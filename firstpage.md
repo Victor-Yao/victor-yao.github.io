@@ -1,5 +1,4 @@
 layout: page
 title: "First Test Page"
-permalink: /edge/troubleshoot
-
+permalink: /Test
 This is my first page for testing purpose.
