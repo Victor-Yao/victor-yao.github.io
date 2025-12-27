@@ -1,4 +1,21 @@
+---
 layout: page
-title: "First Test Page"
-permalink: /Test
-This is my first page for testing purpose.
+title: "排查方法"
+permalink: /debugging-methods/  # 设置该页面的 URL 路径
+---
+
+# 排查方法
+
+在这篇文章中，我们将介绍几种常见的排查问题的方法和技巧。
+
+## 1. 检查日志
+
+首先，检查相关日志是排查问题的第一步。日志文件能提供关键的信息，帮助你定位问题所在。
+
+## 2. 分析网络请求
+
+如果问题涉及到网络请求，使用浏览器的开发者工具查看请求和响应是非常重要的。
+
+## 3. 复现问题
+
+在不同的环境中复现问题，有助于找到问题的根源，确保修复能够覆盖到所有相关场景。
