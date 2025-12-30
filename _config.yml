@@ -1,4 +1,4 @@
-title: Victor Yao's troubleshooting KB
+title: Troubleshooting KB
 description: Share some useful guides here for helping others.
 theme: just-the-docs
 
@@ -7,7 +7,7 @@ baseurl: ""
 permalink: pretty
 
 aux_links:
-  KB Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
+  Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
 
 defaults:
   - scope:

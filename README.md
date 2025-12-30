@@ -24,6 +24,6 @@ It’s published as a GitHub Pages site using the **Just the Docs** theme.
 2. Add a small front matter header at the top:
    ```md
    ---
-   title: Fix download errors
+   title: Capture Something
    parent: Edge
    ---

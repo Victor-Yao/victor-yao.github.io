@@ -17,7 +17,7 @@ Use the **search bar** (top right) or browse by category below.
 ## Categories
 
 - **General**
-  - Start here: [Edge docs](./docs/edge/)
+  - [General overview](/docs/general/)
 
 - **Edge**
   - Start here: [Edge docs](./docs/edge/)
