@@ -1,8 +1,9 @@
 ---
-title: Group Policy Report
+title: Group policy report
 parent: General
 nav_order: 1
 ---
+
 ## Export Group Policy Report
 
 1. Launch Command Prompt as an administrator.
