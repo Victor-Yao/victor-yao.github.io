@@ -1,8 +1,17 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Victor Yao's troubleshooting KB
+description: Share some useful guides here for helping others.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://victor-yao.github.io
+baseurl: ""
+permalink: pretty
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  KB Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
