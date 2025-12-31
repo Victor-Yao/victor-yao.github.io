@@ -11,3 +11,4 @@ nav_order: 1
 2. Verify the output files are created at `reports` folder as following,
 
    ![Generated TLS reports folder](/assets/images/gettlsconfig1.png)
+   

@@ -15,3 +15,4 @@ nav_order: 1
 3. Save the file with the `.evtx` extension.
 
    ![Save event log as an .evtx file](/assets/images/windows-event2.png)
+   
