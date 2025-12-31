@@ -15,3 +15,7 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+
+# Footer last edited timestamp
+last_edit_timestamp: true
+last_edit_time_format: "%Y-%m-%d"  # 可按需改格式
