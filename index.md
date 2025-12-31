@@ -19,8 +19,8 @@ Use the **search bar** (top right) or browse by category below.
 - **General**
   - [General overview](/docs/general/)
 
-- **Edge**
-  - Start here: [Edge docs](./docs/edge/)
+- **Browsers**
+  - [Browsers overview](/docs/Browsers/)
 
 - **IIS**
   - Start here: [IIS docs](./docs/iis/)
