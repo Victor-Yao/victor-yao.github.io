@@ -1,5 +1,5 @@
 ---
-title: wireshark
+title: Wireshark
 parent: General
 nav_order: 1
 ---
