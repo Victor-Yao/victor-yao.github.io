@@ -2,6 +2,7 @@
 title: Procmon trace
 parent: General
 nav_order: 1
+last_modified_date: 2025-12-29
 ---
 
 ## Capture a Procmon trace

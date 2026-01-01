@@ -2,6 +2,7 @@
 title: Chrome_debug
 parent: Browsers
 nav_order: 1
+last_modified_date: 2025-12-30
 ---
 
 ## Collect chrome_debug.log on Edge
