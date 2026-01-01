@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2025-12-31
 ---
 
-## Using crashpad to capture Edge crashing event.
+## Using crashpad to capture Edge crash event.
 
 1. Search for **Environment Variables**, then open it.
 
