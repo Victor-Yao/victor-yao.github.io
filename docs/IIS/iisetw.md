@@ -13,12 +13,12 @@ last_modified_date: 2026-01-01
 
 3. Run `iisetw.bat` for start tracing, then wait it pauses.
 
-   ![Run start.bat to start IIS ETW tracing](/assets/images/IISETW1.png)
+   ![Run iisetw.bat](/assets/images/iisetw1.png)
 
 4. **Reproduce the issue**, then press **Enter** in the Command Prompt for continue tracing.
 
-   ![Script paused before reproducing the issue](/assets/images/IISETW2.png)
+   ![Script paused](/assets/images/iisetw2.png)
 
 5. After tracing finishes, verify many `*.etl` files are created at current folder.
 
-   ![Generated IIS ETW trace files ready to be zipped](/assets/images/IISETW3.png)
+   ![Generated IIS ETW trace](/assets/images/iisetw3.png)
