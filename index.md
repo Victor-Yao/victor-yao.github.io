@@ -23,16 +23,7 @@ Use the **search bar** (top right) or browse by category below.
   - [Browsers overview](/docs/Browsers/)
 
 - **IIS**
-  - Start here: [IIS docs](./docs/iis/)
-
-- **ASP.NET**
-  - Start here: [ASP.NET docs](./docs/aspnet/)
-
-- **.NET**
-  - Start here: [.NET docs](./docs/dotnet/)
-
-- **Edge WebView2**
-  - Start here: [WebView2 docs](./docs/webview2/)
+  - [IIS overview](/docs/Browsers/)
 
 ---
 
