@@ -21,5 +21,4 @@ last_modified_date: 2026-01-01
 
     ![export record](/assets/images/edgehar3.png)
 
-For more information, refer to:  
-[https://learn.microsoft.com/en-us/azure/azure-portal/capture-browser-trace#microsoft-edge](https://learn.microsoft.com/en-us/azure/azure-portal/capture-browser-trace#microsoft-edge)
+> For more information, refer to: [https://learn.microsoft.com/en-us/azure/azure-portal/capture-browser-trace#microsoft-edge](https://learn.microsoft.com/en-us/azure/azure-portal/capture-browser-trace#microsoft-edge)
