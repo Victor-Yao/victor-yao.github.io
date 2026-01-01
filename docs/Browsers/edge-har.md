@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2026-01-01
 ---
 
-## Collect a network trace log from Edge DevTools
+## Collect a network trace log from Edge Developer tools
 
 1. Open Microsoft Edge, then open **Developer tools** by pressing **F12**.
 
