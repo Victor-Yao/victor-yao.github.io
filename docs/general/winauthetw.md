@@ -7,17 +7,15 @@ last_modified_date: 2025-12-29
 
 ## Capture ETW traces for Windows authentication
 
-1. Download [`Auth-Script.zip`](/assets/tools/Auth-Script.zip), then unzip it.
+1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
 
-2. Open **PowerShell** as an administrator, then go to the `Auth-Script` folder.
+2. Open **Power Shell** as an administrator, then go to `mytools\Auth-Script`.
 
 3. Run the following command to start capturing.
 
    ```powershell
    .\start-auth.ps1
    ```
-
-   ![Start authentication ETW trace collection](/assets/images/winauthetw1.png)
 
 4. Reproduce the issue.
 
@@ -27,8 +25,4 @@ last_modified_date: 2025-12-29
    .\stop-auth.ps1
    ```
 
-   ![Stop authentication ETW trace collection](/assets/images/winauthetw2.png)
-
-6. Verify the output files are created at `authlogs` folder.
-
-   ![Auth logs folder created by the script](/assets/images/winauthetw3.png)
+6. Verify the output files are created at `authlogs` folder in the current directory.
