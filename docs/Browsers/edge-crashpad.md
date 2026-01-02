@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2025-12-31
 ---
 
-## Using crashpad to capture Edge crash event.
+## Using crashpad to capture Edge crash event
 
 1. Search for **Environment Variables**, then open it.
 
@@ -19,7 +19,7 @@ last_modified_date: 2025-12-31
     ![Add ENABLE_HEAP_DUMPS](/assets/images/edgecrashpad2.png)
 
 3. Go to `edge://settings/system`, then turn off **Startup boost**.
-    
+
     ![Startup boost option](/assets/images/edgecrashpad3.png)
 
    > Tip: If this setting is disabled (grayed out) and you cannot change it, run the following command in an elevated **Command Prompt** or **PowerShell**:
