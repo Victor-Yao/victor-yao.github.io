@@ -55,7 +55,7 @@ Download [Procdump](https://download.sysinternals.com/files/Procdump.zip). For m
 
    > Tip: If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
 
-## Capture a crash dump
+### Capture a crash dump
 
 1. Open **Command Prompt** as an administrator, then go to the Procdump folder.
 
