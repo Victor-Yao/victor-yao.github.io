@@ -54,3 +54,15 @@ Download [Procdump](https://download.sysinternals.com/files/Procdump.zip). For m
    ```
 
    > Tip: If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
+
+## Capture a crash dump
+
+1. Open **Command Prompt** as an administrator, then go to the Procdump folder.
+
+2. Run the following command, then wait for the crash to occur:
+
+   ```bat
+   procdump -accepteula -e -ma -w w3wp.exe
+   ```
+
+   ![ProcDump waiting for a crash on w3wp.exe](/assets/images/iisprocdump4.png)
