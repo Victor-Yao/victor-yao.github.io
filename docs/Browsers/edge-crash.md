@@ -1,17 +1,13 @@
 ---
-title: Edge Crashpad
+title: Edge Crash
 parent: Browsers
 nav_order: 1
 last_modified_date: 2025-12-31
 ---
 
-## Capture Edge crash dump
-
 There are two different types of crash events in the Edge browser, and the methods for collecting their crash dumps are also different.
 
-### 1. Crashpad crash event
-
----
+## Crashpad crash event
 
 1. Search for **Environment Variables**, then open it.
 
@@ -38,9 +34,7 @@ There are two different types of crash events in the Edge browser, and the metho
 
 5. Verify the dump file is generated at `%LOCALAPPDATA%\Microsoft\Edge\User Data\Crashpad\reports`.
 
-### 2. Windows crash event
-
----
+## Windows crash event
 
 1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
 
