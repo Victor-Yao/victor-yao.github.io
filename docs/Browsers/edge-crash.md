@@ -5,7 +5,13 @@ nav_order: 1
 last_modified_date: 2025-12-31
 ---
 
-## Using crashpad to capture Edge crash event
+## Capture Edge crash dump
+
+There are two different types of crash events in the Edge browser, and the methods for collecting their crash dumps are also different.
+
+### 1. Crashpad crash event
+
+---
 
 1. Search for **Environment Variables**, then open it.
 
@@ -31,3 +37,27 @@ last_modified_date: 2025-12-31
 4. Click `Settings(...) -> Close Microsoft Edge` to fully exit Edge. Reopen Edge, then **reproduce the issue**.
 
 5. Verify the dump file is generated at `%LOCALAPPDATA%\Microsoft\Edge\User Data\Crashpad\reports`.
+
+### 2. Windows crash event
+
+---
+
+1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
+
+2. Import `mytools\msedge-wer.reg` into the registry.
+
+    ![Import reg](/assets/images/edgewer1.png)
+
+3. Verify values in the `msedge.exe` key that exactly same show in the screenshot:
+
+   ```text
+   HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\msedge.exe
+   ```
+
+    ![Start recording](/assets/images/edgewer2.png)
+
+4. Create a folder at `C:\dumps`.
+
+5. **Reproduce the issue**.
+
+6. Verify the dump file is generated at `C:\dumps`.
