@@ -22,3 +22,6 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 - **IIS**
   - [IIS overview](/docs/Browsers/)
+
+- **dotnet**
+  - [dotnet overview](/docs/dotnet/)

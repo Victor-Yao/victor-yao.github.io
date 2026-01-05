@@ -1,8 +1,8 @@
 ---
 title: Enable WCF trace
-parent: Browsers
+parent: dotnet
 nav_order: 1
-last_modified_date: 2025-12-30
+last_modified_date: 2026-01-05
 ---
 
 ## Enable WCF trace log
