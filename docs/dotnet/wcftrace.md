@@ -5,9 +5,12 @@ nav_order: 1
 last_modified_date: 2026-01-05
 ---
 
+Only apply to .Net Framework WCF. For more inforamtion, see [https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial](https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial)
+
 ## Enable WCF trace log
 
 1. Copy and paste the following configuration into the WCF configuration file for both the WCF client and the WCF server.
+
 2. Ensure the directory specified in the `initializeData` value exists. In this example, the directory is `c:\logs`.
 
 ```xml
