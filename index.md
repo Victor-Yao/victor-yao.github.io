@@ -8,9 +8,7 @@ permalink: /
 
 ## Welcome 👋
 
-This is my troubleshooting KB — mostly step-by-step notes for debugging and fixing common issues.
-
-Use the **search bar** (top right) or browse by category below.
+My little troubleshooting knowledge base — quick steps, commands, and checklists I use when debugging stuff.
 
 ---
 
@@ -24,12 +22,3 @@ Use the **search bar** (top right) or browse by category below.
 
 - **IIS**
   - [IIS overview](/docs/Browsers/)
-
----
-
-## How I usually write these pages
-- What’s the symptom?
-- How to reproduce (if useful)
-- Step-by-step fix / investigation
-- Commands + screenshots
-- “If that didn’t work…” next steps
