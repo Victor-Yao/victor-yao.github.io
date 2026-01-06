@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: home
-nav_order: 1
+nav_order: 0
 description: "My little troubleshooting knowledge base — quick steps, commands, and checklists I use when debugging stuff."
 permalink: /
 ---
