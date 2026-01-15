@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2026-01-01
 ---
 
-## Debug ARR and URL Rewrite rules with FREB
+## Troubleshoot ARR and URL Rewrite rules with FREB
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ Install Freb tracing feature. For details, see: [https://learn.microsoft.com/en-
 
       ![Configure FREB rule for rewrite and ARR tracing](/assets/images/Freb8.png)
 
-   3. Select the providers and verbosity as needed.
+   3. Select the providers and verbosity as needed. *If rewrite or requestRouting inexists, reinstall it.*
 
       ![Select FREB providers](/assets/images/Freb9.png)
 
@@ -43,4 +43,10 @@ Install Freb tracing feature. For details, see: [https://learn.microsoft.com/en-
 
    ![Collect failed request tracing logs](/assets/images/Freb6.png)
 
-For an example of tracing rewrite rules with FREB, see: [https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules](https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules)
+Additional Resources
+
+- Download [URLRewrite](https://prod-iis-landing.azurewebsites.net/downloads/microsoft/url-rewrite) and [ARR](https://learn.microsoft.com/en-us/iis/extensions/installing-application-request-routing-arr/install-application-request-routing-version-2#step-1---download-microsoft-application-request-routing-version-2)
+
+- [Troubleshoot ARR using Failed Request Tracing rules](https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-arr-using-frt-rules)
+
+- [Using Failed Request Tracing to Trace Rewrite Rules](https://learn.microsoft.com/en-us/iis/extensions/url-rewrite-module/using-failed-request-tracing-to-trace-rewrite-rules)
