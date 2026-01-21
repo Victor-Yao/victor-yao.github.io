@@ -12,16 +12,12 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 ---
 
-## Categories
+## Steps for collecting log
 
-- **General**
-  - [General overview](/docs/general/)
+1. [General overview](/docs/general/)
 
-- **Browsers**
-  - [Browsers overview](/docs/Browsers/)
+2. [Browsers overview](/docs/Browsers/)
 
-- **IIS**
-  - [IIS overview](/docs/Browsers/)
+3. [IIS overview](/docs/Browsers/)
 
-- **dotnet**
-  - [dotnet overview](/docs/dotnet/)
+4. [dotnet overview](/docs/dotnet/)
