@@ -2,7 +2,7 @@
 title: Edge NetExport
 parent: Browsers
 nav_order: 1
-last_modified_date: 2026-01-01
+last_modified_date: 2026-01-31
 ---
 
 ## Capture netlog dump on Edge
@@ -22,5 +22,25 @@ last_modified_date: 2026-01-01
     > Note, don't close the tab of `edge://net-export`.
 
 5. After reproducing the issue, select **Stop Logging**.
+
+## Capture net-export for startup page
+
+1. Select your case,
+	
+    1. Open with default startup page, 
+        `msedge.exe --log-net-log=%USERPROFILE%\Desktop\ReproNetlog.json --net-log-capture-mode=Everything`
+		
+    2. Open with target startup page, 
+        `msedge.exe --log-net-log=%USERPROFILE%\Desktop\ReproNetlog.json --net-log-capture-mode=Everything "https://www.bing.com"`
+		
+    3. Open with InPrivate mode, 
+        `msedge.exe --log-net-log=%USERPROFILE%\Desktop\ReproNetlog.json --net-log-capture-mode=Everything --inprivate`
+		*Tips, --incognito, \#Chrome Inprivate mode.*
+		
+1. Press `Win+R` to open Run, copy & paste your choice to launch Edge.  
+	
+    ![netexport1](/assets/images/netexport1.png)
+	
+2. After the issue is reproduced, verify **ReproNetlog.json** is generated at Desktop.
 
 For more information, see: [https://www.chromium.org/for-testers/providing-network-details/](https://www.chromium.org/for-testers/providing-network-details/)
