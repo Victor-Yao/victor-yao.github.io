@@ -5,7 +5,7 @@ nav_order: 1
 last_modified_date: 2026-01-31
 ---
 
-## Capture netlog dump on Edge
+## Capture net-export
 
 1. Open Edge and go to `edge://net-export`.
 
@@ -43,4 +43,6 @@ last_modified_date: 2026-01-31
 	
 2. After the issue is reproduced, verify **ReproNetlog.json** is generated at Desktop.
 
-For more information, see: [https://www.chromium.org/for-testers/providing-network-details/](https://www.chromium.org/for-testers/providing-network-details/)
+For more information, see: 
+- [https://www.chromium.org/for-testers/providing-network-details/](https://www.chromium.org/for-testers/providing-network-details/)
+- [https://textslashplain.com/2020/01/17/capture-network-logs-from-edge-and-chrome/](https://textslashplain.com/2020/01/17/capture-network-logs-from-edge-and-chrome/)
