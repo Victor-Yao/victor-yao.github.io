@@ -15,9 +15,9 @@ last_modified_date: 2026-02-05
 
 ### Capture a single dump
 
-1. [[#Prerequisites]]
+1. [Prerequisites](#prerequisites)
 
-2. [[#Appendix 1. How to find the PID of the target w3wp.exe process| Find out the PID of the target w3wp.exe process]]
+2. [Find out the PID of the target w3wp.exe process](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process)
 
 3. Replace `<pid>` with **the PID of the target process**, then run
 
@@ -27,9 +27,9 @@ last_modified_date: 2026-02-05
 
 ### Capture multiple dumps at a fixed interval
 
-1. [[#Prerequisites]]
+1. [Prerequisites](#prerequisites)
 
-2. [[#Appendix 1. How to find the PID of the target w3wp.exe process| Find out the PID of the target w3wp.exe process]]
+2. [Find out the PID of the target w3wp.exe process](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process)
 
 3. Replace `<pid>` with **the PID of the target process**, then run
 
@@ -39,7 +39,7 @@ last_modified_date: 2026-02-05
 
 ### Capture an exception memory dump
 
-1. [[#Prerequisites]]
+1. [Prerequisites](#prerequisites)
 
 2. Replace `<keywords>` with **exception message**, then run:
 
@@ -51,7 +51,7 @@ last_modified_date: 2026-02-05
 
 ### Capture a crash dump
 
-1. [[#Prerequisites]]
+1. [Prerequisites](#prerequisites)
 
 2. Run the following command, then wait for the crash to occur:
 
