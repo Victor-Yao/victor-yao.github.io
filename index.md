@@ -18,6 +18,6 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 2. [Browsers overview](/docs/Browsers/)
 
-3. [IIS overview](/docs/Browsers/)
+3. [IIS overview](/docs/IIS/)
 
 4. [dotnet overview](/docs/dotnet/)
