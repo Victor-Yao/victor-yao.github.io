@@ -13,7 +13,7 @@ last_modified_date: 2025-12-30
    msedge.exe --enable-logging --v=1
    ```
 
-   ![Run dialog with msedge.exe logging flagsd](/assets/images/chrome_debug.png)
+   ![Run dialog with msedge.exe logging flags](/assets/images/chrome_debug.png)
 
 2. Reproduce the issue.
 

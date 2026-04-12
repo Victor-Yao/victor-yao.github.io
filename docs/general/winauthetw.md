@@ -19,7 +19,7 @@ last_modified_date: 2025-12-29
 
 4. Reproduce the issue.
 
-5. Run Run the following command to stop capturing, then wait for the script to finish.
+5. Run the following command to stop capturing, then wait for the script to finish.
 
    ```powershell
    .\stop-auth.ps1

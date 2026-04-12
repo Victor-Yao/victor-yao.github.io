@@ -5,13 +5,13 @@ nav_order: 13
 last_modified_date: 2026-01-01
 ---
 
-## Using Fidder
+## Using Fiddler
 
 ### Prerequisite
 
 1. [Download](https://www.telerik.com/download/fiddler) and install Fiddler. 
 
-    > For mor information, see: [https://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/InstallFiddler](https://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/InstallFiddler)
+    > For more information, see: [https://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/InstallFiddler](https://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/InstallFiddler)
 
 2. Open Fiddler, go to `Tools -> Options -> HTTPS tab` and check on **Decrypt HTTPS traffic**.
 
@@ -21,13 +21,13 @@ last_modified_date: 2026-01-01
 
     ![Install FiddlerRoot](/assets/images/fiddler2.jpg)
 
-    > For mor information, see:  
+    > For more information, see:  
     [https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/decrypthttps](https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/decrypthttps)
     [https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/trustfiddlerrootcert](https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/trustfiddlerrootcert)
 
 ### Capture a Fiddler traffic
 
-1. Select **Remove all** and **Clear Cache** in the toor bar.
+1. Select **Remove all** and **Clear Cache** in the toolbar.
 
     ![Remove all](/assets/images/fiddler3.jpg)
 
@@ -45,5 +45,5 @@ last_modified_date: 2026-01-01
 
     ![stop recording](/assets/images/fiddler7.jpg)
 
-> For mor information, see:  
+> For more information, see:  
 [https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/capturing-traffic/configurebrowsers#chrome-edge-and-brave](https://www.telerik.com/fiddler/fiddler-classic/documentation/configure-fiddler/capturing-traffic/configurebrowsers#chrome-edge-and-brave)

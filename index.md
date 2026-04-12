@@ -20,4 +20,4 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 3. [IIS overview](/docs/IIS/)
 
-4. [dotnet overview](/docs/dotnet/)
+4. [.NET overview](/docs/dotnet/)

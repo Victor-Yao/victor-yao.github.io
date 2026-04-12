@@ -27,7 +27,7 @@ Install Freb tracing feature. For details, see: [https://learn.microsoft.com/en-
 
       ![Configure FREB rule for rewrite and ARR tracing](/assets/images/Freb8.png)
 
-   3. Select the providers and verbosity as needed. *If rewrite or requestRouting inexists, reinstall it.*
+   3. Select the providers and verbosity as needed. *If rewrite or requestRouting does not exist, reinstall it.*
 
       ![Select FREB providers](/assets/images/Freb9.png)
 

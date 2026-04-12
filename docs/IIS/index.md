@@ -7,7 +7,7 @@ last_modified_date: 2026-01-01
 
 ## Internet Information Server
 
-Official Documentations,
+Official Documentation
 
 1. [IIS introduction](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture)
 

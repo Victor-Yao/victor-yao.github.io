@@ -18,7 +18,7 @@ last_modified_date: 2026-01-01
 
     ![Create Backup](/assets/images/backupIIS1.png)
 
-3. List existed backups.
+3. List existing backups.
 
     ```bat
     appcmd list backup

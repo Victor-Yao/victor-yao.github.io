@@ -1,11 +1,11 @@
 ---
 title: Enable WCF trace
-parent: dotnet
+parent: .NET
 nav_order: 1
 last_modified_date: 2026-01-05
 ---
 
-Only apply to .Net Framework WCF. For more inforamtion, see [https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial](https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial)
+Only apply to .Net Framework WCF. For more information, see [https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial](https://learn.microsoft.com/en-us/dotnet/framework/wcf/getting-started-tutorial)
 
 ## Enable WCF trace log
 
