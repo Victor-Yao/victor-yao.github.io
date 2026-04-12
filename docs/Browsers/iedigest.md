@@ -1,7 +1,7 @@
 ---
 title: IE Digest
 parent: Browsers
-nav_order: 1
+nav_order: 15
 last_modified_date: 2026-01-01
 ---
 

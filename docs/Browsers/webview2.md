@@ -1,7 +1,7 @@
 ---
 title: Edge WebView2
 parent: Browsers
-nav_order: 1
+nav_order: 10
 last_modified_date: 2026-01-01
 ---
 

@@ -7,6 +7,11 @@ url: https://victor-yao.github.io
 baseurl: ""
 permalink: pretty
 
+# Exclude non-content directories from Jekyll build
+exclude:
+  - Templates/
+  - .obsidian/
+
 aux_links:
   Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
 

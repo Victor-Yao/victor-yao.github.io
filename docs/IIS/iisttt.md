@@ -1,7 +1,7 @@
 ---
 title: tttrace for IIS
 parent: IIS
-nav_order: 4
+nav_order: 8
 last_modified_date: 2026-01-05
 ---
 
@@ -13,7 +13,7 @@ last_modified_date: 2026-01-05
 
 3. Create a destination folder `c:\tttoutput` to save the output logs.
 
-4. Find the **PID** of `w3wp.exe`. For guides, see [Find the PID of the target w3wp.exe process](docs\IIS\iisprocdump.md)
+4. Find the **PID** of `w3wp.exe`. For guides, see [Find the PID of the target w3wp.exe process](/docs/IIS/iisprocdump/#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process)
 
 5. Replace `PID` with the actual value, then run it to start tracing:
 
