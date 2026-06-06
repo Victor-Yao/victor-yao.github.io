@@ -10,20 +10,19 @@ It’s published as a GitHub Pages site using the **Just the Docs** theme.
 - Notes I want to be able to find again later 😄
 
 ## Main sections
-- Microsoft Edge
+- General
+- Browsers
 - IIS
-- ASP.NET
 - .NET
-- Edge WebView2
 
 (And more over time.)
 
 ## Adding a new doc
 1. Create a new Markdown file under `docs/<category>/`
-   - Example: `docs/edge/capturesomething.md`
+   - Example: `docs/browsers/capturesomething.md`
 2. Add a small front matter header at the top:
    ```md
    ---
    title: Capture Something
-   parent: Edge
+   parent: Browsers
    ---
