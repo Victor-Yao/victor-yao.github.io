@@ -1,0 +1,23 @@
+<script>
+  // Follow the operating system's light/dark preference automatically.
+  (function () {
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function applySystemTheme() {
+      jtd.setTheme(media.matches ? 'dark' : 'light');
+    }
+
+    // jtd is defined by just-the-docs.js, which runs before DOMContentLoaded fires.
+    document.addEventListener('DOMContentLoaded', function () {
+      applySystemTheme();
+
+      // React in real time when the system theme changes.
+      if (media.addEventListener) {
+        media.addEventListener('change', applySystemTheme);
+      } else if (media.addListener) {
+        // Fallback for older browsers.
+        media.addListener(applySystemTheme);
+      }
+    });
+  })();
+</script>
