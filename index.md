@@ -16,7 +16,7 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 1. [General overview]({% link docs/general/index.md %})
 
-2. [Browsers overview]({% link docs/browsers/index.md %})
+2. [Browsers overview]({% link docs/Browsers/index.md %})
 
 3. [IIS overview]({% link docs/IIS/index.md %})
 
