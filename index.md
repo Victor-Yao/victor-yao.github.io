@@ -14,10 +14,10 @@ My little troubleshooting knowledge base — quick steps, commands, and checklis
 
 ## Steps for collecting log
 
-1. [General overview](/docs/general/)
+1. [General overview]({% link docs/general/index.md %})
 
-2. [Browsers overview](/docs/Browsers/)
+2. [Browsers overview]({% link docs/browsers/index.md %})
 
-3. [IIS overview](/docs/IIS/)
+3. [IIS overview]({% link docs/IIS/index.md %})
 
-4. [.NET overview](/docs/dotnet/)
+4. [.NET overview]({% link docs/dotnet/index.md %})
