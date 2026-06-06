@@ -9,14 +9,14 @@ last_modified_date: 2026-01-01
 
 ### Get information about WebView2 Runtime
 
-1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
+1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
 
-2. Open **Power Shell** as an administrator, then go to `mytools`.
+2. Open **Power Shell** as an administrator, then go to `toolkit`.
 
 3. Run `.\GetInstalledWV2.ps1` and review the output similar with below:
 
    ```powershell
-      ~mytools> .\GetInstalledWV2.ps1
+      ~toolkit> .\GetInstalledWV2.ps1
       ==========================================================================================
       [1] Microsoft Edge WebView2 Runtime
       Version         : 143.0.3650.96

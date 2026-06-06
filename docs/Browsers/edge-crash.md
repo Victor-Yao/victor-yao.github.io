@@ -36,9 +36,9 @@ There are two different types of crash events in the Edge browser, and the metho
 
 ## Windows crash event
 
-1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
+1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
 
-2. Import `mytools\msedge-wer.reg` into the registry.
+2. Import `toolkit\msedge-wer.reg` into the registry.
 
     ![Import reg](/assets/images/edgewer1.png)
 

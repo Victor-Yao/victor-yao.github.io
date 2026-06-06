@@ -7,9 +7,9 @@ last_modified_date: 2025-12-29
 
 ## Get TLS configuration from Windows
 
-1. Download [mytools.zip](/assets/mytools.zip), then unzip it.
+1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
 
-2. Open **Command Prompt** as an administrator, then go to `mytools`.
+2. Open **Command Prompt** as an administrator, then go to `toolkit`.
 
 1. Run `GetTlsConfig.bat`
 
