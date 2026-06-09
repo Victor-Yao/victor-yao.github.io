@@ -24,7 +24,8 @@ There are two different types of crash events in the Edge browser, and the metho
 
     ![Startup boost option](/assets/images/edgecrashpad3.png)
 
-   > Tip: If this setting is disabled (grayed out) and you cannot change it, run the following command in an elevated **Command Prompt** or **PowerShell**:
+   {: .tip }
+   > If this setting is disabled (grayed out) and you cannot change it, run the following command in an elevated **Command Prompt** or **PowerShell**:
 
    ```bat
    REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v StartupBoostEnabled /t REG_DWORD /d 0 /f

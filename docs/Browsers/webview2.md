@@ -33,10 +33,9 @@ last_modified_date: 2026-01-01
 
    ![WebView2 shown in Programs and Features](/assets/images/webview21.png)
 
-> For more information, see:  
-
-1. [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq)
-
-2. [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations)
-
-3. [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed)
+{: .note }
+> For more information, see:
+>
+> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq)
+> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations)
+> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed)

@@ -29,6 +29,7 @@ last_modified_date: 2026-01-21
 
    ![flush logbuffer](/assets/images/iislog5.png)
 
+   {: .note }
    > This flushes HTTP log entries cached in memory.
 
 2. Open **IIS Manager**. Select **Sites**, then note the **Site ID** shown in the right pane.

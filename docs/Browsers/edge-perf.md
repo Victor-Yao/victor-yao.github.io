@@ -21,4 +21,5 @@ last_modified_date: 2026-01-01
 
     ![Save trace](/assets/images/edgeperf3.png)
 
+{: .note }
 > For more information, refer to: [https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/evaluate-performance/?source=recommendations#record-runtime-performance](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/evaluate-performance/?source=recommendations#record-runtime-performance)

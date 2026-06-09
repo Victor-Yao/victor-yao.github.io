@@ -9,6 +9,7 @@ last_modified_date: 2025-12-29
 
 1. Download and install [Microsoft Network Monitor (NetMon)](https://www.microsoft.com/en-us/download/details.aspx?id=4865) on both the client and the server.
 
+   {: .note }
    > Perform the remaining steps on the client and server at the same time.
 
 2. Open NetMon, then select **New Capture**.

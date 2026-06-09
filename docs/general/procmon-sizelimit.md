@@ -17,6 +17,7 @@ last_modified_date: 2025-12-29
    Procmon.exe /AcceptEula /Minimized /Quiet /PagingFile /RingBufferSize 800
    ```
 
+   {: .tip }
    > You can increase `/RingBufferSize` up to **4096** (4 GB).
 
    ![Procmon command-line capture with ring buffer](/assets/images/procmon4.png)
@@ -27,7 +28,8 @@ last_modified_date: 2025-12-29
 
    ![Save Procmon log file](/assets/images/procmon3.png)
 
+{: .note }
 > Arguments reference
 
-   ![Procmon usage output](/assets/images/procmon5.png)
+![Procmon usage output](/assets/images/procmon5.png)
    

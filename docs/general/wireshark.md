@@ -9,6 +9,7 @@ last_modified_date: 2025-12-29
 
 1. Download and install [Wireshark](https://www.wireshark.org/download.html) on both the client and the server.
 
+   {: .note }
    > Perform the remaining steps on the client and server at the same time.
 
 2. Run Wireshark as an administrator on both systems, select the network interface, then start capturing.

@@ -23,4 +23,5 @@ last_modified_date: 2026-01-01
 
    ![stop tracing](/assets/images/ieetw3.png)
 
-> For more information, see:[https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows)
+{: .note }
+> For more information, see: [https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/event-tracing-for-windows)

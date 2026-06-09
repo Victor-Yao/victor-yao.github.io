@@ -47,7 +47,8 @@ last_modified_date: 2026-02-05
    procdump -ma -n 1 -e 1 -f <keywords> w3wp.exe
    ```
 
-   > Tip: If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
+   {: .tip }
+   > If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
 
 ### Capture a crash dump
 

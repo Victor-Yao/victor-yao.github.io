@@ -9,6 +9,7 @@ last_modified_date: 2026-01-31
 
 1. Open Edge and go to `edge://net-export`.
 
+    {: .tip }
     > Optional: Close all browser tabs except one.
 
 2. Select **Start Logging to Disk**.
@@ -19,7 +20,8 @@ last_modified_date: 2026-01-31
 
 4. Open a new tab and **reproduce the issue**.
 
-    > Note, don't close the tab of `edge://net-export`.
+    {: .warning }
+    > Don't close the tab of `edge://net-export`.
 
 5. After reproducing the issue, select **Stop Logging**.
 

@@ -13,6 +13,7 @@ last_modified_date: 2025-12-29
 
    ![Reset filter in Procmon](/assets/images/procmon1.png)
 
+   {: .tip }
    > Optional: Enable **Boot Logging** if you must reboot the server to reproduce the issue.
 
    ![Enable Boot Logging in Procmon](/assets/images/procmon2.png)
