@@ -66,13 +66,3 @@ last_modified_date: 2026-06-10
 
   {: .note }
   > Run `netsh trace stop` after the reboot to finalize the trace.
-
-### Analyze the trace
-
-- Open `nettrace.etl` directly in [Microsoft Network Monitor (NetMon)](https://www.microsoft.com/en-us/download/details.aspx?id=4865).
-
-- To analyze the trace in Wireshark, convert the `.etl` file to `.pcapng` with [etl2pcapng](https://github.com/microsoft/etl2pcapng).
-
-  ```cmd
-  etl2pcapng.exe C:\Temp\nettrace.etl C:\Temp\nettrace.pcapng
-  ```
