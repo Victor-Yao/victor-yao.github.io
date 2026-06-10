@@ -7,8 +7,6 @@ last_modified_date: 2026-06-10
 
 ## Capture a network trace with netsh trace (ETW)
 
-`netsh trace` is a built-in Windows command that captures network packets through Event Tracing for Windows (ETW). It requires no additional software and produces an `.etl` file that can be analyzed with Microsoft Network Monitor or converted for Wireshark.
-
 {: .note }
 > Open **Command Prompt** or **PowerShell** as an administrator for all of the following steps.
 
