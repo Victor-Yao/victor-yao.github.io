@@ -1,5 +1,5 @@
 ---
-title: tttrace for IIS
+title: Capture an IIS Time Travel Trace
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 8

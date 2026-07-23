@@ -1,5 +1,5 @@
 ---
-title: PerfView
+title: Capture IIS Performance Traces with PerfView
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 9

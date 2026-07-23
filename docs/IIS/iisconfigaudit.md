@@ -1,5 +1,5 @@
 ---
-title: IIS Config Auditing
+title: Audit IIS Configuration Changes
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 10

@@ -1,5 +1,5 @@
 ---
-title: IIS ETW
+title: Capture an IIS ETW Trace
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 7

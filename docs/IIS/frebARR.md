@@ -1,5 +1,5 @@
 ---
-title: Freb ARR
+title: Capture FREB Traces for ARR and URL Rewrite
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 5

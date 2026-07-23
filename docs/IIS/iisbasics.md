@@ -1,5 +1,5 @@
 ---
-title: IIS Basics
+title: Locate IIS Configuration and Log Files
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 1

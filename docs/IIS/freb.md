@@ -1,5 +1,5 @@
 ---
-title: Freb
+title: Capture IIS Failed Request Traces (FREB)
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 4

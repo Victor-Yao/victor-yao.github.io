@@ -1,5 +1,5 @@
 ---
-title: memory dump with procdump
+title: Collect IIS Dumps with ProcDump
 parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 3
