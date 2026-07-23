@@ -2,11 +2,27 @@ title: Victor Yao's Tech Notes
 author: Victor Yao
 description: Practical troubleshooting guides, technical deep dives, and lessons learned from real-world debugging.
 theme: just-the-docs
+lang: en-US
+timezone: Asia/Shanghai
+repository: Victor-Yao/victor-yao.github.io
+github_username: Victor-Yao
+
+social:
+  name: Victor Yao
+  links:
+    - https://github.com/Victor-Yao
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
 
 url: https://victor-yao.github.io
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: "<!--more-->"
+
+feed:
+  path: feed.xml
 
 # Exclude non-content directories from Jekyll build
 exclude:
@@ -15,6 +31,7 @@ exclude:
 
 aux_links:
   Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
+  RSS Feed: https://victor-yao.github.io/feed.xml
 aux_links_new_tab: true
 
 # Search

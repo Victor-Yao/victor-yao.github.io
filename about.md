@@ -26,4 +26,6 @@ Technology changes over time. Each guide includes a last-modified date, but you 
 
 Corrections and improvement suggestions are welcome through the [GitHub repository](https://github.com/Victor-Yao/victor-yao.github.io).
 
+New blog articles are also available through the [RSS feed]({{ "/feed.xml" | relative_url }}).
+
 For usage boundaries and sensitive-data guidance, read the [Disclaimer and Data Privacy page]({% link disclaimer.md %}).
