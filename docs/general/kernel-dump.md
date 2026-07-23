@@ -1,5 +1,5 @@
 ---
-title: Windows Kernel Dumps
+title: Capture a Windows Kernel Dump
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 9

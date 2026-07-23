@@ -1,5 +1,5 @@
 ---
-title: TLS configuration
+title: Collect Windows TLS Configuration
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 8

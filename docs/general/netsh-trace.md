@@ -1,5 +1,5 @@
 ---
-title: netsh trace (ETW)
+title: Capture a Network Trace with netsh
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 11

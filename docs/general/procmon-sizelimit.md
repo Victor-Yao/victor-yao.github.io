@@ -1,5 +1,5 @@
 ---
-title: Procmon trace with size limit
+title: Capture a Size-Limited Procmon Trace
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 4

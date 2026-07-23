@@ -1,5 +1,5 @@
 ---
-title: Wireshark
+title: Capture a Network Trace with Wireshark
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 7

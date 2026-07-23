@@ -1,5 +1,5 @@
 ---
-title: netmon trace
+title: Capture a Network Trace with Network Monitor
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 6

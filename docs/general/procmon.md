@@ -1,5 +1,5 @@
 ---
-title: Procmon trace
+title: Capture a Procmon Trace
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 3

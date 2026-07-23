@@ -1,5 +1,5 @@
 ---
-title: Spy++ Messages
+title: Monitor Windows Messages with Spy++
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 10

@@ -1,5 +1,5 @@
 ---
-title: Windows event log
+title: Export Windows Event Logs
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 1

@@ -1,5 +1,5 @@
 ---
-title: ETW for Windows
+title: Capture Windows Authentication ETW Traces
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 5

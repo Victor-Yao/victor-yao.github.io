@@ -1,5 +1,5 @@
 ---
-title: Group policy report
+title: Export a Group Policy Report
 parent: Windows & Networking
 grand_parent: Guides
 nav_order: 2
