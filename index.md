@@ -2,22 +2,33 @@
 title: Home
 layout: home
 nav_order: 0
-description: "My little troubleshooting knowledge base — quick steps, commands, and checklists I use when debugging stuff."
+description: "Practical troubleshooting guides, technical deep dives, and lessons learned from real-world debugging."
 permalink: /
 ---
 
-## Welcome 👋
+## Practical guides and technical deep dives
 
-My little troubleshooting knowledge base — quick steps, commands, and checklists I use when debugging stuff.
+I share repeatable troubleshooting procedures, diagnostic techniques, and technical notes developed while investigating real-world problems.
 
----
+The goal is to explain not only which steps to run, but also what evidence they collect and when each technique is useful.
 
-## Steps for collecting log
+## Browse the guides
 
-1. [General overview]({% link docs/general/index.md %})
+- [General diagnostics]({% link docs/general/index.md %}) — Windows tracing, network captures, Procmon, event logs, and system diagnostics.
+- [Browsers]({% link docs/Browsers/index.md %}) — Microsoft Edge, Chrome, WebView2, browser tracing, policies, and troubleshooting.
+- [IIS]({% link docs/IIS/index.md %}) — IIS logging, dumps, Failed Request Tracing, ETW, and performance analysis.
+- [.NET]({% link docs/dotnet/index.md %}) — .NET diagnostics for applications running locally or in cloud environments.
 
-2. [Browsers overview]({% link docs/Browsers/index.md %})
+## Featured troubleshooting guides
 
-3. [IIS overview]({% link docs/IIS/index.md %})
+- [Capture a Procmon trace]({% link docs/general/procmon.md %})
+- [Export a browser HAR file]({% link docs/Browsers/edge-har.md %})
+- [Capture an IIS memory dump with DebugDiag]({% link docs/IIS/iisdebugdiag.md %})
+- [Capture a .NET memory dump in AKS]({% link docs/dotnet/aks-dotnet-dump.md %})
 
-4. [.NET overview]({% link docs/dotnet/index.md %})
+## What to expect
+
+- Copy/paste-ready commands with the required execution context.
+- Screenshots for procedures where the UI matters.
+- Safety and sensitive-data warnings for logs, dumps, and destructive operations.
+- References to official documentation when deeper product details are useful.
