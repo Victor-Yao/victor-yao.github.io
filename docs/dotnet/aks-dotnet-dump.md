@@ -1,5 +1,5 @@
 ---
-title: AKS .NET Memory Dump
+title: Capture a .NET Memory Dump in AKS
 parent: .NET & Cloud Diagnostics
 grand_parent: Guides
 nav_order: 2

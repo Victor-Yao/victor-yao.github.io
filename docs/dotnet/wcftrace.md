@@ -1,5 +1,5 @@
 ---
-title: Enable WCF trace
+title: Enable WCF Tracing
 parent: .NET & Cloud Diagnostics
 grand_parent: Guides
 nav_order: 1
