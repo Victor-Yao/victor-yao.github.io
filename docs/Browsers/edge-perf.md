@@ -1,6 +1,6 @@
 ---
 title: Edge Perf
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 3
 description: "Record and export a Microsoft Edge DevTools performance profile."

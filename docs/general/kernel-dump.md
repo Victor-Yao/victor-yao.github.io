@@ -1,6 +1,6 @@
 ---
 title: Windows Kernel Dumps
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 9
 description: "Configure Windows to capture kernel or complete memory dumps for operating system failures."

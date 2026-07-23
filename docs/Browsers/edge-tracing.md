@@ -1,6 +1,6 @@
 ---
 title: Edge Tracing
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 17
 description: "Capture low-level Microsoft Edge traces with the built-in Chromium tracing tool."

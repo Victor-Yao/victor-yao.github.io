@@ -1,6 +1,6 @@
 ---
 title: SmartScreen Checklist
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 8
 description: "Collect the logs and traces required to investigate Microsoft Defender SmartScreen behavior in Edge."

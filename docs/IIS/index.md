@@ -1,14 +1,14 @@
 ---
-title: IIS
+title: IIS & Web Hosting
 parent: Guides
 nav_order: 3
-description: "Troubleshooting, tracing, configuration, and dump collection guides for IIS."
+description: "Configuration, troubleshooting, tracing, and dump collection guides for IIS and web hosting."
 tags: [iis, diagnostics]
 has_children: true
 last_modified_date: 2026-01-01
 ---
 
-## Internet Information Server
+## IIS & Web Hosting
 
 {: .note }
 > **Official documentation**

@@ -1,6 +1,6 @@
 ---
 title: Procmon trace
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 3
 description: "Capture and save a Process Monitor trace for file, registry, process, and network activity."

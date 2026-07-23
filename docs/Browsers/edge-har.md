@@ -1,6 +1,6 @@
 ---
 title: Edge HAR
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 1
 description: "Capture and export an HTTP Archive network trace from Microsoft Edge DevTools."

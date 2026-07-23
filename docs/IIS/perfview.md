@@ -1,6 +1,6 @@
 ---
 title: PerfView
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 9
 description: "Collect CPU, memory, and ETW performance traces with PerfView."

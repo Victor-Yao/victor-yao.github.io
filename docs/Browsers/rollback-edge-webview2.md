@@ -1,6 +1,6 @@
 ---
 title: Rollback Edge & WebView2 (MSI/GPO)
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 23
 description: "Roll back Microsoft Edge and WebView2 Runtime versions with MSI installers and Group Policy."

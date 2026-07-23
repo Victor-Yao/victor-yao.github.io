@@ -1,6 +1,6 @@
 ---
 title: Wireshark
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 7
 description: "Capture and save a packet trace with Wireshark."

@@ -19,10 +19,10 @@ The goal is to explain not only which steps to run, but also what evidence they 
 
 ## Browse guide topics
 
-- [General diagnostics]({% link docs/general/index.md %}) — Windows tracing, network captures, Procmon, event logs, and system diagnostics.
-- [Browsers]({% link docs/Browsers/index.md %}) — Microsoft Edge, Chrome, WebView2, browser tracing, policies, and troubleshooting.
-- [IIS]({% link docs/IIS/index.md %}) — IIS logging, dumps, Failed Request Tracing, ETW, and performance analysis.
-- [.NET]({% link docs/dotnet/index.md %}) — .NET diagnostics for applications running locally or in cloud environments.
+- [Windows & Networking]({% link docs/general/index.md %}) — Windows tracing, network captures, Procmon, event logs, and system diagnostics.
+- [Browsers & WebView2]({% link docs/Browsers/index.md %}) — Microsoft Edge, Chrome, WebView2, browser tracing, policies, and troubleshooting.
+- [IIS & Web Hosting]({% link docs/IIS/index.md %}) — IIS logging, dumps, Failed Request Tracing, ETW, and performance analysis.
+- [.NET & Cloud Diagnostics]({% link docs/dotnet/index.md %}) — .NET diagnostics for applications running locally or in cloud environments.
 
 ## Featured troubleshooting guides
 

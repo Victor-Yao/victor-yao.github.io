@@ -1,6 +1,6 @@
 ---
 title: Diagnostic at Edge iOS
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 11
 description: "Collect offline diagnostic data from Microsoft Edge for iOS."

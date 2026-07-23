@@ -1,6 +1,6 @@
 ---
 title: Freb
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 4
 description: "Enable IIS Failed Request Tracing for requests that return selected HTTP status codes."

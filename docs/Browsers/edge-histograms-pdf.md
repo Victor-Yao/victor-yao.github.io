@@ -1,6 +1,6 @@
 ---
 title: Edge Histograms (PDF)
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 19
 description: "Collect Microsoft Edge histogram data for encrypted PDF and MIP troubleshooting."

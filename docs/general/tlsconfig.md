@@ -1,6 +1,6 @@
 ---
 title: TLS configuration
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 8
 description: "Collect Windows TLS protocol and cipher-suite configuration for troubleshooting."

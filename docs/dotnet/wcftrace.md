@@ -1,6 +1,6 @@
 ---
 title: Enable WCF trace
-parent: .NET
+parent: .NET & Cloud Diagnostics
 grand_parent: Guides
 nav_order: 1
 description: "Enable WCF message and activity tracing and collect the generated trace log."

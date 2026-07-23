@@ -1,6 +1,6 @@
 ---
 title: Procmon trace with size limit
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 4
 description: "Capture a Process Monitor trace with a ring buffer or maximum file size."

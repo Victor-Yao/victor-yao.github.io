@@ -1,6 +1,6 @@
 ---
 title: netmon trace
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 6
 description: "Capture and save a network trace with Microsoft Network Monitor."

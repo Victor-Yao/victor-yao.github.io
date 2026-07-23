@@ -1,6 +1,6 @@
 ---
 title: Fiddler
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 13
 description: "Configure Fiddler Classic to decrypt HTTPS traffic and capture browser requests."

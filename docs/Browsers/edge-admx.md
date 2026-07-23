@@ -1,6 +1,6 @@
 ---
 title: Edge Admin Templates
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 21
 description: "Deploy Microsoft Edge and Edge Update ADMX/ADML templates to domain or local policy stores."

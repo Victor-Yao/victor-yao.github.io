@@ -1,6 +1,6 @@
 ---
 title: AKS .NET Memory Dump
-parent: .NET
+parent: .NET & Cloud Diagnostics
 grand_parent: Guides
 nav_order: 2
 description: "Capture a .NET process memory dump from a pod running in Azure Kubernetes Service."

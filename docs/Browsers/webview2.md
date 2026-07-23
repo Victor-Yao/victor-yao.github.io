@@ -1,6 +1,6 @@
 ---
 title: Edge WebView2
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 10
 description: "Identify installed WebView2 Runtime versions and related registry information."

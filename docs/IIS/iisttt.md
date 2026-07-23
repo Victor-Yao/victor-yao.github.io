@@ -1,6 +1,6 @@
 ---
 title: tttrace for IIS
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 8
 description: "Capture a Time Travel Tracing recording for an IIS worker process."

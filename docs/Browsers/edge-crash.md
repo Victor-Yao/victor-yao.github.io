@@ -1,6 +1,6 @@
 ---
 title: Edge Crash
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 6
 description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."

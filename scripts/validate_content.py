@@ -13,10 +13,10 @@ IMAGE_PATTERN = re.compile(r"!\[[^\]]*]\((/assets/images/[^)\s]+)\)")
 LIQUID_LINK_PATTERN = re.compile(r"{%\s*link\s+([^%\s]+)\s*%}")
 
 CATEGORIES = {
-    "Browsers": ROOT / "docs" / "Browsers",
-    "IIS": ROOT / "docs" / "IIS",
-    ".NET": ROOT / "docs" / "dotnet",
-    "General": ROOT / "docs" / "general",
+    "Windows & Networking": ROOT / "docs" / "general",
+    "Browsers & WebView2": ROOT / "docs" / "Browsers",
+    "IIS & Web Hosting": ROOT / "docs" / "IIS",
+    ".NET & Cloud Diagnostics": ROOT / "docs" / "dotnet",
 }
 
 TOP_LEVEL_PAGES = [

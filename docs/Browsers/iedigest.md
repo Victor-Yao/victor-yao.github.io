@@ -1,6 +1,6 @@
 ---
 title: IE Digest
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 15
 description: "Collect Internet Explorer configuration data for comparison and troubleshooting."

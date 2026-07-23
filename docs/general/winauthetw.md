@@ -1,6 +1,6 @@
 ---
 title: ETW for Windows
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 5
 description: "Capture ETW traces for Windows authentication troubleshooting."

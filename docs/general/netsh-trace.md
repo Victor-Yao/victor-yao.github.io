@@ -1,6 +1,6 @@
 ---
 title: netsh trace (ETW)
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 11
 description: "Capture an ETW-backed Windows network trace with netsh."

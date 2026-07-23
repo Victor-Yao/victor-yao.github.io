@@ -1,6 +1,6 @@
 ---
 title: Intune Help at Edge iOS
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 12
 description: "Collect Intune help and support data from Microsoft Edge for iOS."

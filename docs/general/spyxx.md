@@ -1,6 +1,6 @@
 ---
 title: Spy++ Messages
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 10
 description: "Use Spy++ to monitor Windows messages sent to an application window."

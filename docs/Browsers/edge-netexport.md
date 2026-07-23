@@ -1,6 +1,6 @@
 ---
 title: Edge NetExport
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 4
 description: "Capture Chromium network events with Microsoft Edge net-export."

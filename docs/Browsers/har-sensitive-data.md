@@ -1,6 +1,6 @@
 ---
 title: HAR with Sensitive Data
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 20
 description: "Configure DevTools to include authentication headers and cookies in a HAR capture."

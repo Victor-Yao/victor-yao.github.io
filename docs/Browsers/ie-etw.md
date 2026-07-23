@@ -1,6 +1,6 @@
 ---
 title: IE ETW
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 14
 description: "Capture an ETW trace for Internet Explorer with the provided script."

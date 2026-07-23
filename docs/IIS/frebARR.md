@@ -1,6 +1,6 @@
 ---
 title: Freb ARR
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 5
 description: "Capture IIS Failed Request Tracing for Application Request Routing and URL Rewrite issues."

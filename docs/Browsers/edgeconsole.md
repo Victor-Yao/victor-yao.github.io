@@ -1,6 +1,6 @@
 ---
 title: Edge Console
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 2
 description: "Save Microsoft Edge DevTools console output for troubleshooting."

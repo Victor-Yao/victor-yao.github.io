@@ -1,6 +1,6 @@
 ---
 title: Clean Cache & Force Remove Edge
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 16
 description: "Use the provided scripts to clear Edge installer state or force-remove Edge and WebView2."

@@ -1,6 +1,6 @@
 ---
 title: IIS Basics
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 1
 description: "Locate key IIS configuration and log files used during basic troubleshooting."

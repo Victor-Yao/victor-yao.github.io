@@ -1,6 +1,6 @@
 ---
 title: IIS ETW
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 7
 description: "Capture an IIS ETW trace with the provided collection script."

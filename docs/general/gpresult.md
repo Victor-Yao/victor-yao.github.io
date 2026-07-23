@@ -1,6 +1,6 @@
 ---
 title: Group policy report
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 2
 description: "Export an HTML report of computer and user Group Policy settings with gpresult."

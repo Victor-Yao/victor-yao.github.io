@@ -1,6 +1,6 @@
 ---
 title: Windows event log
-parent: General
+parent: Windows & Networking
 grand_parent: Guides
 nav_order: 1
 description: "Export Windows Application and System event logs as EVTX files."

@@ -39,7 +39,7 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
   ```yaml
   ---
   title: Page Title
-  parent: Browsers
+  parent: Browsers & WebView2
   grand_parent: Guides
   nav_order: 24
   description: One concise sentence describing the guide.
@@ -50,7 +50,7 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
   ---
   ```
 
-- `parent` must exactly match the category index `title` (`Browsers`, `IIS`, `.NET`, or `General`).
+- `parent` must exactly match the category index `title` (`Windows & Networking`, `Browsers & WebView2`, `IIS & Web Hosting`, or `.NET & Cloud Diagnostics`).
 - All guide pages use `grand_parent: Guides`. Category `index.md` files use `parent: Guides` and `has_children: true`.
 - Keep `nav_order` unique within a parent. Existing child-page orders are contiguous, so inspect siblings and use the next or intentionally repositioned integer.
 - Update `last_modified_date` in `YYYY-MM-DD` format whenever a page changes.

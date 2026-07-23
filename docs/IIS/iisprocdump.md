@@ -1,6 +1,6 @@
 ---
 title: memory dump with procdump
-parent: IIS
+parent: IIS & Web Hosting
 grand_parent: Guides
 nav_order: 3
 description: "Use ProcDump to collect crash, hang, or exception dumps from an IIS worker process."

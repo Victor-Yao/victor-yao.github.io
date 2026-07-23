@@ -1,6 +1,6 @@
 ---
 title: Chrome_debug
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 5
 description: "Enable Microsoft Edge command-line logging and collect chrome_debug.log."

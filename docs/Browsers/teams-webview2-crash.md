@@ -1,6 +1,6 @@
 ---
 title: Teams WebView2 Crash
-parent: Browsers
+parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 22
 description: "Collect and analyze Microsoft Teams WebView2 crash data with dumps and debugging tools."
