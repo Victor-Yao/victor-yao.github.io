@@ -68,10 +68,14 @@ back_to_top_text: "Back to top"
 
 defaults:
   - scope:
-      path: "docs" # an empty string here means all files in the project
+      path: ""
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
       content_type: guide
   - scope:
       path: ""
