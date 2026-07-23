@@ -28,3 +28,9 @@ Open `http://127.0.0.1:4000` to preview the site. Run `bundle exec jekyll build`
 2. Start from `Templates/new doc.md`.
 3. Set `parent`, a unique `nav_order` within that category, and `last_modified_date`.
 4. Put screenshots in `assets/images/` and reference them with root-relative URLs.
+
+## Usage and license
+
+The site includes a public [disclaimer and data privacy guide](disclaimer.md) for diagnostic artifacts and potentially destructive procedures.
+
+The repository is licensed under the [MIT License](LICENSE).

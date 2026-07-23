@@ -32,3 +32,5 @@ The goal is to explain not only which steps to run, but also what evidence they 
 - Screenshots for procedures where the UI matters.
 - Safety and sensitive-data warnings for logs, dumps, and destructive operations.
 - References to official documentation when deeper product details are useful.
+
+Learn more [about this site]({% link about.md %}) and review the [usage and data privacy guidance]({% link disclaimer.md %}) before sharing diagnostic files.
