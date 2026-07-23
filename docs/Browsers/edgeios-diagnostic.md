@@ -1,6 +1,7 @@
 ---
 title: Diagnostic at Edge iOS
 parent: Browsers
+grand_parent: Guides
 nav_order: 11
 last_modified_date: 2025-12-31
 ---

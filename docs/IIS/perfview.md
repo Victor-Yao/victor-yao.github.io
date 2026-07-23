@@ -1,6 +1,7 @@
 ---
 title: PerfView
 parent: IIS
+grand_parent: Guides
 nav_order: 9
 last_modified_date: 2026-06-06
 ---

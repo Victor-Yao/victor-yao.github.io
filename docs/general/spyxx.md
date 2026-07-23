@@ -1,6 +1,7 @@
 ---
 title: Spy++ Messages
 parent: General
+grand_parent: Guides
 nav_order: 10
 last_modified_date: 2026-06-06
 ---

@@ -1,6 +1,7 @@
 ---
 title: memory dump with DebugDiag
 parent: IIS
+grand_parent: Guides
 nav_order: 2
 last_modified_date: 2026-01-01
 ---

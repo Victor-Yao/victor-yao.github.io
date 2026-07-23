@@ -1,6 +1,7 @@
 ---
 title: ETW for Windows
 parent: General
+grand_parent: Guides
 nav_order: 5
 last_modified_date: 2025-12-29
 ---

@@ -12,7 +12,12 @@ I share repeatable troubleshooting procedures, diagnostic techniques, and techni
 
 The goal is to explain not only which steps to run, but also what evidence they collect and when each technique is useful.
 
-## Browse the guides
+## Explore the site
+
+- [Blog]({% link blog/index.md %}) — Technical deep dives, investigation notes, and lessons learned.
+- [Guides]({% link guides/index.md %}) — Task-focused troubleshooting, diagnostics, and log collection procedures.
+
+## Browse guide topics
 
 - [General diagnostics]({% link docs/general/index.md %}) — Windows tracing, network captures, Procmon, event logs, and system diagnostics.
 - [Browsers]({% link docs/Browsers/index.md %}) — Microsoft Edge, Chrome, WebView2, browser tracing, policies, and troubleshooting.

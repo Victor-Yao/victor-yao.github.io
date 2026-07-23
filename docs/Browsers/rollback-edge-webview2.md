@@ -1,6 +1,7 @@
 ---
 title: Rollback Edge & WebView2 (MSI/GPO)
 parent: Browsers
+grand_parent: Guides
 nav_order: 23
 last_modified_date: 2026-06-06
 ---

@@ -11,6 +11,8 @@ The site is published through GitHub Pages using Jekyll and the **Just the Docs*
 - Technical explanations and lessons learned from real-world debugging.
 - Browser, Windows, IIS, and .NET troubleshooting guidance.
 
+The published site separates chronological articles under **Blog** from evergreen task-focused content under **Guides**.
+
 ## Local development
 
 Use Ruby 3.3 and the Bundler version recorded in `Gemfile.lock`.
@@ -26,7 +28,7 @@ Open `http://127.0.0.1:4000` to preview the site. Run `bundle exec jekyll build`
 
 1. Create a Markdown file under the existing category with the exact directory casing, for example `docs/Browsers/capture-something.md`.
 2. Start from `Templates/new doc.md`.
-3. Set `parent`, a unique `nav_order` within that category, and `last_modified_date`.
+3. Set `parent`, `grand_parent: Guides`, a unique `nav_order` within that category, and `last_modified_date`.
 4. Put screenshots in `assets/images/` and reference them with root-relative URLs.
 
 ## Usage and license

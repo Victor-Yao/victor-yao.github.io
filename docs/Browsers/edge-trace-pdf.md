@@ -1,6 +1,7 @@
 ---
 title: Edge Trace (PDF)
 parent: Browsers
+grand_parent: Guides
 nav_order: 18
 last_modified_date: 2026-06-06
 ---

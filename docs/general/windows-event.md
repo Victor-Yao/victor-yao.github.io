@@ -1,6 +1,7 @@
 ---
 title: Windows event log
 parent: General
+grand_parent: Guides
 nav_order: 1
 last_modified_date: 2025-12-29
 ---

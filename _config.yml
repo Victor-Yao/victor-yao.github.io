@@ -5,7 +5,7 @@ theme: just-the-docs
 
 url: https://victor-yao.github.io
 baseurl: ""
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title/
 
 # Exclude non-content directories from Jekyll build
 exclude:
@@ -54,6 +54,12 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      parent: Blog
 
 # Footer last edited timestamp
 last_edit_timestamp: true

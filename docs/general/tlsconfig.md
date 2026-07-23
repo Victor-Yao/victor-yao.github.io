@@ -1,6 +1,7 @@
 ---
 title: TLS configuration
 parent: General
+grand_parent: Guides
 nav_order: 8
 last_modified_date: 2025-12-29
 ---

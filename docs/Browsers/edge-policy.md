@@ -1,6 +1,7 @@
 ---
 title: Export Browser Policies
 parent: Browsers
+grand_parent: Guides
 nav_order: 7
 last_modified_date: 2026-07-23
 ---

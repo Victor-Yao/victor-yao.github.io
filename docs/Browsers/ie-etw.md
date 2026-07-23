@@ -1,6 +1,7 @@
 ---
 title: IE ETW
 parent: Browsers
+grand_parent: Guides
 nav_order: 14
 last_modified_date: 2026-01-01
 ---

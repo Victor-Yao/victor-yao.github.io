@@ -1,6 +1,7 @@
 ---
 title: Edge Admin Templates
 parent: Browsers
+grand_parent: Guides
 nav_order: 21
 last_modified_date: 2026-06-06
 ---

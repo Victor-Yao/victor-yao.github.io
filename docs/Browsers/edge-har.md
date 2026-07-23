@@ -1,6 +1,7 @@
 ---
 title: Edge HAR
 parent: Browsers
+grand_parent: Guides
 nav_order: 1
 last_modified_date: 2026-01-01
 ---

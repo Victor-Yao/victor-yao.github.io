@@ -1,6 +1,7 @@
 ---
 title: Edge Tracing
 parent: Browsers
+grand_parent: Guides
 nav_order: 17
 last_modified_date: 2026-06-06
 ---

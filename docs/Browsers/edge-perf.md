@@ -1,6 +1,7 @@
 ---
 title: Edge Perf
 parent: Browsers
+grand_parent: Guides
 nav_order: 3
 last_modified_date: 2026-01-01
 ---

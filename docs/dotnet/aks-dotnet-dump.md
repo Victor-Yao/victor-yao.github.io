@@ -1,6 +1,7 @@
 ---
 title: AKS .NET Memory Dump
 parent: .NET
+grand_parent: Guides
 nav_order: 2
 last_modified_date: 2026-06-06
 ---

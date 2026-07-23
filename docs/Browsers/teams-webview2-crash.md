@@ -1,6 +1,7 @@
 ---
 title: Teams WebView2 Crash
 parent: Browsers
+grand_parent: Guides
 nav_order: 22
 last_modified_date: 2026-06-06
 ---

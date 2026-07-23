@@ -1,6 +1,7 @@
 ---
 title: Edge Histograms (PDF)
 parent: Browsers
+grand_parent: Guides
 nav_order: 19
 last_modified_date: 2026-06-06
 ---

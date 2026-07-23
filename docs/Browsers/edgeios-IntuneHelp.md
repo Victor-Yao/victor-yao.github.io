@@ -1,6 +1,7 @@
 ---
 title: Intune Help at Edge iOS
 parent: Browsers
+grand_parent: Guides
 nav_order: 12
 last_modified_date: 2026-01-01
 ---

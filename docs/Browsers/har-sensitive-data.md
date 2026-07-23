@@ -1,6 +1,7 @@
 ---
 title: HAR with Sensitive Data
 parent: Browsers
+grand_parent: Guides
 nav_order: 20
 last_modified_date: 2026-06-06
 ---

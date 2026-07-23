@@ -1,6 +1,7 @@
 ---
 title: Procmon trace
 parent: General
+grand_parent: Guides
 nav_order: 3
 last_modified_date: 2025-12-29
 ---

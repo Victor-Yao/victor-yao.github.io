@@ -1,6 +1,7 @@
 ---
 title: Edge Crash
 parent: Browsers
+grand_parent: Guides
 nav_order: 6
 last_modified_date: 2025-12-31
 ---
