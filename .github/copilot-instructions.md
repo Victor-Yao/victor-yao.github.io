@@ -21,6 +21,9 @@ bundle install
 # Build exactly as the CI validation job does.
 bundle exec jekyll build
 
+# Validate front matter, navigation ordering, images, and Liquid links.
+python scripts/validate_content.py
+
 # Preview locally with automatic rebuilds.
 bundle exec jekyll serve --livereload
 ```
@@ -71,4 +74,4 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
 - Keep dependency versions in `Gemfile` and `Gemfile.lock` aligned; Dependabot manages direct Bundler dependencies and GitHub Actions updates.
 - Changes to `_config.yml` affect every page. Preserve the configured default layout, callout names, search, edit links, and `baseurl` behavior unless the task explicitly changes site-wide behavior.
 - When editing `_includes/nav_footer_custom.html`, retain both modern `MediaQueryList.addEventListener` handling and the `addListener` fallback used for older browsers.
-- Validate documentation, front matter, Liquid links, and theme changes with `bundle exec jekyll build` before finishing.
+- Run `python scripts/validate_content.py` and `bundle exec jekyll build` before finishing content or site-wide changes.

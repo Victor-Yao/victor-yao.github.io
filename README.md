@@ -19,10 +19,11 @@ Use Ruby 3.3 and the Bundler version recorded in `Gemfile.lock`.
 
 ```bash
 bundle install
+python scripts/validate_content.py
 bundle exec jekyll serve --livereload
 ```
 
-Open `http://127.0.0.1:4000` to preview the site. Run `bundle exec jekyll build` before committing site-wide changes.
+Open `http://127.0.0.1:4000` to preview the site. Run the content validator and `bundle exec jekyll build` before committing site-wide changes.
 
 ## Adding a guide
 
