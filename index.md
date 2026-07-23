@@ -26,10 +26,10 @@ The goal is to explain not only which steps to run, but also what evidence they 
 
 ## Featured troubleshooting guides
 
-- [Capture a Procmon trace]({% link docs/general/procmon.md %})
-- [Export a browser HAR file]({% link docs/Browsers/edge-har.md %})
-- [Capture an IIS memory dump with DebugDiag]({% link docs/IIS/iisdebugdiag.md %})
-- [Capture a .NET memory dump in AKS]({% link docs/dotnet/aks-dotnet-dump.md %})
+- [Capture a Procmon Trace]({% link docs/general/procmon.md %})
+- [Capture a HAR File in Microsoft Edge]({% link docs/Browsers/edge-har.md %})
+- [Collect IIS Dumps with DebugDiag]({% link docs/IIS/iisdebugdiag.md %})
+- [Capture a .NET Memory Dump in AKS]({% link docs/dotnet/aks-dotnet-dump.md %})
 
 ## What to expect
 
