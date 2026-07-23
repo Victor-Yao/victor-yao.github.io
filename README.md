@@ -31,6 +31,13 @@ Open `http://127.0.0.1:4000` to preview the site. Run `bundle exec jekyll build`
 3. Set `parent`, `grand_parent: Guides`, a unique `nav_order` within that category, and `last_modified_date`.
 4. Put screenshots in `assets/images/` and reference them with root-relative URLs.
 
+## Adding a blog post
+
+1. Copy `Templates/new post.md` to `_posts/YYYY-MM-DD-lowercase-title.md`.
+2. Set a publication `date`, a concise `description`, and relevant `tags`.
+3. Keep `<!--more-->` after the introductory excerpt used by the Blog index.
+4. Use primary or official references for technical claims where possible.
+
 ## Usage and license
 
 The site includes a public [disclaimer and data privacy guide](disclaimer.md) for diagnostic artifacts and potentially destructive procedures.

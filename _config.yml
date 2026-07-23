@@ -6,6 +6,7 @@ theme: just-the-docs
 url: https://victor-yao.github.io
 baseurl: ""
 permalink: /blog/:year/:month/:day/:title/
+excerpt_separator: "<!--more-->"
 
 # Exclude non-content directories from Jekyll build
 exclude:
@@ -54,12 +55,15 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+      content_type: guide
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "default"
       parent: Blog
+      nav_exclude: true
+      content_type: article
 
 # Footer last edited timestamp
 last_edit_timestamp: true

@@ -1,7 +1,6 @@
 ---
 title: Blog
 nav_order: 1
-has_children: true
 description: Technical deep dives, investigation notes, and lessons learned.
 permalink: /blog/
 ---

@@ -2,9 +2,9 @@
 
 ## Repository purpose and architecture
 
-- This repository is a troubleshooting knowledge base published through GitHub Pages. It uses Jekyll 4.4.1 with the Just the Docs 0.12.0 theme.
-- `index.md` is the site landing page. It links to each top-level documentation category with Jekyll `{% link ... %}` tags.
-- Content lives under `docs/<category>/`. Each category has an `index.md` parent page, and the other Markdown files are its Just the Docs child pages.
+- This repository is a personal technical site published through GitHub Pages. It uses Jekyll 4.4.1 with the Just the Docs 0.12.0 theme.
+- `index.md` is the site landing page. The two main content entry points are `blog/index.md` for chronological articles and `guides/index.md` for evergreen troubleshooting content.
+- Blog articles use Jekyll posts under `_posts/`. Guides live under `docs/<category>/`; each category is nested under the `Guides` parent page.
 - `_config.yml` controls the theme, search, callout types, default layout, edit links, and footer timestamps.
 - `_includes/nav_footer_custom.html` is the only custom theme behavior. It follows the operating system light/dark preference through `jtd.setTheme`.
 - Screenshots and other document images live in `assets/images/`. Supporting troubleshooting scripts live in `assets/Scripts/` and should stay synchronized with the guides that reference them.
@@ -31,21 +31,29 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
 ## Documentation and navigation conventions
 
 - Preserve the existing category directory casing: `docs/Browsers`, `docs/IIS`, `docs/dotnet`, and `docs/general`. Local Windows paths are case-insensitive, but the GitHub Pages build runs on Linux.
-- Every child page uses this front matter shape:
+- Every guide page uses this front matter shape:
 
   ```yaml
   ---
   title: Page Title
   parent: Browsers
+  grand_parent: Guides
   nav_order: 24
+  description: One concise sentence describing the guide.
+  tags: [edge, policy]
   last_modified_date: 2026-07-23
+  last_verified_date: 2026-07-23
+  tested_on: Windows 11 and Microsoft Edge Stable
   ---
   ```
 
 - `parent` must exactly match the category index `title` (`Browsers`, `IIS`, `.NET`, or `General`).
+- All guide pages use `grand_parent: Guides`. Category `index.md` files use `parent: Guides` and `has_children: true`.
 - Keep `nav_order` unique within a parent. Existing child-page orders are contiguous, so inspect siblings and use the next or intentionally repositioned integer.
 - Update `last_modified_date` in `YYYY-MM-DD` format whenever a page changes.
-- Category `index.md` files have no `parent`; they set `has_children: true`. When adding or renaming a top-level category, also update the manually maintained links in the root `index.md`.
+- Set `last_verified_date` and `tested_on` only after actually exercising the documented procedure in that environment.
+- Blog posts use `_posts/YYYY-MM-DD-lowercase-title.md`, require `date`, `description`, and `tags`, and use the `<!--more-->` separator after the introductory excerpt. Posts are listed on `blog/index.md` and excluded from the sidebar.
+- When adding or renaming a guide category, update both `guides/index.md` and the manually maintained guide links in the root `index.md`.
 - Start document content at `##`; the page title comes from front matter. Guides favor concise numbered procedures, copy/paste-ready commands, and language-tagged fenced code blocks.
 - Use Jekyll links for repository pages, for example `{% link docs/Browsers/index.md %}`.
 - Reference images from the site root, for example `![Descriptive alt text](/assets/images/example.png)`, and add the corresponding file under `assets/images/`.
@@ -56,7 +64,7 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
   > Warning text.
   ```
 
-- `Templates/new doc.md` is a starter only and is excluded from the rendered site. Publish new content under the appropriate `docs/` category.
+- `Templates/new doc.md` and `Templates/new post.md` are starters only and are excluded from the rendered site. Publish guides under `docs/` and articles under `_posts/`.
 
 ## Site-wide changes
 
