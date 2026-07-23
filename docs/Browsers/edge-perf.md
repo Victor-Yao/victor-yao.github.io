@@ -3,6 +3,8 @@ title: Edge Perf
 parent: Browsers
 grand_parent: Guides
 nav_order: 3
+description: "Record and export a Microsoft Edge DevTools performance profile."
+tags: [edge, performance, devtools]
 last_modified_date: 2026-01-01
 ---
 

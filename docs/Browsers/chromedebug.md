@@ -3,6 +3,8 @@ title: Chrome_debug
 parent: Browsers
 grand_parent: Guides
 nav_order: 5
+description: "Enable Microsoft Edge command-line logging and collect chrome_debug.log."
+tags: [edge, logging, chromium]
 last_modified_date: 2025-12-30
 ---
 

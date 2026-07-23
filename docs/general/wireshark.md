@@ -3,6 +3,8 @@ title: Wireshark
 parent: General
 grand_parent: Guides
 nav_order: 7
+description: "Capture and save a packet trace with Wireshark."
+tags: [networking, packet-capture, wireshark]
 last_modified_date: 2025-12-29
 ---
 

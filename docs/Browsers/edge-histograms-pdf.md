@@ -3,6 +3,8 @@ title: Edge Histograms (PDF)
 parent: Browsers
 grand_parent: Guides
 nav_order: 19
+description: "Collect Microsoft Edge histogram data for encrypted PDF and MIP troubleshooting."
+tags: [edge, pdf, diagnostics]
 last_modified_date: 2026-06-06
 ---
 

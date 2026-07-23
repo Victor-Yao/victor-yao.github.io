@@ -3,6 +3,8 @@ title: PerfView
 parent: IIS
 grand_parent: Guides
 nav_order: 9
+description: "Collect CPU, memory, and ETW performance traces with PerfView."
+tags: [iis, performance, perfview]
 last_modified_date: 2026-06-06
 ---
 

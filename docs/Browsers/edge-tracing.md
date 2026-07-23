@@ -3,6 +3,8 @@ title: Edge Tracing
 parent: Browsers
 grand_parent: Guides
 nav_order: 17
+description: "Capture low-level Microsoft Edge traces with the built-in Chromium tracing tool."
+tags: [edge, tracing, chromium]
 last_modified_date: 2026-06-06
 ---
 

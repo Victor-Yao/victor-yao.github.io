@@ -2,6 +2,8 @@
 title: IIS
 parent: Guides
 nav_order: 3
+description: "Troubleshooting, tracing, configuration, and dump collection guides for IIS."
+tags: [iis, diagnostics]
 has_children: true
 last_modified_date: 2026-01-01
 ---

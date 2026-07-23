@@ -3,6 +3,8 @@ title: Diagnostic at Edge iOS
 parent: Browsers
 grand_parent: Guides
 nav_order: 11
+description: "Collect offline diagnostic data from Microsoft Edge for iOS."
+tags: [edge, ios, diagnostics]
 last_modified_date: 2025-12-31
 ---
 

@@ -3,6 +3,8 @@ title: memory dump with DebugDiag
 parent: IIS
 grand_parent: Guides
 nav_order: 2
+description: "Configure DebugDiag rules to collect IIS crash or exception memory dumps."
+tags: [iis, memory-dump, debugdiag]
 last_modified_date: 2026-01-01
 ---
 ## Using DebugDiag to collect memory dump for IIS

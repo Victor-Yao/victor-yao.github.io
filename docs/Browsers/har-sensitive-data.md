@@ -3,6 +3,8 @@ title: HAR with Sensitive Data
 parent: Browsers
 grand_parent: Guides
 nav_order: 20
+description: "Configure DevTools to include authentication headers and cookies in a HAR capture."
+tags: [har, authentication, sensitive-data]
 last_modified_date: 2026-06-06
 ---
 

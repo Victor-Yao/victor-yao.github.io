@@ -3,6 +3,8 @@ title: Fiddler
 parent: Browsers
 grand_parent: Guides
 nav_order: 13
+description: "Configure Fiddler Classic to decrypt HTTPS traffic and capture browser requests."
+tags: [fiddler, networking, http]
 last_modified_date: 2026-01-01
 ---
 

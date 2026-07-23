@@ -3,6 +3,8 @@ title: Edge Console
 parent: Browsers
 grand_parent: Guides
 nav_order: 2
+description: "Save Microsoft Edge DevTools console output for troubleshooting."
+tags: [edge, devtools, logging]
 last_modified_date: 2025-12-30
 ---
 

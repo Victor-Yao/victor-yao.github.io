@@ -3,6 +3,8 @@ title: Procmon trace with size limit
 parent: General
 grand_parent: Guides
 nav_order: 4
+description: "Capture a Process Monitor trace with a ring buffer or maximum file size."
+tags: [windows, procmon, tracing]
 last_modified_date: 2025-12-29
 ---
 

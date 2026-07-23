@@ -3,6 +3,8 @@ title: Edge Crash
 parent: Browsers
 grand_parent: Guides
 nav_order: 6
+description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."
+tags: [edge, crash, memory-dump]
 last_modified_date: 2025-12-31
 ---
 

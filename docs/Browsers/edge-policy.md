@@ -3,6 +3,8 @@ title: Export Browser Policies
 parent: Browsers
 grand_parent: Guides
 nav_order: 7
+description: "Export applied Edge and Chrome policies to JSON and Windows registry files."
+tags: [edge, chrome, policy]
 last_modified_date: 2026-07-23
 ---
 

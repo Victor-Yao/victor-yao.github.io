@@ -3,6 +3,8 @@ title: Procmon trace
 parent: General
 grand_parent: Guides
 nav_order: 3
+description: "Capture and save a Process Monitor trace for file, registry, process, and network activity."
+tags: [windows, procmon, tracing]
 last_modified_date: 2025-12-29
 ---
 

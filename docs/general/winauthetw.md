@@ -3,6 +3,8 @@ title: ETW for Windows
 parent: General
 grand_parent: Guides
 nav_order: 5
+description: "Capture ETW traces for Windows authentication troubleshooting."
+tags: [windows, authentication, etw]
 last_modified_date: 2025-12-29
 ---
 

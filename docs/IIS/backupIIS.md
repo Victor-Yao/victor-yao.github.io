@@ -3,6 +3,8 @@ title: Backup IIS
 parent: IIS
 grand_parent: Guides
 nav_order: 6
+description: "Back up, list, and restore IIS configuration with AppCmd."
+tags: [iis, configuration, backup]
 last_modified_date: 2026-01-01
 ---
 

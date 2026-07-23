@@ -3,6 +3,8 @@ title: netmon trace
 parent: General
 grand_parent: Guides
 nav_order: 6
+description: "Capture and save a network trace with Microsoft Network Monitor."
+tags: [windows, networking, packet-capture]
 last_modified_date: 2025-12-29
 ---
 

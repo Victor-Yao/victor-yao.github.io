@@ -3,6 +3,8 @@ title: IIS Config Auditing
 parent: IIS
 grand_parent: Guides
 nav_order: 10
+description: "Enable IIS configuration auditing to identify who changed settings and what was modified."
+tags: [iis, configuration, auditing]
 last_modified_date: 2026-06-06
 ---
 

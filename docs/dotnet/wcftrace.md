@@ -3,6 +3,8 @@ title: Enable WCF trace
 parent: .NET
 grand_parent: Guides
 nav_order: 1
+description: "Enable WCF message and activity tracing and collect the generated trace log."
+tags: [dotnet, wcf, tracing]
 last_modified_date: 2026-01-05
 ---
 

@@ -3,6 +3,8 @@ title: Windows Kernel Dumps
 parent: General
 grand_parent: Guides
 nav_order: 9
+description: "Configure Windows to capture kernel or complete memory dumps for operating system failures."
+tags: [windows, memory-dump, kernel]
 last_modified_date: 2026-06-06
 ---
 

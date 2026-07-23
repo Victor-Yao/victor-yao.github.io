@@ -3,6 +3,8 @@ title: Edge HAR
 parent: Browsers
 grand_parent: Guides
 nav_order: 1
+description: "Capture and export an HTTP Archive network trace from Microsoft Edge DevTools."
+tags: [edge, har, networking]
 last_modified_date: 2026-01-01
 ---
 

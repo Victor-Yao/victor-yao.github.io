@@ -3,6 +3,8 @@ title: IE ETW
 parent: Browsers
 grand_parent: Guides
 nav_order: 14
+description: "Capture an ETW trace for Internet Explorer with the provided script."
+tags: [internet-explorer, etw, tracing]
 last_modified_date: 2026-01-01
 ---
 

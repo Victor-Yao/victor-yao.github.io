@@ -3,6 +3,8 @@ title: Freb
 parent: IIS
 grand_parent: Guides
 nav_order: 4
+description: "Enable IIS Failed Request Tracing for requests that return selected HTTP status codes."
+tags: [iis, freb, tracing]
 last_modified_date: 2026-01-01
 ---
 

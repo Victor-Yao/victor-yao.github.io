@@ -3,6 +3,8 @@ title: Freb ARR
 parent: IIS
 grand_parent: Guides
 nav_order: 5
+description: "Capture IIS Failed Request Tracing for Application Request Routing and URL Rewrite issues."
+tags: [iis, freb, arr]
 last_modified_date: 2026-01-01
 ---
 

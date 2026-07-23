@@ -3,6 +3,8 @@ title: Rollback Edge & Webview2 version
 parent: Browsers
 grand_parent: Guides
 nav_order: 9
+description: "Configure Group Policy to roll Microsoft Edge and WebView2 back to a target version."
+tags: [edge, webview2, group-policy]
 last_modified_date: 2026-02-01
 ---
 

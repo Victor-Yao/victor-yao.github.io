@@ -3,6 +3,8 @@ title: Windows event log
 parent: General
 grand_parent: Guides
 nav_order: 1
+description: "Export Windows Application and System event logs as EVTX files."
+tags: [windows, event-logs, diagnostics]
 last_modified_date: 2025-12-29
 ---
 

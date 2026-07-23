@@ -3,6 +3,8 @@ title: IIS Basics
 parent: IIS
 grand_parent: Guides
 nav_order: 1
+description: "Locate key IIS configuration and log files used during basic troubleshooting."
+tags: [iis, configuration, logging]
 last_modified_date: 2026-01-21
 ---
 

@@ -3,6 +3,8 @@ title: Intune Help at Edge iOS
 parent: Browsers
 grand_parent: Guides
 nav_order: 12
+description: "Collect Intune help and support data from Microsoft Edge for iOS."
+tags: [edge, ios, intune]
 last_modified_date: 2026-01-01
 ---
 

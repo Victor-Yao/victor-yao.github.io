@@ -3,6 +3,8 @@ title: Edge Trace (PDF)
 parent: Browsers
 grand_parent: Guides
 nav_order: 18
+description: "Capture a focused Chromium trace for PDF rendering and font-mapping issues in Edge."
+tags: [edge, pdf, tracing]
 last_modified_date: 2026-06-06
 ---
 
