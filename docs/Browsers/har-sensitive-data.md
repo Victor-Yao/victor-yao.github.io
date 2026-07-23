@@ -1,5 +1,5 @@
 ---
-title: HAR with Sensitive Data
+title: Capture Authentication Data in a HAR File
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 20

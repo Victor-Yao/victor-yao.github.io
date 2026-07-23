@@ -1,5 +1,5 @@
 ---
-title: Edge HAR
+title: Capture a HAR File in Microsoft Edge
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 1

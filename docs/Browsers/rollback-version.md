@@ -1,5 +1,5 @@
 ---
-title: Rollback Edge & Webview2 version
+title: Configure Edge and WebView2 Rollback Policies
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 9

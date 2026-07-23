@@ -1,5 +1,5 @@
 ---
-title: SmartScreen Checklist
+title: Collect Microsoft Defender SmartScreen Diagnostics
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 8

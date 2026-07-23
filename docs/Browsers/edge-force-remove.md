@@ -1,5 +1,5 @@
 ---
-title: Clean Cache & Force Remove Edge
+title: Repair or Force-Remove Microsoft Edge
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 16

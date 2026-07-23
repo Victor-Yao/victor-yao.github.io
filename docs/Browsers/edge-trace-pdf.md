@@ -1,5 +1,5 @@
 ---
-title: Edge Trace (PDF)
+title: Capture an Edge Trace for PDF Issues
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 18

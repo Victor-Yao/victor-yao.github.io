@@ -1,5 +1,5 @@
 ---
-title: Intune Help at Edge iOS
+title: Collect Intune Diagnostics from Edge for iOS
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 12

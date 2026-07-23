@@ -1,5 +1,5 @@
 ---
-title: Edge NetExport
+title: Capture a Microsoft Edge NetExport Log
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 4

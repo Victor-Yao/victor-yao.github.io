@@ -1,5 +1,5 @@
 ---
-title: Edge Admin Templates
+title: Deploy Microsoft Edge Administrative Templates
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 21

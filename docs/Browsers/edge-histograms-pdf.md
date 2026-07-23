@@ -1,5 +1,5 @@
 ---
-title: Edge Histograms (PDF)
+title: Collect Edge Histograms for PDF Issues
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 19

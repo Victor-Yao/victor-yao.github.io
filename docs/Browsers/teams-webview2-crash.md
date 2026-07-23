@@ -1,5 +1,5 @@
 ---
-title: Teams WebView2 Crash
+title: Diagnose Microsoft Teams WebView2 Crashes
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 22

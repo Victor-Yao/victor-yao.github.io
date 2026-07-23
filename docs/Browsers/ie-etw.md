@@ -1,5 +1,5 @@
 ---
-title: IE ETW
+title: Capture an Internet Explorer ETW Trace
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 14

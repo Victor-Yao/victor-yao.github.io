@@ -1,5 +1,5 @@
 ---
-title: Edge Perf
+title: Capture an Edge Performance Profile
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 3

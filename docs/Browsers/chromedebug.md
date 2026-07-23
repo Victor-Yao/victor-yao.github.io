@@ -1,5 +1,5 @@
 ---
-title: Chrome_debug
+title: Collect Microsoft Edge Debug Logs
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 5

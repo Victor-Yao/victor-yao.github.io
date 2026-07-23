@@ -1,5 +1,5 @@
 ---
-title: Fiddler
+title: Capture Browser Traffic with Fiddler
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 13

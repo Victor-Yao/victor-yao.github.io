@@ -1,5 +1,5 @@
 ---
-title: Rollback Edge & WebView2 (MSI/GPO)
+title: Roll Back Edge and WebView2 with MSI Packages
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 23

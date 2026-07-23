@@ -1,5 +1,5 @@
 ---
-title: Edge Tracing
+title: Capture a Microsoft Edge Trace
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 17

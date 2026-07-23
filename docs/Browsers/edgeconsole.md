@@ -1,5 +1,5 @@
 ---
-title: Edge Console
+title: Export Edge DevTools Console Logs
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 2

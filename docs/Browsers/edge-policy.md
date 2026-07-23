@@ -1,5 +1,5 @@
 ---
-title: Export Browser Policies
+title: Export Browser Policies and Registry Settings
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 7

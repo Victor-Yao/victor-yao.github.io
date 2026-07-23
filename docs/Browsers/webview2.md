@@ -1,5 +1,5 @@
 ---
-title: Edge WebView2
+title: Inspect the Installed WebView2 Runtime
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 10
