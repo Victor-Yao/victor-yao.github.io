@@ -3,42 +3,93 @@ title: Inspect the Installed WebView2 Runtime
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 10
-description: "Identify installed WebView2 Runtime versions and related registry information."
+description: "Identify installed Evergreen WebView2 Runtime versions without changing servicing registry values."
 tags: [webview2, runtime, registry]
-last_modified_date: 2026-01-01
+last_modified_date: 2026-07-24
 ---
 
-## Edge WebView2 Runtime
+## Inspect the installed WebView2 Runtime
 
-### Get information about WebView2 Runtime
+Use the official Microsoft Edge Update client registration to determine whether
+the Evergreen WebView2 Runtime is installed and which version is registered.
+The checks in this guide are read-only.
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+{: .warning }
+> Do not change `SystemComponent`, `pv`, or other WebView2 and Edge Update
+> registry values to expose the Runtime in Programs and Features. WebView2 is a
+> shared component, and changing its servicing metadata can interfere with
+> application maintenance and updates.
 
-2. Open **Power Shell** as an administrator, then go to `toolkit`.
+### Scope
 
-3. Run `.\GetInstalledWV2.ps1` and review the output similar with below:
+- The registry checks detect the **Evergreen WebView2 Runtime**.
+- A Fixed Version Runtime is stored with the application and is not registered
+  through these Evergreen registry keys.
+- Run the per-user check in the affected user's Windows session.
+- Administrator rights are not required for these read-only queries.
 
-   ```powershell
-      ~toolkit> .\GetInstalledWV2.ps1
-      ==========================================================================================
-      [1] Microsoft Edge WebView2 Runtime
-      Version         : 143.0.3650.96
-      SystemComponent : 1
-      Registry Path   : HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Microsoft EdgeWebView
-      ==========================================================================================
-   ```
+### Use PowerShell
 
-### Show WebView2 Runtime in the installed programs
+Run the following commands in PowerShell:
 
-1. Open **Registry Editor**, then go to the registry path returned by **GetInstalledWV2.ps1**.
-2. Set the `SystemComponent` value to `0`.
-3. Press `Win+R`, run `appwiz.cpl`, then search for `WebView2`.
+```powershell
+$clientId = '{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}'
 
-   ![WebView2 shown in Programs and Features](/assets/images/webview21.png)
+$machinePath = if ([Environment]::Is64BitOperatingSystem) {
+    "HKLM:\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\$clientId"
+} else {
+    "HKLM:\SOFTWARE\Microsoft\EdgeUpdate\Clients\$clientId"
+}
 
-{: .note }
-> For more information, see:
->
-> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq)
-> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/browser-features?source=recommendations)
-> - [https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution?source=recommendations&tabs=dotnetcsharp#detect-if-a-webview2-runtime-is-already-installed)
+Get-ItemProperty -Path $machinePath -Name pv -ErrorAction SilentlyContinue |
+    Select-Object @{Name='Scope'; Expression={'Per-machine'}}, @{Name='Version'; Expression={$_.pv}}
+
+Get-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\EdgeUpdate\Clients\$clientId" -Name pv -ErrorAction SilentlyContinue |
+    Select-Object @{Name='Scope'; Expression={'Per-user'}}, @{Name='Version'; Expression={$_.pv}}
+```
+
+At least one `pv` value must exist and contain a version greater than
+`0.0.0.0`. No output means that an Evergreen Runtime registration was not found
+for the machine or current user.
+
+The repository also contains a read-only
+[GetInstalledWV2.ps1 script]({% link assets/Scripts/GetInstalledWV2.ps1 %})
+that performs the same checks and displays the matching registry path.
+
+Example output:
+
+```text
+Scope       Version        RegistryPath
+-----       -------        ------------
+Per-machine 150.0.4078.48  HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+```
+
+### Inspect the registry manually
+
+On 64-bit Windows, check:
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+HKEY_CURRENT_USER\Software\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+```
+
+On 32-bit Windows, use this per-machine path instead:
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}
+```
+
+Read the `pv` value only. Do not modify or export unrelated Edge Update client
+registrations.
+
+### Application-level detection
+
+WebView2 application installers should use
+`GetAvailableCoreWebView2BrowserVersionString` to detect an available Runtime
+instead of relying only on an uninstall entry or Programs and Features.
+
+## References
+
+- [Detect whether the WebView2 Runtime is installed](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution#detect-if-a-webview2-runtime-is-already-installed)
+- [WebView2 Runtime distribution](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)
+- [Evergreen versus Fixed Version distribution](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/evergreen-vs-fixed-version)

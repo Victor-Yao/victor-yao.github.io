@@ -1,27 +1,37 @@
-$paths = @(
-  "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*",
-  "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*",
-  "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+$clientId = '{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}'
+
+$machinePath = if ([Environment]::Is64BitOperatingSystem) {
+    "HKLM:\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\$clientId"
+}
+else {
+    "HKLM:\SOFTWARE\Microsoft\EdgeUpdate\Clients\$clientId"
+}
+
+$locations = @(
+    @{
+        Scope = 'Per-machine'
+        Path  = $machinePath
+    }
+    @{
+        Scope = 'Per-user'
+        Path  = "HKCU:\SOFTWARE\Microsoft\EdgeUpdate\Clients\$clientId"
+    }
 )
 
-$items = Get-ItemProperty $paths -ErrorAction SilentlyContinue |
-  Where-Object { $_.DisplayName -match "WebView2|Edge WebView2" } |
-  Select-Object @{
-      Name="RegistryPath"; Expression={ $_.PSPath -replace '^Microsoft\.PowerShell\.Core\\Registry::','' }
-    }, DisplayName, DisplayVersion, SystemComponent
-
-if (-not $items) {
-  Write-Host "No WebView2 / Edge WebView2 uninstall entries were found." -ForegroundColor Yellow
-  return
+$runtimes = foreach ($location in $locations) {
+    $item = Get-ItemProperty -Path $location.Path -ErrorAction SilentlyContinue
+    if ($item.pv -and $item.pv -ne '0.0.0.0') {
+        [pscustomobject]@{
+            Scope        = $location.Scope
+            Version      = $item.pv
+            RegistryPath = $item.PSPath -replace '^Microsoft\.PowerShell\.Core\\Registry::', ''
+        }
+    }
 }
 
-$i = 0
-$items | ForEach-Object {
-  $i++
-  Write-Host ("=" * 90)
-  Write-Host ("[{0}] {1}" -f $i, $_.DisplayName)
-  Write-Host ("Version         : {0}" -f $_.DisplayVersion)
-  Write-Host ("SystemComponent : {0}" -f $_.SystemComponent)
-  Write-Host ("Registry Path   : {0}" -f $_.RegistryPath)
+if (-not $runtimes) {
+    Write-Warning 'No installed Evergreen WebView2 Runtime was found for this machine or user.'
+    return
 }
-Write-Host ("=" * 90)
+
+$runtimes | Format-Table -AutoSize
