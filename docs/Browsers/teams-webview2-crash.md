@@ -1,97 +1,113 @@
 ---
-title: Diagnose Microsoft Teams WebView2 Crashes
+title: Collect Microsoft Teams WebView2 Crash Diagnostics
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 22
-description: "Collect and analyze Microsoft Teams WebView2 crash data with dumps and debugging tools."
+description: "Collect supported Teams, Windows, and existing WebView2 crash data without changing Crashpad permissions."
 tags: [teams, webview2, crash]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-07-24
 ---
 
-## Microsoft Teams WebView2 crash analysis and debugging
+## Collect Microsoft Teams WebView2 crash diagnostics
 
-This guide describes how to enable full heap dumps and engineering tools to troubleshoot WebView2 crashes within Microsoft Teams.
+Use this guide when the Microsoft Teams desktop client crashes or closes
+because of a suspected WebView2 failure.
 
-### Environment
+{: .warning }
+> Do not deny delete permissions on the Teams Crashpad directory, add
+> system-wide heap-dump environment variables, enable internal Teams engineering
+> menus, or deliberately trigger `edge://crash`. These unsupported changes can
+> interfere with Teams updates, normal crash handling, and other WebView2
+> applications.
 
-- **Software**: Microsoft Teams (Work or School)
-- **Engine**: Microsoft Edge WebView2 Runtime
-- **OS**: Windows 10 / 11
+{: .important }
+> Teams logs and memory dumps can contain tenant names, user identifiers,
+> meeting and chat metadata, URLs, tokens, and in-memory content. Collect only
+> the required files and use an approved secure transfer channel.
 
-### Phase 1: Enable system-wide heap dumps
+### 1. Record the incident
 
-1. Press `Win + R`, type `sysdm.cpl`, and press **Enter**.
+Before restarting Teams, record:
 
-2. Go to the **Advanced** tab and select **Environment Variables**.
+- The local date and time of the crash.
+- The corresponding UTC time. Teams diagnostic logs use UTC.
+- The action being performed when the crash occurred.
+- The Teams version and whether the problem affects one or multiple users.
+- Whether Teams restarted automatically or remained closed.
 
-3. Under **System variables**, select **New** and add the following entry:
+### 2. Collect Teams support files
 
-   - **Variable name**: `ENABLE_HEAP_DUMPS`
-   - **Variable value**: `1`
+Collect the files as soon as possible after the crash:
 
-4. Select **OK** to save the changes.
+1. Select the Teams icon in the Windows system tray, then select **Collect
+   support files**.
+2. Alternatively, press `Ctrl + Alt + Shift + 1`.
+3. Wait until the **Downloading web logs** banner disappears.
+4. Open the user's **Downloads** folder.
+5. Keep the generated web-log archive and compress the Microsoft Teams support
+   log files before transfer.
 
-### Phase 2: Prevent Crashpad from deleting dump files
+When multiple accounts are signed in, the output can contain diagnostic data
+for every signed-in account.
 
-By default, the Crashpad process may delete dump files after generation or upload. Follow these steps to lock the directory:
+### 3. Export the relevant Windows events
 
-1. Go to `%LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\EBWebView\Crashpad\reports`.
+1. Open **Event Viewer**.
+2. Go to **Windows Logs > Application**.
+3. Filter the log to the incident window.
+4. Include application crash and Windows Error Reporting events, commonly event
+   IDs `1000` and `1001`.
+5. Select **Save Filtered Log File As...** and save the result as
+   `Teams-crash-Application.evtx`.
 
-2. Right-click the `reports` folder and select **Properties**.
+Do not copy the live `Application.evtx` file directly from
+`%SystemRoot%\System32\Winevt\Logs`.
 
-3. Go to the **Security** tab and select **Advanced**.
+### 4. Record the WebView2 Runtime version
 
-4. Select **Add**, then select **Select a principal**.
+Follow
+[Inspect the Installed WebView2 Runtime]({% link docs/Browsers/webview2.md %})
+and record the installed Evergreen Runtime version without changing any
+registry values.
 
-5. Type `Everyone` and select **OK**.
+### 5. Copy an existing Crashpad dump when available
 
-6. Change the **Type** to **Deny**.
+For the current Teams package, existing Crashpad reports can appear under:
 
-7. Select **Show advanced permissions** and check the following:
+```text
+%LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\EBWebView\Crashpad\reports
+```
 
-   - `Delete subfolders and files`
-   - `Delete`
+The path can change between Teams versions. If the directory exists and already
+contains a dump from the incident time, copy the file to the diagnostic package
+before restarting or updating Teams.
 
-8. Select **OK** on all windows to apply the restriction.
+{: .warning }
+> Do not change the directory owner or access control list and do not add a
+> **Deny** entry for `Everyone`. If no dump exists, continue with the Teams and
+> event logs rather than forcing a test crash.
 
-### Phase 3: Enable Teams engineering tools
+### 6. Escalate dump collection when required
 
-1. Press `Win + R`, paste the following command, and press **Enter**:
+If Microsoft Support requires a full dump that Teams did not retain, use the
+current, support-provided collection procedure for the affected Teams and
+WebView2 versions. The instructions must identify the exact process, dump
+trigger, output directory, dump limit, and cleanup steps.
 
-   ```text
-   notepad %localappdata%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\configuration.json
-   ```
+Do not leave a persistent system-wide dump configuration enabled after the
+collection.
 
-2. Add or modify the configuration to include the following JSON content:
+### 7. Package and clean up
 
-   ```json
-   {"core/devMenuEnabled": true}
-   ```
+1. Include the incident time, Teams version, WebView2 version, Teams support
+   files, filtered Application event log, and any existing matching dump.
+2. Transfer the package through the approved support channel.
+3. Delete temporary local copies when the required retention period ends.
 
-3. Save the file and close Notepad.
+This procedure does not change Teams configuration, Crashpad permissions, or
+system-wide dump settings, so no system rollback is required.
 
-4. **Restart the operating system** to ensure all environment variables and configurations take effect.
+## References
 
-### Phase 4: Verification and data collection
-
-1. **Verify dump generation**
-
-   Launch Teams and sign in. Enter `edge://crash` in the Engineering tool from a chat or the search bar (or trigger a crash via the DevTools console). Check whether a `.dmp` file is generated in `%LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\EBWebView\Crashpad\reports`.
-
-   {: .important }
-   > If no dump file appears, re-verify the environment variables and directory permissions set in Phase 1 and Phase 2.
-
-2. **Clean up**
-
-   Manually delete any test dump files created during the verification step.
-
-3. **Reproduce and capture**
-
-   Wait for the actual issue to occur. Once the crash happens, collect the following data:
-
-   {: .note }
-   > **Required logs for submission:**
-   >
-   > - **Memory dumps**: All files inside the `\Crashpad\reports` path mentioned above.
-   > - **Teams client logs**: Standard diagnostic logs captured via `Ctrl + Alt + Shift + 1`.
-   > - **Event logs**: The `Application.evtx` file located at `%SystemRoot%\System32\Winevt\Logs`.
+- [Collect Teams client diagnostic logs for Microsoft support](https://learn.microsoft.com/en-us/microsoftteams/log-files)
+- [WebView2 end-user FAQ](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/end-user-faq)
