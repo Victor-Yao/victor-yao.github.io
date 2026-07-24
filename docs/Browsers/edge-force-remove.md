@@ -1,120 +1,132 @@
 ---
-title: Repair or Force-Remove Microsoft Edge
+title: Repair Microsoft Edge and WebView2 Installation
 parent: Browsers & WebView2
 grand_parent: Guides
 nav_order: 16
-description: "Use the provided scripts to clear Edge installer state or force-remove Edge and WebView2."
+description: "Use supported repair, reinstall, and diagnostic steps for Microsoft Edge and WebView2 installation failures."
 tags: [edge, webview2, installation]
-last_modified_date: 2026-06-07
+last_modified_date: 2026-07-24
 ---
 
-## Clean the Edge installation cache and force-remove Microsoft Edge
+## Repair Microsoft Edge and WebView2 installation
 
-This guide covers two related repair scenarios for Microsoft Edge:
-
-- **Clean the installation cache** — clears leftover registry keys and the MSI
-  installer cache that can block a reinstall or an upgrade, while keeping your
-  Edge folders and user data in place.
-- **Force-remove Edge completely** — fully uninstalls Microsoft Edge and Edge
-  WebView2, including processes, registry keys, program directories, scheduled
-  tasks, the MSI installer cache, and (optionally) user profiles.
+Use supported repair and reinstall methods when Microsoft Edge or the Evergreen
+WebView2 Runtime cannot install, update, or start correctly.
 
 {: .warning }
-> These scripts delete registry keys, files, and scheduled tasks. Run them only
-> when a normal uninstall or repair has failed. Both scripts require an
-> **elevated (Administrator)** PowerShell session and prompt for confirmation
-> before doing anything destructive. Force-removing Edge is **not supported** on
-> systems where Edge is a protected OS component, and it may need to be
-> reinstalled afterward.
+> Do not manually delete Edge or WebView2 program directories, Edge Update
+> services and scheduled tasks, Windows Installer cache entries, or broad Edge
+> registry trees. These components can be shared or protected by Windows.
+> Removing them can corrupt servicing state and break Teams, Outlook, Widgets,
+> and other WebView2 applications.
 
-### When to use which script
+The legacy force-removal scripts previously associated with this page are no
+longer linked or supported by this guide.
 
-| Goal | Script | Edge folders / user data |
-| --- | --- | --- |
-| Fix a stuck install or upgrade | `Edge-CleanInstallationCache.ps1` | Kept |
-| Remove Edge entirely | `Edge-CompleteRemove.ps1` | Deleted (profiles optional) |
+### 1. Complete the basic checks
 
-## Clean the installation cache
+1. Record the exact error code, affected version, installation scope, and local
+   time of the failure.
+2. Restart Windows to complete pending installer operations and release locked
+   files.
+3. Confirm that the system drive has at least 1-2 GB of free space.
+4. Close Microsoft Edge and all WebView2 applications, including Teams, new
+   Outlook, Widgets, and line-of-business applications.
+5. In **Task Manager**, confirm that no required application is still using
+   `msedge.exe` or `msedgewebview2.exe`.
+6. On a managed device, review applied update and installation policies before
+   changing the local installation.
 
-Use this when a reinstall or update keeps failing because of stale installer
-state.
+### 2. Repair Microsoft Edge
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+Use the built-in repair first:
 
-2. Open **PowerShell** as an administrator, then go to the `toolkit` folder.
+1. Open **Settings > Apps > Installed apps**.
+2. Find **Microsoft Edge**, select **More options**, then select **Modify**.
+3. Approve the administrator prompt and select **Repair**.
+4. Keep the device connected to the internet while Windows downloads and
+   reinstalls Edge.
 
-3. Allow the script to run for the current session, then start it:
+The supported repair process preserves normal browser data and settings.
 
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   .\Edge-CleanInstallationCache.ps1
-   ```
+If **Modify** is unavailable because the device is managed, contact the device
+administrator. Otherwise, download the current supported installer from the
+[Microsoft Edge download page](https://www.microsoft.com/edge/download) or the
+[Microsoft Edge for Business download page](https://www.microsoft.com/edge/business/download),
+then run it as an administrator.
 
-4. When prompted, type `Y` and press `Enter` to confirm.
+After repair, open `edge://settings/help` and confirm that Microsoft Edge starts
+and updates successfully.
 
-5. The script performs the following steps:
+### 3. Repair the Evergreen WebView2 Runtime
 
-   - Stops the `msedge`, `MicrosoftEdgeUpdate`, and `msedgewebview2` processes.
-   - Deletes the Edge and Edge Update registry keys under `HKLM` and `HKCU`.
-   - Clears the MSI installer cache entries (products, features, upgrade codes,
-     and per-user components) for Microsoft Edge.
+1. Close every application that uses WebView2.
+2. Download the **Evergreen Standalone Installer** matching the operating-system
+   architecture from the
+   [WebView2 download page](https://developer.microsoft.com/en-us/microsoft-edge/webview2#download-section).
+3. Run the installer as an administrator.
+4. Verify the registered Runtime version by following
+   [Inspect the Installed WebView2 Runtime]({% link docs/Browsers/webview2.md %}).
+5. Start the affected WebView2 application and retest it.
 
-6. Reinstall or update Microsoft Edge from the
-   [official download page](https://www.microsoft.com/edge/download).
+Do not uninstall the shared Evergreen Runtime merely to troubleshoot one
+application unless the application vendor or Microsoft Support provides a
+version-specific recovery procedure.
 
-{: .note }
-> This script does **not** delete the Edge program folders or your user
-> profiles, so your settings and data remain intact.
+### 4. Collect installation diagnostics
 
-## Force-remove Microsoft Edge
+If supported repair or reinstall still fails, collect the following data before
+making further system changes.
 
-Use this only when you need to remove Edge completely and the standard uninstall
-is unavailable or fails.
+#### Edge Update logs
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+- Per-machine installation:
 
-2. Open **PowerShell** as an administrator, then go to the `toolkit` folder.
+  ```text
+  %ALLUSERSPROFILE%\Microsoft\EdgeUpdate\Log\MicrosoftEdgeUpdate.log
+  ```
 
-3. Allow the script to run for the current session, then start it:
+- Per-user installation:
 
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   .\Edge-CompleteRemove.ps1
-   ```
+  ```text
+  %LOCALAPPDATA%\Temp\MicrosoftEdgeUpdate.log
+  ```
 
-4. When prompted, type `Y` and press `Enter` to confirm.
+#### Installer logs
 
-5. The script performs the following steps:
+- Per-machine installation:
 
-   - Stops the `msedge`, `MicrosoftEdgeUpdate`, and `msedgewebview2` processes.
-   - Deletes the Edge and Edge Update registry keys under `HKLM` and `HKCU`.
-   - Deletes the Edge program directories:
+  ```text
+  %WINDIR%\Temp\msedge_installer.log
+  ```
 
-     - `C:\Program Files (x86)\Microsoft\Edge`
-     - `C:\Program Files (x86)\Microsoft\EdgeCore`
-     - `C:\Program Files (x86)\Microsoft\EdgeUpdate`
-     - `C:\Program Files (x86)\Microsoft\EdgeWebView`
+- Per-user installation:
 
-   - Removes scheduled tasks whose name starts with `MicrosoftEdgeUpdateTask`.
-   - Clears the MSI installer cache entries for Microsoft Edge.
+  ```text
+  %LOCALAPPDATA%\Temp\msedge_installer.log
+  ```
 
-6. Handle user profiles when prompted. The script lists every Edge profile it
-   finds under `C:\Users\<user>\AppData\Local\Microsoft\Edge`, then asks what to
-   delete:
+Also:
 
-   - Enter `A` to delete **all** detected profiles.
-   - Enter specific numbers separated by commas (for example, `1,3`) to delete
-     only those profiles.
-   - Leave the prompt blank and press `Enter` to keep all profiles.
+- [Export browser policies and registry settings]({% link docs/Browsers/edge-policy.md %}).
+- Capture a short
+  [Process Monitor trace]({% link docs/general/procmon.md %}) while reproducing
+  the installation failure.
+- Record the installer filename, command line, error code, and failure time.
 
-   {: .warning }
-   > Deleting a profile permanently removes that user's Edge favorites, history,
-   > passwords, and other local data. Back up anything you need first.
+{: .important }
+> Installer logs, policy exports, and Process Monitor traces can contain user
+> names, paths, URLs, policy values, and application data. Review and transfer
+> them through an approved support channel.
 
-7. When the script finishes, restart the computer.
+### 5. Escalate unresolved servicing failures
 
-## Reinstall Edge after a force-removal
+Package the diagnostics and open a Microsoft support request when repair and
+reinstall fail. Do not use registry cleaners or manually remove Windows
+Installer product, component, or upgrade-code registrations as a workaround.
 
-If you need Edge again after a complete removal, download and run the latest
-installer from the
-[official Microsoft Edge download page](https://www.microsoft.com/edge/download).
+## References
+
+- [Install, update, or roll back failures for Edge and Edge WebView2](https://learn.microsoft.com/en-us/troubleshoot/microsoft-edge/manageability/update-install-rollback-failures)
+- [What to do if Microsoft Edge is not working](https://support.microsoft.com/en-us/edge/what-to-do-if-microsoft-edge-isn-t-working)
+- [Distribute the WebView2 Runtime](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution)
