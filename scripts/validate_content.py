@@ -11,6 +11,12 @@ DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 POST_NAME_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.md$")
 IMAGE_PATTERN = re.compile(r"!\[[^\]]*]\((/assets/images/[^)\s]+)\)")
 LIQUID_LINK_PATTERN = re.compile(r"{%\s*link\s+([^%\s]+)\s*%}")
+CJK_PATTERN = re.compile(r"[\u3400-\u9fff]")
+
+# A Chinese sentence carries the same meaning in far fewer characters than the
+# English equivalent, so descriptions are measured against a lower minimum.
+MIN_DESCRIPTION_LENGTH = 30
+MIN_CJK_DESCRIPTION_LENGTH = 12
 
 CATEGORIES = {
     "Windows & Networking": ROOT / "docs" / "general",
@@ -26,6 +32,16 @@ TOP_LEVEL_PAGES = [
     ROOT / "about.md",
     ROOT / "disclaimer.md",
 ]
+
+# Chinese guides mirror the English tree inside the docs_zh collection. Just the
+# Docs resolves `parent` only within a collection, so the translated titles form
+# an independent navigation namespace.
+ZH_ROOT = ROOT / "_docs_zh"
+ZH_GUIDES_TITLE = "指南"
+ZH_CATEGORIES = {
+    "Windows 与网络": ZH_ROOT / "general",
+    "浏览器与 WebView2": ZH_ROOT / "Browsers",
+}
 
 
 def relative(path: Path) -> str:
@@ -72,8 +88,13 @@ def parse_nav_order(path: Path, fields: dict[str, str], errors: list[str]) -> in
 
 def validate_metadata(path: Path, fields: dict[str, str], errors: list[str]) -> None:
     description = fields.get("description", "")
-    if description and len(description) < 30:
-        errors.append(f"{relative(path)}: description should be at least 30 characters")
+    minimum = (
+        MIN_CJK_DESCRIPTION_LENGTH
+        if CJK_PATTERN.search(description)
+        else MIN_DESCRIPTION_LENGTH
+    )
+    if description and len(description) < minimum:
+        errors.append(f"{relative(path)}: description should be at least {minimum} characters")
 
     tags = fields.get("tags", "")
     if tags and not re.fullmatch(r"\[[^\]]+\]", tags):
@@ -193,6 +214,156 @@ def validate_guides(errors: list[str]) -> list[Path]:
     return guide_paths
 
 
+def english_counterpart(path: Path) -> Path:
+    """Map a Chinese collection file to the English page it translates."""
+    parts = path.relative_to(ZH_ROOT).parts
+    if parts == ("index.md",):
+        return ROOT / "guides" / "index.md"
+    return ROOT / "docs" / Path(*parts)
+
+
+def expected_zh_permalink(path: Path) -> str:
+    """The URL a Chinese page must publish at.
+
+    The language switcher pairs a page with its counterpart by prefixing the
+    English URL with /zh, so a wrong permalink silently breaks the switch.
+    """
+    parts = path.relative_to(ZH_ROOT).parts
+    if parts == ("index.md",):
+        return "/zh/guides/"
+
+    directory = "/".join(parts[:-1])
+    if parts[-1] == "index.md":
+        return f"/zh/docs/{directory}/"
+    return f"/zh/docs/{directory}/{Path(parts[-1]).stem}/"
+
+
+def validate_zh_guides(errors: list[str]) -> list[Path]:
+    if not ZH_ROOT.exists():
+        return []
+
+    zh_paths: list[Path] = []
+    child_orders: dict[str, dict[int, list[str]]] = defaultdict(lambda: defaultdict(list))
+    category_orders: dict[int, list[str]] = defaultdict(list)
+
+    def check_shared_rules(path: Path, fields: dict[str, str]) -> None:
+        permalink = fields.get("permalink", "")
+        expected = expected_zh_permalink(path)
+        if permalink != expected:
+            errors.append(f"{relative(path)}: permalink must be '{expected}'")
+
+        counterpart = english_counterpart(path)
+        if not counterpart.exists():
+            errors.append(
+                f"{relative(path)}: translates '{relative(counterpart)}', which does not exist"
+            )
+
+    root_index = ZH_ROOT / "index.md"
+    fields, _ = parse_front_matter(root_index, errors)
+    require_fields(
+        root_index,
+        fields,
+        ["title", "permalink", "nav_order", "description", "tags", "last_modified_date", "has_children"],
+        errors,
+    )
+    validate_metadata(root_index, fields, errors)
+    check_shared_rules(root_index, fields)
+    if fields.get("title") != ZH_GUIDES_TITLE:
+        errors.append(f"{relative(root_index)}: title must be '{ZH_GUIDES_TITLE}'")
+    if fields.get("has_children") != "true":
+        errors.append(f"{relative(root_index)}: has_children must be true")
+    zh_paths.append(root_index)
+
+    for parent, directory in ZH_CATEGORIES.items():
+        index_path = directory / "index.md"
+        if not index_path.exists():
+            errors.append(f"{relative(index_path)}: missing category index for '{parent}'")
+            continue
+
+        fields, _ = parse_front_matter(index_path, errors)
+        require_fields(
+            index_path,
+            fields,
+            [
+                "title",
+                "permalink",
+                "parent",
+                "nav_order",
+                "description",
+                "tags",
+                "last_modified_date",
+                "has_children",
+            ],
+            errors,
+        )
+        validate_metadata(index_path, fields, errors)
+        check_shared_rules(index_path, fields)
+
+        if fields.get("title") != parent:
+            errors.append(f"{relative(index_path)}: title must be '{parent}'")
+        if fields.get("parent") != ZH_GUIDES_TITLE:
+            errors.append(f"{relative(index_path)}: parent must be '{ZH_GUIDES_TITLE}'")
+        if fields.get("has_children") != "true":
+            errors.append(f"{relative(index_path)}: has_children must be true")
+
+        order = parse_nav_order(index_path, fields, errors)
+        if order is not None:
+            category_orders[order].append(relative(index_path))
+        zh_paths.append(index_path)
+
+        for path in sorted(directory.glob("*.md")):
+            if path.name == "index.md":
+                continue
+
+            fields, _ = parse_front_matter(path, errors)
+            require_fields(
+                path,
+                fields,
+                [
+                    "title",
+                    "permalink",
+                    "parent",
+                    "grand_parent",
+                    "nav_order",
+                    "description",
+                    "tags",
+                    "last_modified_date",
+                ],
+                errors,
+            )
+            validate_metadata(path, fields, errors)
+            check_shared_rules(path, fields)
+
+            if fields.get("parent") != parent:
+                errors.append(f"{relative(path)}: parent must be '{parent}'")
+            if fields.get("grand_parent") != ZH_GUIDES_TITLE:
+                errors.append(f"{relative(path)}: grand_parent must be '{ZH_GUIDES_TITLE}'")
+
+            order = parse_nav_order(path, fields, errors)
+            if order is not None:
+                child_orders[parent][order].append(relative(path))
+            zh_paths.append(path)
+
+    unexpected = {
+        path
+        for path in ZH_ROOT.rglob("*.md")
+        if path.parent != ZH_ROOT and path.parent not in ZH_CATEGORIES.values()
+    }
+    for path in sorted(unexpected):
+        errors.append(f"{relative(path)}: not inside a known Chinese guide category")
+
+    for order, paths in category_orders.items():
+        if len(paths) > 1:
+            errors.append(f"{ZH_GUIDES_TITLE}: duplicate category nav_order {order}: {', '.join(paths)}")
+
+    for parent, orders in child_orders.items():
+        for order, paths in orders.items():
+            if len(paths) > 1:
+                errors.append(f"{parent}: duplicate nav_order {order}: {', '.join(paths)}")
+
+    return zh_paths
+
+
 def validate_top_level_pages(errors: list[str]) -> list[Path]:
     orders: dict[int, list[str]] = defaultdict(list)
 
@@ -234,6 +405,7 @@ def validate_posts(errors: list[str]) -> list[Path]:
 def main() -> int:
     errors: list[str] = []
     site_paths = validate_guides(errors)
+    site_paths.extend(validate_zh_guides(errors))
     site_paths.extend(validate_top_level_pages(errors))
     site_paths.extend(validate_posts(errors))
     validate_local_references(site_paths, errors)
