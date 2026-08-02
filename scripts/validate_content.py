@@ -83,6 +83,18 @@ def validate_metadata(path: Path, fields: dict[str, str], errors: list[str]) -> 
     if modified and not DATE_PATTERN.fullmatch(modified):
         errors.append(f"{relative(path)}: last_modified_date must use YYYY-MM-DD")
 
+    verified = fields.get("last_verified_date")
+    if verified and not DATE_PATTERN.fullmatch(verified):
+        errors.append(f"{relative(path)}: last_verified_date must use YYYY-MM-DD")
+
+    # last_verified_date states that the procedure was exercised in a specific
+    # environment, so tested_on must describe that environment.
+    tested_on = fields.get("tested_on")
+    if verified and not tested_on:
+        errors.append(f"{relative(path)}: last_verified_date requires a 'tested_on' value")
+    if tested_on and not verified:
+        errors.append(f"{relative(path)}: tested_on requires a 'last_verified_date' value")
+
 
 def path_exists_with_exact_case(relative_path: str) -> bool:
     current = ROOT

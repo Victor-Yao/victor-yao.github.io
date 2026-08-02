@@ -5,7 +5,9 @@ grand_parent: Guides
 nav_order: 8
 description: "Collect Windows TLS protocol and cipher-suite configuration for troubleshooting."
 tags: [windows, tls, security]
-last_modified_date: 2025-12-29
+last_modified_date: 2026-08-02
+last_verified_date: 2026-08-02
+tested_on: Windows 11 Enterprise (build 26200)
 ---
 
 ## Get TLS configuration from Windows

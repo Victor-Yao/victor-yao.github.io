@@ -5,7 +5,9 @@ grand_parent: Guides
 nav_order: 2
 description: "Export an HTML report of computer and user Group Policy settings with gpresult."
 tags: [windows, group-policy]
-last_modified_date: 2025-12-29
+last_modified_date: 2026-08-02
+last_verified_date: 2026-08-02
+tested_on: Windows 11 Enterprise (build 26200)
 ---
 
 ## Export Group Policy Report
