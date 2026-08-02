@@ -1,1 +1,69 @@
 {% feed_meta %}
+
+{%- comment -%}
+Enable Chinese tokenization for the Lunr search index.
+
+Lunr's default tokenizer splits on whitespace, so a Chinese sentence becomes a
+single token and no Chinese query can ever match. lunr-languages adds a Chinese
+tokenizer that uses Intl.Segmenter in the browser.
+
+These files must be registered on the global `lunr` object before
+just-the-docs.js builds the index, which it does on DOMContentLoaded. This
+include is emitted in <head>, so the synchronous scripts below always run first.
+{%- endcomment -%}
+{%- if site.search_enabled != false %}
+<script src="{{ '/assets/js/vendor/lunr.stemmer.support.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/lunr.multi.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/vendor/lunr.zh.js' | relative_url }}"></script>
+<script>
+  /*
+    Just the Docs tokenizes the search *query* with the global lunr.tokenizer,
+    while the index is built with the language-aware tokenizer installed by
+    lunr.multiLanguage. Leaving them different means Chinese content is indexed
+    as segmented words but queried as one long token, so nothing ever matches.
+    Pointing the global tokenizer at the Chinese one keeps both sides identical;
+    it still splits English on whitespace.
+
+    Only block comments are safe here: the vendor/compress.html layout collapses
+    this script onto a single line, so a // comment would disable the rest of it.
+  */
+  if (typeof lunr !== 'undefined' && lunr.zh && typeof lunr.zh.tokenizer === 'function') {
+    lunr.tokenizer = lunr.zh.tokenizer;
+  }
+</script>
+{%- endif %}
+
+{%- comment -%}
+Show only the navigation tree for the language being viewed.
+
+Just the Docs renders the English page tree and the Chinese collection into the
+same sidebar and offers no per-language scoping. The active language is known at
+build time, so this is done with CSS rather than JavaScript: the correct tree is
+hidden before first paint instead of flashing and then disappearing.
+
+  .site-nav > ul:first-of-type   the English page tree
+  .site-nav > ul.nav-category-list  the Chinese collection (nav_fold: true)
+{%- endcomment -%}
+<style>
+{%- if page.url contains '/zh/' %}
+  .site-nav > ul:first-of-type { display: none; }
+{%- else %}
+  .site-nav > ul.nav-category-list { display: none; }
+{%- endif %}
+
+  .lang-switcher {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .lang-switcher-current {
+    font-weight: 600;
+  }
+
+  .lang-switcher-current::after {
+    content: '\00b7';
+    margin: 0 0.35rem;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+</style>

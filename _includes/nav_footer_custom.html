@@ -1,3 +1,42 @@
+{%- comment -%}
+Language switcher.
+
+English pages live as normal pages under docs/ and keep their original URLs.
+Chinese pages live in the docs_zh collection and are served from the same path
+prefixed with /zh. A counterpart therefore differs only by that prefix.
+
+Only pages that have actually been translated are linked directly; anything else
+falls back to the other language's guide index so the link is never broken.
+{%- endcomment -%}
+
+{%- assign is_zh = false -%}
+{%- if page.url contains '/zh/' -%}{%- assign is_zh = true -%}{%- endif -%}
+
+{%- assign target = nil -%}
+{%- if is_zh -%}
+  {%- assign counterpart = page.url | remove_first: '/zh' -%}
+  {%- for candidate in site.html_pages -%}
+    {%- if candidate.url == counterpart -%}{%- assign target = candidate.url -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if target == nil -%}{%- assign target = '/guides/' -%}{%- endif -%}
+{%- else -%}
+  {%- assign counterpart = page.url | prepend: '/zh' -%}
+  {%- for candidate in site.docs_zh -%}
+    {%- if candidate.url == counterpart -%}{%- assign target = candidate.url -%}{%- break -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if target == nil -%}{%- assign target = '/zh/guides/' -%}{%- endif -%}
+{%- endif -%}
+
+<div class="lang-switcher">
+  {%- if is_zh %}
+  <span class="lang-switcher-current" aria-current="true">中文</span>
+  <a href="{{ target | relative_url }}" hreflang="en" lang="en">English</a>
+  {%- else %}
+  <span class="lang-switcher-current" aria-current="true">English</span>
+  <a href="{{ target | relative_url }}" hreflang="zh-CN" lang="zh-CN">中文</a>
+  {%- endif %}
+</div>
+
 <script>
   /*
     Follow the operating system's light/dark preference automatically.

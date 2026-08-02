@@ -29,6 +29,21 @@ exclude:
   - Templates/
   - .obsidian/
 
+# Chinese guides live in their own collection so that Just the Docs gives them a
+# separate navigation namespace. Titles such as `parent: 浏览器与 WebView2` are
+# resolved only against other pages in the same collection, which keeps the
+# translated tree independent of the English page tree under docs/.
+collections:
+  docs_zh:
+    output: true
+    permalink: /zh/docs/:path/
+
+just_the_docs:
+  collections:
+    docs_zh:
+      name: 中文指南
+      nav_fold: true
+
 aux_links:
   Repository on GitHub: https://github.com/Victor-Yao/victor-yao.github.io
   RSS Feed: https://victor-yao.github.io/feed.xml
@@ -72,6 +87,14 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  # Collection documents do not inherit the "pages" defaults above.
+  - scope:
+      path: ""
+      type: "docs_zh"
+    values:
+      layout: "default"
+      content_type: guide
+      lang: zh-CN
   - scope:
       path: "docs" # an empty string here means all files in the project
       type: "pages"
