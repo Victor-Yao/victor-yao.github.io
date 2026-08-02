@@ -16,7 +16,7 @@ The goal is to explain not only which steps to run, but also what evidence they 
 
 - [Blog]({% link blog/index.md %}) — Technical deep dives, investigation notes, and lessons learned.
 - [Guides]({% link guides/index.md %}) — Task-focused troubleshooting, diagnostics, and log collection procedures.
-- [中文指南]({% link _docs_zh/index.md %}) — Chinese translations of selected guides.
+- [中文指南]({% link _docs_zh/index.md %}) — Chinese translations of every guide.
 
 ## Browse guide topics
 

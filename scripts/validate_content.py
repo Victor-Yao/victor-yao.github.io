@@ -41,6 +41,8 @@ ZH_GUIDES_TITLE = "指南"
 ZH_CATEGORIES = {
     "Windows 与网络": ZH_ROOT / "general",
     "浏览器与 WebView2": ZH_ROOT / "Browsers",
+    "IIS 与 Web 托管": ZH_ROOT / "IIS",
+    ".NET 与云诊断": ZH_ROOT / "dotnet",
 }
 
 
