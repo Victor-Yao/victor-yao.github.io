@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 4
 description: "Enable IIS Failed Request Tracing for requests that return selected HTTP status codes."
 tags: [iis, freb, tracing]
-last_modified_date: 2026-01-01
+last_modified_date: 2026-08-02
 ---
 
 ## Enable failed request tracing rule for a specific HTTP status code
@@ -30,9 +30,13 @@ Install Freb tracing feature. For details, see: [https://learn.microsoft.com/en-
 
       ![Enter the status code to trace](/assets/images/Freb7.png)
 
-   3. Complete the remaining wizard steps, then finish the rule creation.
+   3. Select the trace providers to capture, then select **Finish**.
 
-      ![Finish the rule configuration wizard](/assets/images/Freb4.png)
+      ![Select the trace providers and finish the wizard](/assets/images/Freb3.png)
+
+   4. Confirm that the new rule appears in the rules list.
+
+      ![The new rule in the Failed Request Tracing Rules list](/assets/images/Freb4.png)
 
 3. Return to the site level and enable the rule.
 
