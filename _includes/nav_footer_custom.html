@@ -1,5 +1,11 @@
 <script>
-  // Follow the operating system's light/dark preference automatically.
+  /*
+    Follow the operating system's light/dark preference automatically.
+
+    Only block comments are safe here: Just the Docs renders pages through its
+    vendor/compress.html layout, which collapses this script onto a single line.
+    A // comment would then comment out the rest of the script.
+  */
   (function () {
     var media = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -7,15 +13,15 @@
       jtd.setTheme(media.matches ? 'dark' : 'light');
     }
 
-    // jtd is defined by just-the-docs.js, which runs before DOMContentLoaded fires.
+    /* jtd is defined by just-the-docs.js, which runs before DOMContentLoaded fires. */
     document.addEventListener('DOMContentLoaded', function () {
       applySystemTheme();
 
-      // React in real time when the system theme changes.
+      /* React in real time when the system theme changes. */
       if (media.addEventListener) {
         media.addEventListener('change', applySystemTheme);
       } else if (media.addListener) {
-        // Fallback for older browsers.
+        /* Fallback for older browsers. */
         media.addListener(applySystemTheme);
       }
     });
