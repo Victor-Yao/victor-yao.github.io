@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 3
 description: "Use ProcDump to collect crash, hang, or exception dumps from an IIS worker process."
 tags: [iis, memory-dump, procdump]
-last_modified_date: 2026-02-05
+last_modified_date: 2026-08-02
 ---
 
 ## Using procdump to collect memory dump of w3wp.exe
@@ -16,7 +16,24 @@ last_modified_date: 2026-02-05
 
 2. Open Command Prompt as an administrator, then go to the **Procdump** folder.
 
+### Choose a capture mode
+
+Each capture mode below is an independent procedure. Run the one that matches
+the problem you are investigating — these sections are alternatives, not
+sequential steps.
+
+| Capture mode | Use when | Section |
+| --- | --- | --- |
+| Single dump | You need one snapshot of the current process state, for example during a hang | [Capture a single dump](#single-dump) |
+| Multiple dumps at an interval | You need to compare process state over time, for example for a memory leak | [Capture multiple dumps](#interval-dumps) |
+| Exception dump | You need the state at the moment a specific exception message is thrown | [Capture an exception dump](#exception-dump) |
+| Crash dump | You need the state at the moment the process terminates unexpectedly | [Capture a crash dump](#crash-dump) |
+
 ### Capture a single dump
+{: #single-dump }
+
+{: .note }
+> Independent capture mode. Run only this section — the other capture modes are alternatives.
 
 1. [Prerequisites](#prerequisites)
 
@@ -29,6 +46,10 @@ last_modified_date: 2026-02-05
    ```
 
 ### Capture multiple dumps at a fixed interval
+{: #interval-dumps }
+
+{: .note }
+> Independent capture mode. Run only this section — the other capture modes are alternatives.
 
 1. [Prerequisites](#prerequisites)
 
@@ -41,6 +62,10 @@ last_modified_date: 2026-02-05
    ```
 
 ### Capture an exception memory dump
+{: #exception-dump }
+
+{: .note }
+> Independent capture mode. Run only this section — the other capture modes are alternatives.
 
 1. [Prerequisites](#prerequisites)
 
@@ -54,6 +79,10 @@ last_modified_date: 2026-02-05
    > If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
 
 ### Capture a crash dump
+{: #crash-dump }
+
+{: .note }
+> Independent capture mode. Run only this section — the other capture modes are alternatives.
 
 1. [Prerequisites](#prerequisites)
 

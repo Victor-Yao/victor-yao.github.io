@@ -5,12 +5,13 @@ grand_parent: Guides
 nav_order: 9
 description: "Configure Windows to capture kernel or complete memory dumps for operating system failures."
 tags: [windows, memory-dump, kernel]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-08-02
 ---
 
 ## Capturing Windows kernel dumps
 
-This guide details two methods for capturing kernel memory dumps.
+This guide describes two alternative methods for capturing kernel memory dumps.
+Choose one method. Do not run both.
 
 ### Environment
 
@@ -18,7 +19,23 @@ This guide details two methods for capturing kernel memory dumps.
 - **Tooling**: Sysinternals Suite (LiveKd, NotMyFault)
 - **Dependency**: Debugging Tools for Windows (WinDbg) must be installed for LiveKd to function correctly.
 
+### Choose a method
+
+| Method | Use when | Impact on the machine |
+| --- | --- | --- |
+| [Method 1: Live kernel dump](#live-kernel-dump) | The system is still running and you need its current kernel state | None. The system keeps running |
+| [Method 2: Forced crash dump](#forced-crash-dump) | The system hangs, or the analysis requires a full crash dump | The machine bugchecks (BSOD) and restarts immediately |
+
+{: .warning }
+> Method 2 deliberately crashes the machine. Do not run it after Method 1 has
+> already produced a usable dump, and do not run it on a production system
+> outside an agreed maintenance window.
+
 ### Method 1: Live kernel dump (non-invasive)
+{: #live-kernel-dump }
+
+{: .note }
+> Independent section. Complete only these steps. Method 2 is an alternative, not a later step.
 
 Use this method to capture the kernel state without crashing or restarting the system.
 
@@ -54,6 +71,10 @@ Use this method to capture the kernel state without crashing or restarting the s
    > ```
 
 ### Method 2: Forced crash dump (invasive)
+{: #forced-crash-dump }
+
+{: .note }
+> Independent section. Complete only these steps. Method 1 is an alternative, not an earlier step.
 
 Use this method if the system is hanging or if a full crash dump is required for root cause analysis.
 

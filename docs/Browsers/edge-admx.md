@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 21
 description: "Deploy Microsoft Edge and Edge Update ADMX/ADML templates to domain or local policy stores."
 tags: [edge, group-policy, admx]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-08-02
 ---
 
 ## Deploying Microsoft Edge administrative templates
 
-This guide describes how to download and import Microsoft Edge administrative templates (ADMX/ADML) into both Active Directory Central Stores and individual local machines.
+This guide describes how to download and import Microsoft Edge administrative templates (ADMX/ADML) into either an Active Directory Central Store or an individual local machine. The two deployment targets are alternatives — choose the one that matches the machines you manage.
 
 ### Environment
 
@@ -25,7 +25,18 @@ There are two distinct administrative templates required for full management of 
 - **msedge.admx**: Configures browser settings (for example, home page, extensions, security policies).
 - **msedgeupdate.admx**: Manages the update behavior, update frequency, and version pinning of Microsoft Edge.
 
-### Phase 1: Deployment to Active Directory (Central Store)
+### Choose a deployment target
+
+| Deployment target | Use when | Section |
+| --- | --- | --- |
+| Active Directory Central Store | The machines are domain-joined and policy is managed centrally | [Deploy to the Central Store](#deploy-central-store) |
+| Individual computer (Local Store) | The machine is standalone, or you are testing before a domain-wide rollout | [Deploy to a local machine](#deploy-local-store) |
+
+### Deploy to the Active Directory Central Store
+{: #deploy-central-store }
+
+{: .note }
+> Independent section. Complete only these steps. Deploying to a local machine is an alternative, not a later step.
 
 Deploying to the Central Store makes the templates available to all Domain Administrators across the network.
 
@@ -44,7 +55,11 @@ Deploying to the Central Store makes the templates available to all Domain Admin
    {: .warning }
    > If the `PolicyDefinitions` folder doesn't exist, create it manually within the `policies` directory.
 
-### Phase 2: Deployment to an individual computer (Local Store)
+### Deploy to an individual computer (Local Store)
+{: #deploy-local-store }
+
+{: .note }
+> Independent section. Complete only these steps. Deploying to the Central Store is an alternative, not an earlier step.
 
 Follow these steps if you are managing a standalone machine or testing policies before domain-wide deployment.
 

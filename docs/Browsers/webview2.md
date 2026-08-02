@@ -5,7 +5,9 @@ grand_parent: Guides
 nav_order: 10
 description: "Identify installed Evergreen WebView2 Runtime versions without changing servicing registry values."
 tags: [webview2, runtime, registry]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-08-02
+last_verified_date: 2026-08-02
+tested_on: Windows 11 Enterprise (build 26200), WebView2 Runtime 151.0.4129.59, PowerShell 7.6.4
 ---
 
 ## Inspect the installed WebView2 Runtime
@@ -29,6 +31,10 @@ The checks in this guide are read-only.
 - Administrator rights are not required for these read-only queries.
 
 ### Use PowerShell
+{: #check-powershell }
+
+{: .note }
+> This section and [Inspect the registry manually](#check-registry-manually) perform the same check. Use whichever is more convenient — running both is unnecessary.
 
 Run the following commands in PowerShell:
 
@@ -65,6 +71,10 @@ Per-machine 150.0.4078.48  HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Edg
 ```
 
 ### Inspect the registry manually
+{: #check-registry-manually }
+
+{: .note }
+> This section and [Use PowerShell](#check-powershell) perform the same check. Use whichever is more convenient — running both is unnecessary.
 
 On 64-bit Windows, check:
 

@@ -5,10 +5,21 @@ grand_parent: Guides
 nav_order: 4
 description: "Capture Chromium network events with Microsoft Edge net-export."
 tags: [edge, networking, net-export]
-last_modified_date: 2026-01-31
+last_modified_date: 2026-08-02
 ---
 
+## Choose a capture method
+
+| Capture method | Use when | Section |
+| --- | --- | --- |
+| In-browser capture | The issue can be reproduced after Edge is already running | [Capture net-export](#capture-in-browser) |
+| Command-line capture | The issue happens during startup, before you can open `edge://net-export` | [Capture net-export for startup page](#capture-startup) |
+
 ## Capture net-export
+{: #capture-in-browser }
+
+{: .note }
+> Independent section. Complete only these steps. The startup page section is an alternative, not a later step.
 
 1. Open Edge and go to `edge://net-export`.
 
@@ -29,6 +40,10 @@ last_modified_date: 2026-01-31
 5. After reproducing the issue, select **Stop Logging**.
 
 ## Capture net-export for startup page
+{: #capture-startup }
+
+{: .note }
+> Independent section. Complete only these steps. The in-browser capture section is an alternative, not an earlier step.
 
 1. Select your case,
 	

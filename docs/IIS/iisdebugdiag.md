@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 2
 description: "Configure DebugDiag rules to collect IIS crash or exception memory dumps."
 tags: [iis, memory-dump, debugdiag]
-last_modified_date: 2026-01-01
+last_modified_date: 2026-08-02
 ---
 ## Using DebugDiag to collect memory dump for IIS
 
@@ -17,7 +17,22 @@ last_modified_date: 2026-01-01
 
    ![Open DebugDiag Collection as administrator](/assets/images/debugdiag10.png)
 
+### Choose a rule type
+
+Both rules below create a DebugDiag crash rule for the same application pool.
+Configure the one that matches what you need to capture — these sections are
+alternatives, not sequential steps.
+
+| Rule type | Capture when | Section |
+| --- | --- | --- |
+| Crash rule | The worker process terminates unexpectedly | [Capture a crash dump](#debugdiag-crash) |
+| Exception rule | A specific exception is thrown while the process keeps running | [Capture a specific exception](#debugdiag-exception) |
+
 ### Capture a crash dump
+{: #debugdiag-crash }
+
+{: .note }
+> Independent section. Configure only this rule — the exception rule is an alternative, not a later step.
 
 1. Add a crash rule and finish wizard as screenshots.
 
@@ -50,6 +65,10 @@ last_modified_date: 2026-01-01
     ![Wait for the crash to occur](/assets/images/debugdiag9.png)
 
 ### Capture a specific exception
+{: #debugdiag-exception }
+
+{: .note }
+> Independent section. Configure only this rule — the crash rule is an alternative, not an earlier step.
 
 1. Add a crash rule:
 

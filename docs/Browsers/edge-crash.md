@@ -5,12 +5,23 @@ grand_parent: Guides
 nav_order: 6
 description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."
 tags: [edge, crash, memory-dump]
-last_modified_date: 2025-12-31
+last_modified_date: 2026-08-02
 ---
 
-There are two different types of crash events in the Edge browser, and the methods for collecting their crash dumps are also different.
+There are two different types of crash events in the Edge browser, and the methods for collecting their crash dumps are also different. Collect the one that matches the crash you are investigating — these sections are alternatives, not sequential steps.
+
+## Choose the crash type
+
+| Crash type | Collect when | Section |
+| --- | --- | --- |
+| Crashpad | A tab, renderer, or GPU process crashes and Edge itself keeps running or restarts | [Crashpad crash event](#crashpad-crash-event) |
+| Windows Error Reporting | The whole `msedge.exe` process terminates and Windows reports the application crash | [Windows crash event](#windows-crash-event) |
 
 ## Crashpad crash event
+{: #crashpad-crash-event }
+
+{: .note }
+> Independent section. Complete only these steps. The Windows crash event section is an alternative, not a later step.
 
 1. Search for **Environment Variables**, then open it.
 
@@ -39,6 +50,10 @@ There are two different types of crash events in the Edge browser, and the metho
 5. Verify the dump file is generated at `%LOCALAPPDATA%\Microsoft\Edge\User Data\Crashpad\reports`.
 
 ## Windows crash event
+{: #windows-crash-event }
+
+{: .note }
+> Independent section. Complete only these steps. The Crashpad crash event section is an alternative, not an earlier step.
 
 1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
 
