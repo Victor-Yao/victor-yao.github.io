@@ -5,18 +5,21 @@ grand_parent: Guides
 nav_order: 8
 description: "Collect the logs and traces required to investigate Microsoft Defender SmartScreen behavior in Edge."
 tags: [edge, smartscreen, security]
-last_modified_date: 2026-01-01
+last_modified_date: 2026-10-03
 ---
 
 ## SmartScreen checklist for Edge
 
 ### Enable the SmartScreen debug log
 
-1. Open Event Viewer, then go to `Applications and Services Logs > Microsoft > Windows > SmartScreen > Debug`.
+1. Open **Command Prompt** as an administrator.
 
-2. Select **Enable Log**.
+2. Create the output folder and enable the log:
 
-   ![Event Viewer SmartScreen Debug log with Enable Log option](/assets/images/smartscreen1.png)
+   ```bat
+   if not exist "C:\Logs" mkdir "C:\Logs"
+   wevtutil.exe sl "Microsoft-Windows-SmartScreen/Debug" /e:true
+   ```
 
 ### Enable Edge tracing
 
@@ -26,22 +29,32 @@ last_modified_date: 2026-01-01
 
    ![Edge tracing page showing Reload and Manually select settings](/assets/images/smartscreen2.png)
 
-3. Under Record Categories, select **SmartScreen** only, then select **Record**.
+3. Under **Record Categories**, select **SmartScreen** only, then select **Record**.
 
    ![Edge tracing settings with only SmartScreen selected](/assets/images/smartscreen3.png)
 
 ### Collect logs
 
-1. **Reproduce the issue** after enabling the *SmartScreen debug log* and *Edge tracing*.
+1. Enable the SmartScreen debug log and Edge tracing, then reproduce the issue.
 
 2. Stop and save the Edge tracing.
 
    ![Stop and save the Edge trace](/assets/images/smartscreen4.png)
 
-3. Verify if any records in the SmartScreen debug log, the select **Save All Events As...**.
+3. In the same administrator **Command Prompt**, export the SmartScreen log:
 
-   ![Save SmartScreen debug log events](/assets/images/smartscreen5.png)
+   ```bat
+   wevtutil.exe epl "Microsoft-Windows-SmartScreen/Debug" "C:\Logs\SmartScreen-Debug.evtx"
+   ```
 
-4. Go to *Windows Security > Protection history*, expand any relevant entries about blocked content.
+   Use a new filename if `SmartScreen-Debug.evtx` already exists.
+
+4. Go to **Windows Security > Protection history** and expand the relevant blocked-content entries.
 
    ![Protection history](/assets/images/smartscreen6.png)
+
+### Event log location (reference)
+
+In **Event Viewer**, the log is under **Applications and Services Logs > Microsoft > Windows > SmartScreen > Debug**. If hidden, select **View > Show Analytic and Debug Logs**.
+
+The default log file is `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-SmartScreen%4Debug.evtx`.

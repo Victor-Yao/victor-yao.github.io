@@ -6,18 +6,18 @@ grand_parent: 指南
 nav_order: 1
 description: "查找基础故障排查中使用的关键 IIS 配置和日志文件。"
 tags: [iis, configuration, logging]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## IIS 基础信息
 
 ### 配置
 
-1. applicationHost.config
+1. `applicationHost.config`
 
     IIS 的服务器级配置文件。路径为 `%windir%\System32\inetsrv\config\applicationHost.config`。
 
-2. web.config
+2. `web.config`
 
     网站的应用程序级配置文件。它通常位于应用程序根目录。在某些场景中缺少此文件是正常的。
 
@@ -48,7 +48,7 @@ last_modified_date: 2026-08-02
 
    ![日志文件路径](/assets/images/iislog3.png)
 
-5. 在日志目录中，打开与站点 ID 匹配的 `W3SVC<SiteID>` 文件夹。
+5. 在日志目录中，打开与站点 ID 匹配的 `W3SVC<site-id>` 文件夹。
 
    ![W3SVC 站点日志](/assets/images/iislog4.png)
 

@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 9
 description: "使用 PerfView 收集 CPU、内存和 ETW 性能跟踪。"
 tags: [iis, performance, perfview]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 使用 PerfView 收集性能跟踪
 
-本指南说明如何使用 PerfView 工具抓取详细性能数据，包括 IIS 和线程时间信息。
+使用 PerfView 收集 IIS 和线程时间性能数据。
 
 ### 环境
 
@@ -21,13 +21,13 @@ last_modified_date: 2026-08-02
 
 ### 步骤
 
-1. 下载 [PerfView.exe](https://github.com/Microsoft/perfview/releases) 二进制文件，并以管理员身份运行。
+1. 下载 [PerfView.exe](https://github.com/Microsoft/perfview/releases)，以管理员身份运行。
 
-2. 从顶部菜单栏选择 **Collect**，然后选择 **Collect**（或按 `Alt+C`）。
+2. 选择 **Collect > Collect** 或按 **Alt+C**。
 
 3. **配置收集参数**
 
-   在配置窗口中，应用以下设置以确保抓取完整数据：
+   应用以下设置：
 
    - **Zip**：启用（选中）。
    - **Circular MB**：设置为 `1000` 或更高，以防止缓冲区被覆盖。
@@ -40,7 +40,7 @@ last_modified_date: 2026-08-02
 
 4. 选择 **Start Collection** 按钮。
 
-5. 在重现性能问题时保持跟踪运行（此场景通常约 **2 分钟**）。
+5. 在跟踪运行期间复现性能问题，此场景通常约需 2 分钟。
 
 6. 抓取时间结束后，选择 **Stop Collection**。
 

@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 5
 description: "为 Application Request Routing 和 URL Rewrite 问题抓取 IIS 失败请求跟踪。"
 tags: [iis, freb, arr]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 使用 FREB 排查 ARR 和 URL Rewrite 规则
@@ -43,7 +43,7 @@ last_modified_date: 2026-08-02
 
    ![启用失败请求跟踪规则](/assets/images/Freb5.png)
 
-4. 重现问题并收集 FREB 日志。
+4. 复现问题并收集 FREB 日志。
 
    ![收集失败请求跟踪日志](/assets/images/Freb6.png)
 

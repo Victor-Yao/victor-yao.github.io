@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 24
 description: "Collect a WebView2 ETW trace with the built-in Windows recorder and send it to support."
 tags: [webview2, etw, diagnostics]
-last_modified_date: 2026-09-14
+last_modified_date: 2026-10-03
 ---
 
 ## Collect the trace
@@ -21,7 +21,7 @@ The steps below use `WebView2_CPU.wprp`. To use `WebView2.wprp`, download that f
 
 2. **Download the recording profile.** Create the folder `C:\Temp\WebView2-ETW`. Right-click [WebView2_CPU.wprp]({% link assets/WebView2_CPU.wprp %}), select **Save link as**, and save it in that folder. Save it as `WebView2_CPU.wprp`, not `WebView2_CPU.wprp.txt`.
 
-3. **Start recording.** Open **Command Prompt (CMD) as administrator** and run:
+3. **Start recording.** Open **Command Prompt** as an administrator and run:
 
    ```bat
    wpr -start "C:\Temp\WebView2-ETW\WebView2_CPU.wprp" -filemode
@@ -29,7 +29,7 @@ The steps below use `WebView2_CPU.wprp`. To use `WebView2.wprp`, download that f
 
 4. **Reproduce the issue.**
 
-5. **Stop and save.** In the same elevated Command Prompt window, run:
+5. **Stop and save.** In the same elevated **Command Prompt** window, run:
 
    ```bat
    wpr -stop "C:\Temp\WebView2-ETW\trace.etl" "WebView2 issue"

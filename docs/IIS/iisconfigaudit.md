@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 10
 description: "Enable IIS configuration auditing to identify who changed settings and what was modified."
 tags: [iis, configuration, auditing]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-10-03
 ---
 
 ## Enabling IIS configuration auditing
 
-This guide describes how to enable IIS configuration operational logging to audit who modified IIS settings and what changes were applied.
+Enable IIS configuration logging to record who changed IIS settings and what was changed.
 
 ### Environment
 
@@ -23,7 +23,7 @@ This guide describes how to enable IIS configuration operational logging to audi
 
 2. Go to the following path in the console tree:
 
-   `Applications and Services Logs` > `Microsoft` > `Windows` > `IIS-Configuration`
+   **Applications and Services Logs > Microsoft > Windows > IIS-Configuration**
 
 3. Right-click the **Operational** log and select **Enable Log**.
 

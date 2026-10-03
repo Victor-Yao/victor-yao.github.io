@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 12
 description: "Capture size-limited Windows performance counter logs for IIS, ASP.NET, .NET Framework, and WCF troubleshooting."
 tags: [windows, perfmon, performance, iis, dotnet]
-last_modified_date: 2026-09-02
+last_modified_date: 2026-10-03
 ---
 
 ## Capture performance counter logs with Perfmon
@@ -13,7 +13,7 @@ last_modified_date: 2026-09-02
 Use `logman` to collect Windows performance counters in a binary `.blg` file. The commands below sample every second and use an 800 MB circular log, so the oldest data is overwritten when the size limit is reached.
 
 {: .warning }
-> Run all commands from **Command Prompt as Administrator**. Make sure the target drive has at least 2 GB of free space before starting the capture.
+> Run all commands from **Command Prompt** as an administrator. Make sure the target drive has at least 2 GB of free space before starting the capture.
 
 ### Prepare the capture
 

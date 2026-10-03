@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 9
 description: "Configure Microsoft Edge Update policies to roll Edge back to an available target version."
 tags: [edge, group-policy, rollback]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-10-03
 ---
 
 ## Configure Microsoft Edge rollback with Group Policy
@@ -29,8 +29,7 @@ temporarily return Microsoft Edge to an earlier version.
 ### Configure the rollback
 
 1. Open **Group Policy Management Editor** or **Local Group Policy Editor**.
-2. Go to `Computer Configuration > Administrative Templates > Microsoft Edge
-   Update > Applications > Microsoft Edge`.
+2. Go to **Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge**.
 3. Enable **Rollback to target version**.
 4. Enable **Target version override**, then enter the exact available version,
    such as `150.0.4078.48`.
@@ -41,7 +40,7 @@ temporarily return Microsoft Edge to an earlier version.
 
    Do not select **Update disabled**. Microsoft Edge Update must be allowed to
    process the policy-based rollback.
-6. Force policy refresh from an elevated Command Prompt:
+6. Force policy refresh from an elevated **Command Prompt**:
 
    ```bat
    gpupdate /force

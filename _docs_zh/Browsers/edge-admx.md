@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 21
 description: "将 Microsoft Edge 和 Edge Update ADMX/ADML 模板部署到域或本地策略存储。"
 tags: [edge, group-policy, admx]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 部署 Microsoft Edge 管理模板
 
-本指南说明如何下载 Microsoft Edge 管理模板（ADMX/ADML），并将其导入 Active Directory 中央存储或单台本地计算机。这两个部署目标是替代方案——请选择与你管理的计算机匹配的方案。
+将 Microsoft Edge 管理模板（ADMX/ADML）部署到 Active Directory 中央存储或本地计算机。部署目标**只选一种**。
 
 ### 环境
 
@@ -23,8 +23,8 @@ last_modified_date: 2026-08-02
 
 要完整管理 Microsoft Edge，需要两个不同的管理模板：
 
-- **msedge.admx**：配置浏览器设置（例如主页、扩展、安全策略）。
-- **msedgeupdate.admx**：管理 Microsoft Edge 的更新行为、更新频率和版本固定。
+- `msedge.admx`：浏览器设置，如主页、扩展和安全策略。
+- `msedgeupdate.admx`：更新行为、频率和版本固定。
 
 ### 选择部署目标
 
@@ -35,9 +35,6 @@ last_modified_date: 2026-08-02
 
 ### 部署到 Active Directory 中央存储
 {: #deploy-central-store }
-
-{: .note }
-> 独立章节。只完成这些步骤。部署到本地计算机是替代方案，不是后续步骤。
 
 部署到中央存储后，网络中的所有域管理员都可以使用这些模板。
 
@@ -59,14 +56,11 @@ last_modified_date: 2026-08-02
 ### 部署到单台计算机（本地存储）
 {: #deploy-local-store }
 
-{: .note }
-> 独立章节。只完成这些步骤。部署到中央存储是替代方案，不是前置步骤。
-
 如果你管理的是独立计算机，或在全域部署前测试策略，请按以下步骤操作。
 
 1. **定位本地策略目录**
 
-   打开 File Explorer，并转到 `C:\Windows\PolicyDefinitions`。
+   打开 **File Explorer**，转到 `C:\Windows\PolicyDefinitions`。
 
 2. **安装 ADMX 文件**
 
@@ -78,7 +72,7 @@ last_modified_date: 2026-08-02
 
 4. **验证安装**
 
-   运行 `gpedit.msc`，并转到 `Computer Configuration > Administrative Templates`。确认现在可以看到 **Microsoft Edge** 和 **Microsoft Edge Update** 类别。
+   运行 `gpedit.msc`，并转到 **Computer Configuration > Administrative Templates**。确认现在可以看到 **Microsoft Edge** 和 **Microsoft Edge Update** 类别。
 
    {: .tip }
    > 若要确保拥有 Windows OS 本身的最新管理模板，请参阅 [Microsoft 文档](https://learn.microsoft.com/en-us/troubleshoot/windows-client/group-policy/create-and-manage-central-store)，其中按 Windows 版本提供 ADMX 文件的直接下载链接。

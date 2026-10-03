@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 7
 description: "将已生效的 Edge 与 Chrome 策略导出为 JSON 和 Windows 注册表文件。"
 tags: [edge, chrome, policy]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 last_verified_date: 2026-08-02
 tested_on: Windows 11 企业版（内部版本 26200）、Microsoft Edge Stable 151.0.4129.59、PowerShell 7.6.4
 ---
@@ -31,9 +31,6 @@ tested_on: Windows 11 企业版（内部版本 26200）、Microsoft Edge Stable 
 ## Microsoft Edge：导出已生效的策略为 JSON
 {: #edge-policy-json }
 
-{: .note }
-> 独立小节。只需完成这里的步骤。本页其他小节是可替代的导出方式，不是后续步骤。
-
 1. 在 Microsoft Edge 中访问 `edge://policy`。
 2. 选择 **Export to JSON**（导出为 JSON），然后将文件保存到本地。
 
@@ -41,9 +38,6 @@ tested_on: Windows 11 企业版（内部版本 26200）、Microsoft Edge Stable 
 
 ## Microsoft Edge：导出注册表中的策略
 {: #edge-policy-registry }
-
-{: .note }
-> 独立小节。只需完成这里的步骤。本页其他小节是可替代的导出方式，不是后续步骤。
 
 在 PowerShell 中运行以下命令：
 
@@ -96,17 +90,11 @@ Edge 根项的导出是递归的，因此在 `WebView2` 子项存在时已经包
 ## Google Chrome：导出已生效的策略为 JSON
 {: #chrome-policy-json }
 
-{: .note }
-> 独立小节。只需完成这里的步骤。本页其他小节是可替代的导出方式，不是后续步骤。
-
 1. 在 Google Chrome 中访问 `chrome://policy`。
 2. 选择 **Export to JSON**（导出为 JSON），然后将文件保存到本地。
 
 ## Google Chrome：导出注册表中的策略
 {: #chrome-policy-registry }
-
-{: .note }
-> 独立小节。只需完成这里的步骤。本页其他小节是可替代的导出方式，不是后续步骤。
 
 在 PowerShell 中运行以下命令：
 

@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 6
 description: "使用 AppCmd 创建、验证并安全还原 IIS 配置备份。"
 tags: [iis, configuration, backup]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 备份和还原 IIS 配置
@@ -42,6 +42,8 @@ AppCmd 会备份全局 IIS 服务器配置。在更改 IIS 设置或安装会修
    ![列出 IIS 配置备份](/assets/images/backupIIS2.png)
 
 手动 AppCmd 备份存储在：
+
+`<backup-name>` 表示创建备份时使用的名称。
 
 ```text
 %windir%\System32\inetsrv\backup\<backup-name>

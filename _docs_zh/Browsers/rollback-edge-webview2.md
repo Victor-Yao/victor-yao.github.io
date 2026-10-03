@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 23
 description: "使用企业 MSI 包临时回滚 Microsoft Edge。"
 tags: [edge, rollback, msi]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 使用 MSI 回滚 Microsoft Edge
@@ -26,10 +26,9 @@ last_modified_date: 2026-08-02
 ### 1. 临时禁用 Edge 更新
 
 1. 打开 **本地组策略编辑器**。
-2. 转到 `Computer Configuration > Administrative Templates > Microsoft Edge
-   Update > Applications > Microsoft Edge`。
+2. 转到 **Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge**。
 3. 启用 **Update policy override**，然后选择 **Update disabled**。
-4. 从提升的命令提示符运行以下命令：
+4. 从管理员 **Command Prompt** 运行以下命令：
 
    ```bat
    gpupdate /force
@@ -41,10 +40,10 @@ last_modified_date: 2026-08-02
 
 1. 保存用户工作并关闭所有 Microsoft Edge 窗口。
 2. 下载目标 Microsoft Edge MSI。匹配已安装的渠道和体系结构。
-3. 以管理员身份打开 **命令提示符**，然后运行：
+3. 以管理员身份打开 **Command Prompt**，将 `<installer-path>` 替换为下载的 MSI 完整路径，运行：
 
    ```bat
-   msiexec /i "C:\Path\To\MicrosoftEdgeEnterpriseX64.msi" /qn ALLOWDOWNGRADE=1 /L*v "%TEMP%\edge-rollback.log"
+   msiexec /i "<installer-path>" /qn ALLOWDOWNGRADE=1 /L*v "%TEMP%\edge-rollback.log"
    ```
 
 所需的回滚属性为 `ALLOWDOWNGRADE=1`。安装日志写入 `%TEMP%\edge-rollback.log`。

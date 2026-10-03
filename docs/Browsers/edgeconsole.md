@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 2
 description: "Save Microsoft Edge DevTools console output for troubleshooting."
 tags: [edge, devtools, logging]
-last_modified_date: 2025-12-30
+last_modified_date: 2026-10-03
 ---
 
-## Collect Console log from Developer tools on Edge
+## Collect Console log from Developer Tools on Edge
 
-1. Open Microsoft Edge, then open **Developer tools** by pressing **F12**.
+1. Open Microsoft Edge, then open **Developer Tools** by pressing **F12**.
 
 2. Select the **Console** tab, then select **Clear console**.
 

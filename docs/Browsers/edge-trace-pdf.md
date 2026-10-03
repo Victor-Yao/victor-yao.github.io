@@ -5,20 +5,20 @@ grand_parent: Guides
 nav_order: 18
 description: "Capture a focused Chromium trace for PDF rendering and font-mapping issues in Edge."
 tags: [edge, pdf, tracing]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-10-03
 ---
 
 ## Capturing an Edge trace for PDF troubleshooting
 
-This guide describes how to capture low-level Chromium traces focused on PDF rendering and font-mapping logic in Microsoft Edge.
+Capture Chromium traces for Edge PDF rendering and font-mapping issues.
 
 ### Instructions
 
 1. **Terminate all Edge processes**
 
-   Open a Command Prompt and run:
+   Open a **Command Prompt** and run:
 
-   ```cmd
+   ```bat
    taskkill /f /im msedge.exe
    ```
 
@@ -29,7 +29,7 @@ This guide describes how to capture low-level Chromium traces focused on PDF ren
 
    Start Edge with the feature flags that enable the target PDF and font libraries:
 
-   ```cmd
+   ```bat
    msedge.exe --enable-features="msPdfSharedLibrary,msPdfEnableSkiaFontMap"
    ```
 
@@ -48,7 +48,7 @@ This guide describes how to capture low-level Chromium traces focused on PDF ren
    Select **Record** to begin the session.
 
    {: .tip }
-   > If you can't find the specific categories in the manual list, make sure "Disabled by Default" categories are also visible, or use the "Edit" function to add the category strings manually.
+   > If a category is missing, show **Disabled by Default** categories or use **Edit** to add its name.
 
 5. **Capture the rendering event**
 
@@ -60,5 +60,5 @@ This guide describes how to capture low-level Chromium traces focused on PDF ren
 
 ## See also
 
-- [Edge Histograms (PDF)](/docs/browsers/edge-histograms-pdf/)
-- [Edge Tracing](/docs/browsers/edge-tracing/)
+- [Edge Histograms (PDF)]({% link docs/Browsers/edge-histograms-pdf.md %})
+- [Edge Tracing]({% link docs/Browsers/edge-tracing.md %})

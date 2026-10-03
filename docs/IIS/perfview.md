@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 9
 description: "Collect CPU, memory, and ETW performance traces with PerfView."
 tags: [iis, performance, perfview]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-10-03
 ---
 
 ## Collecting performance traces using PerfView
 
-This guide describes how to capture detailed performance data, including IIS and thread-time information, using the PerfView tool.
+Use PerfView to collect IIS and thread-time performance data.
 
 ### Environment
 
@@ -20,13 +20,13 @@ This guide describes how to capture detailed performance data, including IIS and
 
 ### Procedure
 
-1. Download and run the [PerfView.exe](https://github.com/Microsoft/perfview/releases) binary as an Administrator.
+1. Download [PerfView.exe](https://github.com/Microsoft/perfview/releases) and run it as an administrator.
 
-2. Select **Collect** from the top menu bar, then select **Collect** (or press `Alt+C`).
+2. Select **Collect > Collect** or press **Alt+C**.
 
 3. **Configure collection parameters**
 
-   In the configuration window, apply the following settings to ensure comprehensive data capture:
+   Apply these settings:
 
    - **Zip**: Enabled (checked).
    - **Circular MB**: Set to `1000` or higher to prevent buffer overwrite.
@@ -39,7 +39,7 @@ This guide describes how to capture detailed performance data, including IIS and
 
 4. Select the **Start Collection** button.
 
-5. Allow the trace to run while reproducing the performance issue (typically for approximately **2 minutes** in this scenario).
+5. Reproduce the performance issue while tracing runs, typically for about 2 minutes in this scenario.
 
 6. Select **Stop Collection** once the capture period is complete.
 

@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 23
 description: "Temporarily roll back Microsoft Edge with an enterprise MSI package."
 tags: [edge, rollback, msi]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-10-03
 ---
 
 ## Roll back Microsoft Edge with an MSI
@@ -32,10 +32,9 @@ resolved.
 ### 1. Temporarily disable Edge updates
 
 1. Open **Local Group Policy Editor**.
-2. Go to `Computer Configuration > Administrative Templates > Microsoft Edge
-   Update > Applications > Microsoft Edge`.
+2. Go to **Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge**.
 3. Enable **Update policy override**, then select **Update disabled**.
-4. Run the following command from an elevated Command Prompt:
+4. Run the following command from an elevated **Command Prompt**:
 
    ```bat
    gpupdate /force
@@ -49,10 +48,10 @@ manual MSI rollback is running.
 1. Save user work and close all Microsoft Edge windows.
 2. Download the target Microsoft Edge MSI. Match the installed channel and
    architecture.
-3. Open **Command Prompt** as an administrator, then run:
+3. Open **Command Prompt** as an administrator. Replace `<installer-path>` with the full path to the downloaded MSI and run:
 
    ```bat
-   msiexec /i "C:\Path\To\MicrosoftEdgeEnterpriseX64.msi" /qn ALLOWDOWNGRADE=1 /L*v "%TEMP%\edge-rollback.log"
+   msiexec /i "<installer-path>" /qn ALLOWDOWNGRADE=1 /L*v "%TEMP%\edge-rollback.log"
    ```
 
 The required rollback property is `ALLOWDOWNGRADE=1`. The installation log is

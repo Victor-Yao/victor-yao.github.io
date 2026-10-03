@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 12
 description: "抓取限制大小的 Windows 性能计数器日志，用于排查 IIS、ASP.NET、.NET Framework 和 WCF 性能问题。"
 tags: [windows, perfmon, performance, iis, dotnet]
-last_modified_date: 2026-09-02
+last_modified_date: 2026-10-03
 ---
 
 ## 使用 Perfmon 抓取性能计数器日志
@@ -14,7 +14,7 @@ last_modified_date: 2026-09-02
 使用 `logman` 将 Windows 性能计数器收集到二进制 `.blg` 文件中。以下命令每秒采样一次，并使用 800 MB 的循环日志；达到大小上限后，最早的数据会被覆盖。
 
 {: .warning }
-> 所有命令都需要在**以管理员身份运行的命令提示符**中执行。开始抓取前，请确保目标驱动器至少有 2 GB 可用空间。
+> 所有命令都需要在以管理员身份运行的 **Command Prompt** 中执行。开始抓取前，请确保目标驱动器至少有 2 GB 可用空间。
 
 ### 准备抓取
 
@@ -47,9 +47,9 @@ last_modified_date: 2026-09-02
    logman start PerfCapture
    ```
 
-3. 在收集器运行期间重现性能问题。记录重现开始和结束时间（包括时区），以便将操作与计数器数据关联起来。
+3. 在收集器运行期间复现性能问题。记录复现开始和结束时间（包括时区），以便将操作与计数器数据关联起来。
 
-4. 重现问题后立即停止数据收集。
+4. 复现问题后立即停止数据收集。
 
    ```bat
    logman stop PerfCapture

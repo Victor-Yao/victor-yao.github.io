@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 16
 description: "使用受支持的修复、重新安装和诊断步骤处理 Microsoft Edge 与 WebView2 安装失败。"
 tags: [edge, webview2, installation]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 修复 Microsoft Edge 和 WebView2 安装
@@ -87,7 +87,7 @@ last_modified_date: 2026-08-02
 另请收集：
 
 - [导出浏览器策略和注册表设置]({% link _docs_zh/Browsers/edge-policy.md %})。
-- 在重现安装失败时，捕获一段简短的 [Process Monitor 跟踪]({% link _docs_zh/general/procmon.md %})。
+- 在复现安装失败时，捕获一段简短的 [Process Monitor 跟踪]({% link _docs_zh/general/procmon.md %})。
 - 记录安装程序文件名、命令行、错误代码和失败时间。
 
 {: .important }

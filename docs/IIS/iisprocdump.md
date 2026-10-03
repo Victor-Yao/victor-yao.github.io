@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 3
 description: "Use ProcDump to collect crash, hang, or exception dumps from an IIS worker process."
 tags: [iis, memory-dump, procdump]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## Using procdump to collect memory dump of w3wp.exe
@@ -14,13 +14,11 @@ last_modified_date: 2026-08-02
 
 1. Download [Procdump](https://download.sysinternals.com/files/Procdump.zip). For more information, see [https://learn.microsoft.com/en-us/sysinternals/downloads/procdump](https://learn.microsoft.com/en-us/sysinternals/downloads/procdump#examples)
 
-2. Open Command Prompt as an administrator, then go to the **Procdump** folder.
+2. Open **Command Prompt** as an administrator and go to the extracted ProcDump folder.
 
 ### Choose a capture mode
 
-Each capture mode below is an independent procedure. Run the one that matches
-the problem you are investigating — these sections are alternatives, not
-sequential steps.
+Choose **one** capture mode below; they are alternatives, not sequential steps.
 
 | Capture mode | Use when | Section |
 | --- | --- | --- |
@@ -32,14 +30,11 @@ sequential steps.
 ### Capture a single dump
 {: #single-dump }
 
-{: .note }
-> Independent capture mode. Run only this section — the other capture modes are alternatives.
+1. Complete the [prerequisites](#prerequisites).
 
-1. [Prerequisites](#prerequisites)
+2. [Find the target worker process PID](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process).
 
-2. [Find out the PID of the target w3wp.exe process](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process)
-
-3. Replace `<pid>` with **the PID of the target process**, then run
+3. Replace `<pid>` with the target process ID, then run:
 
    ```bat
    procdump -ma -accepteula <pid>
@@ -48,14 +43,11 @@ sequential steps.
 ### Capture multiple dumps at a fixed interval
 {: #interval-dumps }
 
-{: .note }
-> Independent capture mode. Run only this section — the other capture modes are alternatives.
+1. Complete the [prerequisites](#prerequisites).
 
-1. [Prerequisites](#prerequisites)
+2. [Find the target worker process PID](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process).
 
-2. [Find out the PID of the target w3wp.exe process](#appendix-1-how-to-find-the-pid-of-the-target-w3wpexe-process)
-
-3. Replace `<pid>` with **the PID of the target process**, then run
+3. Replace `<pid>` with the target process ID, then run:
 
    ```bat
    procdump -ma -accepteula -s 10 -n 3 <pid>
@@ -64,27 +56,21 @@ sequential steps.
 ### Capture an exception memory dump
 {: #exception-dump }
 
-{: .note }
-> Independent capture mode. Run only this section — the other capture modes are alternatives.
+1. Complete the [prerequisites](#prerequisites).
 
-1. [Prerequisites](#prerequisites)
-
-2. Replace `<keywords>` with **exception message**, then run:
+2. Replace `<exception-filter>` with the exception message text, then run:
 
    ```bat
-   procdump -ma -n 1 -e 1 -f <keywords> w3wp.exe
+   procdump -ma -n 1 -e 1 -f "<exception-filter>" w3wp.exe
    ```
 
    {: .tip }
-   > If you want to capture other process, replace `w3wp.exe` with the target process name, (for example, `dotnet.exe`).
+   > For another process, replace `w3wp.exe` with its name, such as `dotnet.exe`.
 
 ### Capture a crash dump
 {: #crash-dump }
 
-{: .note }
-> Independent capture mode. Run only this section — the other capture modes are alternatives.
-
-1. [Prerequisites](#prerequisites)
+1. Complete the [prerequisites](#prerequisites).
 
 2. Run the following command, then wait for the crash to occur:
 

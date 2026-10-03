@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 2
 description: "Configure DebugDiag rules to collect IIS crash or exception memory dumps."
 tags: [iis, memory-dump, debugdiag]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 ## Using DebugDiag to collect memory dump for IIS
 
@@ -13,15 +13,13 @@ last_modified_date: 2026-08-02
 
 1. Download and install [DebugDiag](https://www.microsoft.com/en-us/download/details.aspx?id=103453).
 
-2. Search for **DebugDiag.Collection.exe**, then run it as an administrator.
+2. Run `DebugDiag.Collection.exe` as an administrator.
 
    ![Open DebugDiag Collection as administrator](/assets/images/debugdiag10.png)
 
 ### Choose a rule type
 
-Both rules below create a DebugDiag crash rule for the same application pool.
-Configure the one that matches what you need to capture — these sections are
-alternatives, not sequential steps.
+Both options use a DebugDiag crash rule. Choose **one** for the target application pool.
 
 | Rule type | Capture when | Section |
 | --- | --- | --- |
@@ -31,10 +29,7 @@ alternatives, not sequential steps.
 ### Capture a crash dump
 {: #debugdiag-crash }
 
-{: .note }
-> Independent section. Configure only this rule — the exception rule is an alternative, not a later step.
-
-1. Add a crash rule and finish wizard as screenshots.
+1. Add a crash rule using the following settings:
 
    1. Select **Crash**.
 
@@ -44,11 +39,11 @@ alternatives, not sequential steps.
 
       ![Select Crash rule type](/assets/images/debugdiag2.png)
 
-   3. Select **your app pool**, then continue.
+   3. Select the target application pool, then continue.
 
       ![Select the target process](/assets/images/debugdiag3.png)
 
-   4. Configure advanced options same with screenshot, then continue.
+   4. Configure the advanced options as shown, then continue.
 
       ![Configure crash rule options](/assets/images/debugdiag11.png)
 
@@ -60,15 +55,12 @@ alternatives, not sequential steps.
 
       ![Activate the crash rule](/assets/images/debugdiag8.png)
 
-2. Wait for the crash to occur, then verify if a dump file is created at dump folder.
+2. Wait for the crash, then confirm that a dump file was created in the selected folder.
 
     ![Wait for the crash to occur](/assets/images/debugdiag9.png)
 
 ### Capture a specific exception
 {: #debugdiag-exception }
-
-{: .note }
-> Independent section. Configure only this rule — the crash rule is an alternative, not an earlier step.
 
 1. Add a crash rule:
 
@@ -80,7 +72,7 @@ alternatives, not sequential steps.
 
       ![Select Crash rule type](/assets/images/debugdiag2.png)
 
-   3. Select **your app pool**, then continue.
+   3. Select the target application pool, then continue.
 
       ![Select the target process](/assets/images/debugdiag3.png)
 
@@ -102,6 +94,6 @@ alternatives, not sequential steps.
 
       ![Activate the rule](/assets/images/debugdiag8.png)
 
-2. Wait for the exception occur. Then verify if a dump file is created at dump folder.
+2. Wait for the exception, then confirm that a dump file was created in the selected folder.
 
     ![Activate the crash rule](/assets/images/debugdiag9.png)

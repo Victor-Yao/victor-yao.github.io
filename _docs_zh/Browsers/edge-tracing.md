@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 17
 description: "使用内置 Chromium tracing 工具捕获底层 Microsoft Edge 跟踪。"
 tags: [edge, tracing, chromium]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 捕获 Microsoft Edge 跟踪日志
 
-本指南说明如何使用内置 Chromium tracing 工具诊断底层浏览器问题，例如 PDF 呈现失败或插件错误。
+使用 Chromium 跟踪排查 Edge PDF 呈现失败、插件错误等底层问题。
 
 ### 环境
 
@@ -28,7 +28,7 @@ last_modified_date: 2026-08-02
 
    在配置覆盖层中，选择 **Manually select settings**。确保列表中的**所有**类别都已选中，以确保跟踪全面，然后选择对话框底部的 **Record** 按钮。
 
-3. **重现问题**
+3. **复现问题**
 
    屏幕顶部会出现进度条，指示缓冲区使用情况。打开新标签页或窗口并触发错误。
 
@@ -37,7 +37,7 @@ last_modified_date: 2026-08-02
    错误可见后，立即返回 `edge://tracing` 选项卡并选择 **Stop**。
 
    {: .tip }
-   > 你不需要等待缓冲区使用率达到 100%。问题一旦重现就停止跟踪，以便控制文件大小。
+   > 你不需要等待缓冲区使用率达到 100%。问题一旦复现就停止跟踪，以便控制文件大小。
 
 5. **保存并导出**
 
@@ -45,5 +45,5 @@ last_modified_date: 2026-08-02
 
 ## 另请参阅
 
-- [Edge Trace (PDF)](/zh/docs/Browsers/edge-trace-pdf/)
-- [Edge Histograms (PDF)](/zh/docs/Browsers/edge-histograms-pdf/)
+- [Edge Trace (PDF)]({% link _docs_zh/Browsers/edge-trace-pdf.md %})
+- [Edge Histograms (PDF)]({% link _docs_zh/Browsers/edge-histograms-pdf.md %})

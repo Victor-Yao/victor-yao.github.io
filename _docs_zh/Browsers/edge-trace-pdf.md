@@ -6,20 +6,20 @@ grand_parent: 指南
 nav_order: 18
 description: "为 Edge 中的 PDF 呈现和字体映射问题捕获聚焦的 Chromium 跟踪。"
 tags: [edge, pdf, tracing]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 为 PDF 故障排除捕获 Edge 跟踪
 
-本指南说明如何在 Microsoft Edge 中捕获聚焦于 PDF 呈现和字体映射逻辑的底层 Chromium 跟踪。
+采集 Chromium 跟踪，排查 Edge PDF 呈现和字体映射问题。
 
 ### 操作步骤
 
 1. **终止所有 Edge 进程**
 
-   打开 Command Prompt 并运行：
+   打开 **Command Prompt** 并运行：
 
-   ```cmd
+   ```bat
    taskkill /f /im msedge.exe
    ```
 
@@ -30,11 +30,11 @@ last_modified_date: 2026-08-02
 
    使用启用目标 PDF 和字体库的功能标志启动 Edge：
 
-   ```cmd
+   ```bat
    msedge.exe --enable-features="msPdfSharedLibrary,msPdfEnableSkiaFontMap"
    ```
 
-3. **验证问题重现**
+3. **验证问题复现**
 
    打开有问题的 PDF 文件，并确认启用这些标志后呈现问题或错误仍然发生，然后再继续跟踪。
 
@@ -49,7 +49,7 @@ last_modified_date: 2026-08-02
    选择 **Record** 开始会话。
 
    {: .tip }
-   > 如果在手动列表中找不到特定类别，请确保 "Disabled by Default" 类别也可见，或使用 "Edit" 功能手动添加类别字符串。
+   > 若缺少类别，显示 **Disabled by Default** 类别，或通过 **Edit** 添加名称。
 
 5. **捕获呈现事件**
 
@@ -61,5 +61,5 @@ last_modified_date: 2026-08-02
 
 ## 另请参阅
 
-- [Edge Histograms (PDF)](/zh/docs/Browsers/edge-histograms-pdf/)
-- [Edge Tracing](/zh/docs/Browsers/edge-tracing/)
+- [Edge Histograms (PDF)]({% link _docs_zh/Browsers/edge-histograms-pdf.md %})
+- [Edge Tracing]({% link _docs_zh/Browsers/edge-tracing.md %})

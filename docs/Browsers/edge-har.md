@@ -5,18 +5,18 @@ grand_parent: Guides
 nav_order: 1
 description: "Capture and export an HTTP Archive network trace from Microsoft Edge DevTools."
 tags: [edge, har, networking]
-last_modified_date: 2026-01-01
+last_modified_date: 2026-10-03
 ---
 
-## Collect a network trace log from Edge Developer tools
+## Collect a network trace log from Edge Developer Tools
 
-1. Open Microsoft Edge, then open **Developer tools** by pressing **F12**.
+1. Open Microsoft Edge, then open **Developer Tools** by pressing **F12**.
 
 2. Select the **Network** tab. Then select **Clear cache** and enable **Disable cache**.
 
     ![Clear and disable cache](/assets/images/edgehar1.png)
 
-3. Select **Record** to start recording, then **reproduce the issue**.
+3. Select **Record** to start recording, then reproduce the issue.
 
     ![Start recording](/assets/images/edgehar2.png)
 

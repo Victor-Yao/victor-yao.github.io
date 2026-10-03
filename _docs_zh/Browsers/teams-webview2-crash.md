@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 22
 description: "在不更改 Crashpad 权限的情况下收集受支持的 Teams、Windows 和现有 WebView2 崩溃数据。"
 tags: [teams, webview2, crash]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 收集 Microsoft Teams WebView2 崩溃诊断数据
@@ -35,7 +35,7 @@ last_modified_date: 2026-08-02
 
 1. 在 Windows 系统托盘中选择 Teams 图标，然后选择 **Collect
    support files**。
-2. 或者，按 `Ctrl + Alt + Shift + 1`。
+2. 或者，按 **Ctrl+Alt+Shift+1**。
 3. 等待 **Downloading web logs** 横幅消失。
 4. 打开用户的 **Downloads** 文件夹。
 5. 保留生成的 Web 日志存档，并在传输前压缩 Microsoft Teams 支持日志文件。

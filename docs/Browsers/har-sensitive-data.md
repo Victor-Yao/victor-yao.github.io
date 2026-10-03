@@ -5,27 +5,27 @@ grand_parent: Guides
 nav_order: 20
 description: "Configure DevTools to include authentication headers and cookies in a HAR capture."
 tags: [har, authentication, sensitive-data]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-10-03
 ---
 
 ## Capturing sensitive data in HAR logs
 
-This guide describes how to configure browser Developer Tools to include sensitive authentication headers and cookie data when exporting an HTTP Archive (HAR) file.
+Configure Developer Tools to include authentication headers and cookies in exported HAR files.
 
 ### Environment
 
 - **Browser**: Microsoft Edge, Google Chrome, or other Chromium-based browsers
-- **Interface**: Developer Tools (`F12`)
+- **Interface**: Developer Tools (**F12**)
 
 ### Instructions
 
 1. **Open Developer Tools**
 
-   Launch the browser and press `F12` or `Ctrl + Shift + I`, then go to the **Network** tab.
+   Launch the browser and press **F12** or **Ctrl+Shift+I**, then go to the **Network** tab.
 
 2. **Access settings**
 
-   Press `F1` while the Developer Tools pane is active to open the **Settings** interface.
+   Press **F1** while the Developer Tools pane is active to open the **Settings** interface.
 
 3. **Navigate to network settings**
 

@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 6
 description: "Create, verify, and safely restore IIS configuration backups with AppCmd."
 tags: [iis, configuration, backup]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-10-03
 ---
 
 ## Back up and restore IIS configuration
@@ -46,6 +46,8 @@ configuration.
    ![List IIS configuration backups](/assets/images/backupIIS2.png)
 
 Manual AppCmd backups are stored in:
+
+`<backup-name>` is the name used when creating the backup.
 
 ```text
 %windir%\System32\inetsrv\backup\<backup-name>

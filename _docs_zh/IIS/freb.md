@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 4
 description: "为返回指定 HTTP 状态代码的请求启用 IIS 失败请求跟踪。"
 tags: [iis, freb, tracing]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 为特定 HTTP 状态代码启用失败请求跟踪规则
@@ -43,6 +43,6 @@ last_modified_date: 2026-08-02
 
    ![启用失败请求跟踪规则](/assets/images/Freb5.png)
 
-4. 重现问题并收集 FREB 日志。
+4. 复现问题并收集 FREB 日志。
 
    ![收集失败请求跟踪日志](/assets/images/Freb6.png)

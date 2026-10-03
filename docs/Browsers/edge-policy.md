@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 7
 description: "Export applied Edge and Chrome policies to JSON and Windows registry files."
 tags: [edge, chrome, policy]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 last_verified_date: 2026-08-02
 tested_on: Windows 11 Enterprise (build 26200), Microsoft Edge Stable 151.0.4129.59, PowerShell 7.6.4
 ---
@@ -33,9 +33,6 @@ are alternatives, not sequential steps.
 ## Microsoft Edge: export applied policies to JSON
 {: #edge-policy-json }
 
-{: .note }
-> Independent section. Complete only these steps. The other sections on this page are alternative exports, not later steps.
-
 1. Go to `edge://policy` in Microsoft Edge.
 2. Select **Export to JSON**, then save the file to disk.
 
@@ -43,9 +40,6 @@ are alternatives, not sequential steps.
 
 ## Microsoft Edge: export registry-backed policies
 {: #edge-policy-registry }
-
-{: .note }
-> Independent section. Complete only these steps. The other sections on this page are alternative exports, not later steps.
 
 Run the following commands in PowerShell:
 
@@ -98,17 +92,11 @@ The script checks each key before exporting and prints one status line per key. 
 ## Google Chrome: export applied policies to JSON
 {: #chrome-policy-json }
 
-{: .note }
-> Independent section. Complete only these steps. The other sections on this page are alternative exports, not later steps.
-
 1. Go to `chrome://policy` in Google Chrome.
 2. Select **Export to JSON**, then save the file to disk.
 
 ## Google Chrome: export registry-backed policies
 {: #chrome-policy-registry }
-
-{: .note }
-> Independent section. Complete only these steps. The other sections on this page are alternative exports, not later steps.
 
 Run the following commands in PowerShell:
 

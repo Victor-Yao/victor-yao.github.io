@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 2
 description: "配置 DebugDiag 规则以抓取 IIS 崩溃或异常内存转储。"
 tags: [iis, memory-dump, debugdiag]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 ## 使用 DebugDiag 为 IIS 抓取内存转储
 
@@ -14,13 +14,13 @@ last_modified_date: 2026-08-02
 
 1. 下载并安装 [DebugDiag](https://www.microsoft.com/en-us/download/details.aspx?id=103453)。
 
-2. 搜索 **DebugDiag.Collection.exe**，然后以管理员身份运行它。
+2. 以管理员身份运行 `DebugDiag.Collection.exe`。
 
    ![以管理员身份打开 DebugDiag Collection](/assets/images/debugdiag10.png)
 
 ### 选择规则类型
 
-下面两个规则都会为同一个应用程序池创建 DebugDiag 崩溃规则。请配置与你需要抓取的内容匹配的一个规则——这些小节是替代方案，不是顺序步骤。
+两种方式均使用 DebugDiag 崩溃规则，为目标应用程序池**只选择一种**。
 
 | 规则类型 | 抓取时机 | 小节 |
 | --- | --- | --- |
@@ -30,10 +30,7 @@ last_modified_date: 2026-08-02
 ### 抓取崩溃转储
 {: #debugdiag-crash }
 
-{: .note }
-> 独立小节。只配置此规则——异常规则是替代方案，不是后续步骤。
-
-1. 添加崩溃规则，并按截图完成向导。
+1. 添加崩溃规则，按以下设置完成向导：
 
    1. 选择 **Crash**。
 
@@ -43,7 +40,7 @@ last_modified_date: 2026-08-02
 
       ![选择 Crash 规则类型](/assets/images/debugdiag2.png)
 
-   3. 选择 **your app pool**，然后继续。
+   3. 选择目标应用程序池，然后继续。
 
       ![选择目标进程](/assets/images/debugdiag3.png)
 
@@ -59,15 +56,12 @@ last_modified_date: 2026-08-02
 
       ![激活崩溃规则](/assets/images/debugdiag8.png)
 
-2. 等待崩溃发生，然后验证转储文件夹中是否创建了转储文件。
+2. 等待崩溃，确认所选文件夹中已生成转储文件。
 
     ![等待崩溃发生](/assets/images/debugdiag9.png)
 
 ### 抓取特定异常
 {: #debugdiag-exception }
-
-{: .note }
-> 独立小节。只配置此规则——崩溃规则是替代方案，不是前置步骤。
 
 1. 添加崩溃规则：
 
@@ -79,7 +73,7 @@ last_modified_date: 2026-08-02
 
       ![选择 Crash 规则类型](/assets/images/debugdiag2.png)
 
-   3. 选择 **your app pool**，然后继续。
+   3. 选择目标应用程序池，然后继续。
 
       ![选择目标进程](/assets/images/debugdiag3.png)
 
@@ -101,6 +95,6 @@ last_modified_date: 2026-08-02
 
       ![激活规则](/assets/images/debugdiag8.png)
 
-2. 等待异常发生。然后验证转储文件夹中是否创建了转储文件。
+2. 等待异常，确认所选文件夹中已生成转储文件。
 
     ![激活崩溃规则](/assets/images/debugdiag9.png)

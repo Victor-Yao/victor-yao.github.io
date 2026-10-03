@@ -5,10 +5,10 @@ grand_parent: Guides
 nav_order: 6
 description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."
 tags: [edge, crash, memory-dump]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
-There are two different types of crash events in the Edge browser, and the methods for collecting their crash dumps are also different. Collect the one that matches the crash you are investigating — these sections are alternatives, not sequential steps.
+Choose **one** procedure matching the Edge crash type; these are alternatives, not sequential steps.
 
 ## Choose the crash type
 
@@ -20,17 +20,14 @@ There are two different types of crash events in the Edge browser, and the metho
 ## Crashpad crash event
 {: #crashpad-crash-event }
 
-{: .note }
-> Independent section. Complete only these steps. The Windows crash event section is an alternative, not a later step.
-
 1. Search for **Environment Variables**, then open it.
 
     ![Environment Variables dialog](/assets/images/edgecrashpad1.png)
 
 2. Add a new **User variable**:
 
-   * **Variable name:** `ENABLE_HEAP_DUMPS`
-   * **Variable value:** `1`
+   - **Variable name:** `ENABLE_HEAP_DUMPS`
+   - **Variable value:** `1`
 
     ![Add ENABLE_HEAP_DUMPS](/assets/images/edgecrashpad2.png)
 
@@ -45,15 +42,12 @@ There are two different types of crash events in the Edge browser, and the metho
    REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v StartupBoostEnabled /t REG_DWORD /d 0 /f
    ```
 
-4. Click `Settings(...) -> Close Microsoft Edge` to fully exit Edge. Reopen Edge, then **reproduce the issue**.
+4. Click **Settings(...) > Close Microsoft Edge** to fully exit Edge. Reopen Edge, then reproduce the issue.
 
 5. Verify the dump file is generated at `%LOCALAPPDATA%\Microsoft\Edge\User Data\Crashpad\reports`.
 
 ## Windows crash event
 {: #windows-crash-event }
-
-{: .note }
-> Independent section. Complete only these steps. The Crashpad crash event section is an alternative, not an earlier step.
 
 1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
 
@@ -61,7 +55,7 @@ There are two different types of crash events in the Edge browser, and the metho
 
     ![Import reg](/assets/images/edgewer1.png)
 
-3. Verify values in the `msedge.exe` key that exactly same show in the screenshot:
+3. Confirm that the values under the following key match the screenshot:
 
    ```text
    HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\msedge.exe
@@ -71,6 +65,6 @@ There are two different types of crash events in the Edge browser, and the metho
 
 4. Create a folder at `C:\dumps`.
 
-5. **Reproduce the issue**.
+5. Reproduce the issue.
 
 6. Verify the dump file is generated at `C:\dumps`.

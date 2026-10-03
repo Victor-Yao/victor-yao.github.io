@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 10
 description: "启用 IIS 配置审核，以识别谁更改了设置以及修改了哪些内容。"
 tags: [iis, configuration, auditing]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 启用 IIS 配置审核
 
-本指南说明如何启用 IIS 配置操作日志，以审核谁修改了 IIS 设置以及应用了哪些更改。
+启用 IIS 配置日志，记录谁修改了 IIS 设置及具体变更。
 
 ### 环境
 
@@ -20,15 +20,15 @@ last_modified_date: 2026-08-02
 
 ### 步骤
 
-1. 启动 **Event Viewer**（`eventvwr.msc`）。
+1. 打开**事件查看器**（`eventvwr.msc`）。
 
 2. 在控制台树中转到以下路径：
 
-   `Applications and Services Logs` > `Microsoft` > `Windows` > `IIS-Configuration`
+   **Applications and Services Logs > Microsoft > Windows > IIS-Configuration**
 
 3. 右键单击 **Operational** 日志并选择 **Enable Log**。
 
-4. 重现问题。
+4. 复现问题。
 
 5. 返回 **Operational** 日志查看条目，然后右键单击 **Operational** 并选择 **Save All Events As...**。
 

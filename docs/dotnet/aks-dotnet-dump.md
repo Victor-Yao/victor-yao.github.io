@@ -5,68 +5,60 @@ grand_parent: Guides
 nav_order: 2
 description: "Safely capture and retrieve a .NET process memory dump from an AKS pod."
 tags: [dotnet, aks, memory-dump]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-10-03
 ---
 
 ## Capture a .NET memory dump in AKS
 
-This procedure runs `dotnet-dump` in the same container as the target .NET
-process. Use it only when the container has a shell, a writable temporary
-directory, and enough available memory and ephemeral storage.
+Run `dotnet-dump` in the target application's container.
+
+Replace `<namespace>`, `<pod>`, `<container>`, and `<pid>` with the target values before running the commands.
 
 {: .warning }
-> Collecting a heap or full dump can substantially increase memory and disk
-> usage. A container close to its memory limit can be terminated during
-> collection. The target process can also pause while the dump is written.
-> Test the procedure and schedule a controlled collection window.
+> Collection can pause the process, use substantial disk space, or exceed the
+> memory limit and terminate the container. Test first and use a controlled capture window.
 
 {: .important }
-> Memory dumps can contain credentials, access tokens, personal data, request
-> content, and encryption material. Store, transfer, retain, and delete the dump
-> according to your organization's approved diagnostic-data process.
+> Dumps may contain credentials, tokens, personal data, and encryption material.
+> Follow the approved diagnostic-data handling and retention policy.
 
 ### Prerequisites
 
-- `kubectl` access with permission to run `pods/exec` in the target namespace.
-- The target namespace, pod, and container names.
-- Enough free ephemeral storage for a file comparable to the process memory
-  footprint.
-- `dotnet-dump` must run as the same user as the target process or as root.
-- The target process and `dotnet-dump` must use the same `TMPDIR`.
-- The container security policy must permit the required `ptrace` operation.
+- `kubectl` with `pods/exec` permission; namespace, pod, and container names.
+- A shell, writable temporary directory, enough memory, and ephemeral storage
+  comparable to the process memory footprint.
+- The same process user (or root) and `TMPDIR` as the target application.
+- Container security policy permitting `ptrace`.
 
-Do not install a package manager or permanently add diagnostic tools to a
-production container solely for an ad hoc collection.
+Do not install package managers or permanently modify the production image for this capture.
 
-### 1. Confirm the target container
+### 1. Open the target container
 
-List the containers in the pod:
+List containers:
 
 ```bash
 kubectl get pod <pod> -n <namespace> -o jsonpath='{.spec.containers[*].name}'
 ```
 
-Open a shell in the selected container:
+Open the selected container:
 
 ```bash
 kubectl exec -it <pod> -n <namespace> -c <container> -- /bin/sh
 ```
 
-If the image has no shell, is read-only, or is distroless, stop here. Use a
-prebuilt diagnostic image or sidecar designed for this workload. A sidecar must
-share the process namespace and the diagnostic socket directory, normally
-`/tmp`, with the target container.
+For shell-less, read-only, or distroless images, use a prebuilt diagnostic
+image or sidecar. The sidecar must share the process namespace and diagnostic
+socket directory, normally `/tmp`.
 
-### 2. Place the matching `dotnet-dump` binary
+### 2. Prepare dotnet-dump
 
-Inside the target container, identify its architecture:
+Check the container architecture:
 
 ```bash
 uname -m
 ```
 
-Use the matching Microsoft direct-download package. For example, for a glibc
-x64 image with `curl` already installed:
+Match the architecture and libc (`glibc` or `musl`). For glibc x64 with `curl`:
 
 ```bash
 cd /tmp
@@ -74,69 +66,53 @@ curl -fL https://aka.ms/dotnet-dump/linux-x64 -o dotnet-dump
 chmod 700 dotnet-dump
 ```
 
-Microsoft also publishes Linux Arm, Arm64, musl-x64, and musl-Arm64 packages.
-Do not use the x64 binary on a different architecture or on an incompatible
-musl-based image.
+If downloads are blocked, transfer an approved, integrity-verified binary to
+`/tmp/dotnet-dump`. `kubectl cp` requires container-side `tar`; otherwise use
+the approved diagnostic image or artifact-transfer process.
 
-If outbound download is blocked, transfer an approved, integrity-verified
-binary to `/tmp/dotnet-dump`. `kubectl cp` requires `tar` inside the container;
-if `tar` is unavailable, use your organization's diagnostic image or artifact
-transfer process instead of modifying the application image.
+### 3. Find the .NET process
 
-### 3. Identify the .NET process
-
-List compatible .NET processes:
+List processes:
 
 ```bash
 /tmp/dotnet-dump ps
 ```
 
-Record the PID for the affected application. Use a PID rather than the process
-name when more than one .NET process is present.
+Use the affected application's PID.
 
 ### 4. Collect the dump
 
-Choose the dump type requested for the investigation:
-
-- `Heap` captures managed heaps, threads, stacks, exceptions, and handles
-  without mapped module images.
-- `Full` is larger and should be used only when the additional memory is
-  required.
-
-Collect to a known writable path:
+- `Heap`: managed heaps, threads, stacks, exceptions, and handles; excludes mapped module images.
+- `Full`: larger; use only when the additional memory is required.
 
 ```bash
 /tmp/dotnet-dump collect --process-id <pid> --type Heap --output /tmp/app-heap.dmp
 ```
 
-Wait for the command to report that the dump was written successfully. If it
-fails with a connection, permission, or incompatible-runtime error, do not
-weaken the pod security configuration without approval. Verify the process
-user, `TMPDIR`, diagnostic socket, and `ptrace` requirements first.
+Wait for success. On failure, check the user, `TMPDIR`, diagnostic socket,
+`ptrace`, and runtime compatibility. Do not relax security settings without approval.
 
-### 5. Copy the dump from the pod
+### 5. Copy the dump
 
-Run this command from a second terminal:
+In a second terminal:
 
 ```bash
 kubectl cp <namespace>/<pod>:/tmp/app-heap.dmp ./app-heap.dmp -c <container>
 ```
 
-Verify that the local file exists and has a nonzero size before deleting the
-pod copy. Copy the file immediately because a pod restart removes data stored
-only in the container writable layer.
+Copy promptly: pod restarts discard writable-layer files.
+Verify that the local file exists and is nonempty before deleting the pod copy.
 
 ### 6. Clean up
 
-After the local copy has been verified, remove the temporary files:
+After verifying the local copy, remove temporary files:
 
 ```bash
 kubectl exec <pod> -n <namespace> -c <container> -- rm -f /tmp/app-heap.dmp /tmp/dotnet-dump
 ```
 
-Upload the dump only through an approved encrypted channel, restrict access to
-the investigation team, and delete local and remote copies when the retention
-period ends.
+Transfer through an approved encrypted channel, limit access to the investigation
+team, and delete copies after the retention period.
 
 ## References
 

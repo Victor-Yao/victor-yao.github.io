@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 10
 description: "Use Spy++ to monitor Windows messages sent to an application window."
 tags: [windows, debugging, ui]
-last_modified_date: 2026-06-06
+last_modified_date: 2026-10-03
 ---
 
 ## Monitoring Windows messages via Spy++
 
-This guide describes how to use the [Spy++](https://learn.microsoft.com/en-us/visualstudio/debugger/introducing-spy-increment?view=visualstudio) utility to intercept and log Windows messages for Microsoft Edge, which is useful for diagnosing UI-related hangs, input issues, or window-management conflicts.
+Use [Spy++](https://learn.microsoft.com/en-us/visualstudio/debugger/introducing-spy-increment?view=visualstudio) to log Microsoft Edge window messages when investigating UI hangs, input issues, or window-management conflicts.
 
 ### Environment
 
@@ -22,15 +22,15 @@ This guide describes how to use the [Spy++](https://learn.microsoft.com/en-us/vi
 
 1. **Initialize the utility**
 
-   Download the `Spy++.zip` archive and extract its contents. Launch `spyxx_amd64.exe` with Administrator privileges.
+   Download and extract `Spy++.zip`, then run `spyxx_amd64.exe` as an administrator.
 
 2. **Configure message logging**
 
-   In the top menu, go to **Spy** > **Log Messages...**.
+   In the top menu, go to **Spy > Log Messages...**.
 
 3. **Target the Microsoft Edge window**
 
-   Locate the **Finder Tool** (the radar/target icon) in the Message Options dialog. Click and drag the icon over the active **Microsoft Edge** window. Release the mouse button; the handle and class information for the Edge window should now be populated in the dialog.
+   In **Message Options**, drag **Finder Tool** (the target icon) onto the Edge window. Release it and confirm that the window handle and class are populated.
 
 4. **Adjust capture scope**
 
@@ -38,11 +38,11 @@ This guide describes how to use the [Spy++](https://learn.microsoft.com/en-us/vi
 
 5. **Reproduce and capture**
 
-   Perform the actions in Edge that trigger the reported issue. Monitor the Spy++ log window to ensure messages are being actively intercepted.
+   Reproduce the issue and confirm that messages appear in the Spy++ log window.
 
 6. **Export the log data**
 
-   Once the reproduction is complete, go to **Messages** > **Save Log to File...** and save the file with the `.sxl` extension.
+   Once the reproduction is complete, go to **Messages > Save Log to File...** and save the file with the `.sxl` extension.
 
 {: .tip }
 >

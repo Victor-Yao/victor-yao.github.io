@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 22
 description: "Collect supported Teams, Windows, and existing WebView2 crash data without changing Crashpad permissions."
 tags: [teams, webview2, crash]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-10-03
 ---
 
 ## Collect Microsoft Teams WebView2 crash diagnostics
@@ -41,7 +41,7 @@ Collect the files as soon as possible after the crash:
 
 1. Select the Teams icon in the Windows system tray, then select **Collect
    support files**.
-2. Alternatively, press `Ctrl + Alt + Shift + 1`.
+2. Alternatively, press **Ctrl+Alt+Shift+1**.
 3. Wait until the **Downloading web logs** banner disappears.
 4. Open the user's **Downloads** folder.
 5. Keep the generated web-log archive and compress the Microsoft Teams support

@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 19
 description: "为加密 PDF 和 MIP 故障排除收集 Microsoft Edge 直方图数据。"
 tags: [edge, pdf, diagnostics]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 为 PDF 故障排除捕获 Edge 直方图
 
-本指南说明如何收集浏览器直方图数据，以诊断 Microsoft Edge 中与 Microsoft Information Protection (MIP) 加密 PDF 相关的问题。
+排查 Microsoft Information Protection（MIP）加密 PDF 问题时，收集 Edge 直方图。
 
 ### 环境
 
@@ -32,7 +32,7 @@ last_modified_date: 2026-08-02
    {: .note }
    > 切换到 Monitor Mode 后，按钮文本会变为 **Switch to Histogram Mode**。
 
-3. **重现问题**
+3. **复现问题**
 
    从你的**本地存储**打开有问题的 MIP 受保护 PDF。
 
@@ -45,7 +45,7 @@ last_modified_date: 2026-08-02
 
 5. **提取特定直方图类别**
 
-   通过搜索标题（使用 `Ctrl + F`）定位以下类别。对每个类别，展开标题，复制**完整内容**（包括标题和数据），并将其粘贴到单个 `.txt` 文件中。
+   按 **Ctrl+F** 查找以下类别，逐项展开，将标题和**全部数据**复制到同一个 `.txt` 文件中。
 
    必需类别：
 
@@ -62,5 +62,5 @@ last_modified_date: 2026-08-02
 
 ## 另请参阅
 
-- [Edge Trace (PDF)](/zh/docs/Browsers/edge-trace-pdf/)
-- [Edge Tracing](/zh/docs/Browsers/edge-tracing/)
+- [Edge Trace (PDF)]({% link _docs_zh/Browsers/edge-trace-pdf.md %})
+- [Edge Tracing]({% link _docs_zh/Browsers/edge-tracing.md %})

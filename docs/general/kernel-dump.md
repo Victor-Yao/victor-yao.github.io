@@ -5,13 +5,12 @@ grand_parent: Guides
 nav_order: 9
 description: "Configure Windows to capture kernel or complete memory dumps for operating system failures."
 tags: [windows, memory-dump, kernel]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## Capturing Windows kernel dumps
 
-This guide describes two alternative methods for capturing kernel memory dumps.
-Choose one method. Do not run both.
+Choose **one** kernel dump method below; do not run both.
 
 ### Environment
 
@@ -34,29 +33,26 @@ Choose one method. Do not run both.
 ### Method 1: Live kernel dump (non-invasive)
 {: #live-kernel-dump }
 
-{: .note }
-> Independent section. Complete only these steps. Method 2 is an alternative, not a later step.
-
 Use this method to capture the kernel state without crashing or restarting the system.
 
 1. **Install Debugging Tools**
 
    Make sure the Windows SDK or WinDbg is installed so that `kd.exe` or `windbg.exe` is available in the system path.
 
-2. **Launch elevated Command Prompt**
-
-   Run `cmd.exe` as Administrator.
+2. Open **Command Prompt** as an administrator.
 
 3. **Run LiveKd**
 
    Go to the folder containing `livekd.exe` and run one of the following commands to generate a mirror dump:
 
-   ```cmd
+   Replace `<debugger-path>` with the full path to `kd.exe` and `<pid>` with the target process ID.
+
+   ```bat
    livekd -accepteula -ml -o C:\dumps\live_kernel.dmp
 
-   livekd -accepteula -k "C:\Path\To\kd.exe" -o c:\dumps\live_kernel.dmp
+   livekd -accepteula -k "<debugger-path>" -o c:\dumps\live_kernel.dmp
 
-   livekd -accepteula -k "C:\Path\To\kd.exe" -mp 13848 -o c:\dumps\live_kernel.dmp
+   livekd -accepteula -k "<debugger-path>" -mp <pid> -o c:\dumps\live_kernel.dmp
    ```
 
 4. **Verify output**
@@ -66,27 +62,24 @@ Use this method to capture the kernel state without crashing or restarting the s
    {: .tip }
    > For **LiveKd**, if you encounter symbol errors, set your symbol path environment variable before running the tool:
    >
-   > ```cmd
+   > ```bat
    > set _NT_SYMBOL_PATH=srv*C:\Symbols*https://msdl.microsoft.com/download/symbols
    > ```
 
 ### Method 2: Forced crash dump (invasive)
 {: #forced-crash-dump }
 
-{: .note }
-> Independent section. Complete only these steps. Method 1 is an alternative, not an earlier step.
-
 Use this method if the system is hanging or if a full crash dump is required for root cause analysis.
 
 1. **Configure crash dump settings**
 
-   Press `Win + R`, type `sysdm.cpl`, and go to **Advanced** > **Startup and Recovery** > **Settings**. Make sure **Write debugging information** is set to **Kernel memory dump** or **Complete memory dump**.
+   Press **Win+R**, type `sysdm.cpl`, and go to **Advanced > Startup and Recovery > Settings**. Make sure **Write debugging information** is set to **Kernel memory dump** or **Complete memory dump**.
 
 2. **Run NotMyFault**
 
-   Open an elevated Command Prompt, go to the `NotMyFault` directory, and run the following command to immediately trigger a system crash (BSOD):
+   Open an elevated **Command Prompt**, go to the `NotMyFault` directory, and run the following command to immediately trigger a system crash (BSOD):
 
-   ```cmd
+   ```bat
    notmyfault64.exe /crash
    ```
 

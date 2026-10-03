@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 9
 description: "配置 Microsoft Edge Update 策略，将 Edge 回滚到可用的目标版本。"
 tags: [edge, group-policy, rollback]
-last_modified_date: 2026-08-02
+last_modified_date: 2026-10-03
 ---
 
 ## 使用组策略配置 Microsoft Edge 回滚
@@ -26,8 +26,7 @@ last_modified_date: 2026-08-02
 ### 配置回滚
 
 1. 打开 **组策略管理编辑器** 或 **本地组策略编辑器**。
-2. 转到 `Computer Configuration > Administrative Templates > Microsoft Edge
-   Update > Applications > Microsoft Edge`。
+2. 转到 **Computer Configuration > Administrative Templates > Microsoft Edge Update > Applications > Microsoft Edge**。
 3. 启用 **Rollback to target version**。
 4. 启用 **Target version override**，然后输入确切可用版本，例如 `150.0.4078.48`。
 5. 启用 **Update policy override**，然后选择以下值之一：
@@ -36,7 +35,7 @@ last_modified_date: 2026-08-02
    - **Automatic silent updates only**
 
    不要选择 **Update disabled**。必须允许 Microsoft Edge Update 处理基于策略的回滚。
-6. 从提升的命令提示符强制刷新策略：
+6. 从管理员 **Command Prompt** 强制刷新策略：
 
    ```bat
    gpupdate /force

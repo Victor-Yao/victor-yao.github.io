@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 11
 description: "Collect offline diagnostic data from Microsoft Edge for iOS."
 tags: [edge, ios, diagnostics]
-last_modified_date: 2025-12-31
+last_modified_date: 2026-10-03
 ---
 
 ## Collect offline diagnostic data from Edge on iOS
@@ -28,10 +28,10 @@ last_modified_date: 2025-12-31
 
         ![private-Open help and feedback 02](/assets/images/edgeios-diagnostic4.png)
 
-3. Turn on all options, then tap **Share**.
+4. Turn on all options, then tap **Share**.
 
     ![Check all options](/assets/images/edgeios-diagnostic5.jpg)
 
-4. Save the diagnostic data file locally.
+5. Save the diagnostic data file locally.
 
     ![Save file locally](/assets/images/edgeios-diagnostic6.jpg)

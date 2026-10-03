@@ -5,18 +5,18 @@ grand_parent: Guides
 nav_order: 1
 description: "Locate key IIS configuration and log files used during basic troubleshooting."
 tags: [iis, configuration, logging]
-last_modified_date: 2026-01-21
+last_modified_date: 2026-10-03
 ---
 
 ## IIS basic information
 
 ### Configurations
 
-1. applicationHost.config
+1. `applicationHost.config`
 
     The server-level configuration file for IIS. The path is `%windir%\System32\inetsrv\config\applicationHost.config`.
 
-2. web.config
+2. `web.config`
 
     The application-level configuration file for a website. It is usually located in the application root directory. It is normal for this file to be missing in some scenarios.
 
@@ -47,7 +47,7 @@ last_modified_date: 2026-01-21
 
    ![log file path](/assets/images/iislog3.png)
 
-5. In the log directory, open the folder named `W3SVC<SiteID>` that matches your site ID.
+5. In the log directory, open the folder named `W3SVC<site-id>` that matches your site ID.
 
    ![W3SVC site log](/assets/images/iislog4.png)
 

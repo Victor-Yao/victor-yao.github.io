@@ -58,6 +58,11 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
 - Blog posts use `_posts/YYYY-MM-DD-lowercase-title.md`, require `date`, `description`, and `tags`, and use the `<!--more-->` separator after the introductory excerpt. Posts are listed on `blog/index.md` and excluded from the sidebar.
 - When adding or renaming a guide category, update both `guides/index.md` and the manually maintained guide links in the root `index.md`.
 - Start document content at `##`; the page title comes from front matter. Guides favor concise numbered procedures, copy/paste-ready commands, and language-tagged fenced code blocks.
+- Start steps with an action verb. Keep short actions on one line; use a short action label and supporting detail only when needed. Number each procedure consecutively from `1.` and state alternative methods once before their sections.
+- Format UI labels, menu paths, and shortcuts in bold: `**File > Save**`, `**Ctrl+Shift+I**`. Use ` > ` between menu levels and no spaces around `+` in shortcuts. Preserve the actual UI label, including `...` where applicable.
+- Use inline code for commands, switches, filenames, paths, registry values, and identifiers. Use `bat` for Command Prompt commands, `powershell` for PowerShell, `bash` for Linux shells, and `text` for output, directory trees, or Run-dialog input.
+- Use descriptive lowercase angle-bracket placeholders, such as `<pid>` and `<installer-path>`, and explain replacements before use. Quote arguments that can contain spaces. Environment variables, wildcards, XML tags, and language syntax are literal syntax, not placeholders.
+- Use concise imperative wording in both languages. Chinese procedures use one consistent term for reproduction and distinguish touch taps from desktop clicks. Preserve language-appropriate punctuation, actual command syntax, necessary warnings, and existing links or anchors.
 - Use Jekyll links for repository pages, for example `{% link docs/Browsers/index.md %}`.
 - Reference images from the site root, for example `![Descriptive alt text](/assets/images/example.png)`, and add the corresponding file under `assets/images/`.
 - Just the Docs callouts are configured only for `note`, `tip`, `warning`, and `important`. Use:
