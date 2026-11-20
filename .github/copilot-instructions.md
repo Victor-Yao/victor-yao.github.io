@@ -65,6 +65,11 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
 - Use concise imperative wording in both languages. Chinese procedures use one consistent term for reproduction and distinguish touch taps from desktop clicks. Preserve language-appropriate punctuation, actual command syntax, necessary warnings, and existing links or anchors.
 - Use Jekyll links for repository pages, for example `{% link docs/Browsers/index.md %}`.
 - Reference images from the site root, for example `![Descriptive alt text](/assets/images/example.png)`, and add the corresponding file under `assets/images/`.
+- Share tools and scripts in one of three ways only:
+  - Scripts and configuration files you maintain (`.ps1`, `.bat`, `.reg`, `.wprp`, `.xml`) live in `assets/Scripts/` and are linked individually with `{% link assets/Scripts/<file> %}`. Tell readers to create a working folder, then right-click the link and select **Save link as**. English and Chinese pages link the same file. Do not bundle scripts into ZIP files.
+  - Binary tools that have no official download, such as the internal TTD build, are published as GitHub Release assets under a versioned tag (for example `ttd-1.10.91.0`), one ZIP per architecture, and linked with the full release download URL.
+  - Third-party tools are linked to their official download page and are never redistributed.
+- Keep inline code blocks to short commands that readers need to read or edit. Move longer scripts into `assets/Scripts/`.
 - Just the Docs callouts are configured only for `note`, `tip`, `warning`, and `important`. Use:
 
   ```markdown

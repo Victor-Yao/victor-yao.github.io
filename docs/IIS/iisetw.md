@@ -5,14 +5,14 @@ grand_parent: Guides
 nav_order: 7
 description: "Capture an IIS ETW trace with the provided collection script."
 tags: [iis, etw, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 ## Collect a Windows event trace for IIS
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+1. Create the `C:\Temp\IIS-ETW` folder. Right-click [iisetw.bat]({% link assets/Scripts/iisetw.bat %}), select **Save link as**, and save it in that folder.
 
-2. Open **Command Prompt** as an administrator and go to the extracted `toolkit` folder.
+2. Open **Command Prompt** as an administrator and go to `C:\Temp\IIS-ETW`.
 
 3. Run `iisetw.bat` to start tracing and wait for the script to pause.
 

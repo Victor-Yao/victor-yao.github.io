@@ -6,14 +6,20 @@ grand_parent: 指南
 nav_order: 8
 description: "为 IIS 工作进程抓取 Time Travel Tracing 录制。"
 tags: [iis, ttd, debugging]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 ## 为 IIS 工作进程抓取 TTT 跟踪
 
-1. 下载 [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip)，然后解压。
+1. 根据系统架构下载对应的 TTD，然后解压到 `C:\TTD`：
 
-2. 以管理员身份打开 **Command Prompt**，然后根据系统架构转到 toolkit 中的 `TTD_x86` 或 `TTD_x64`。
+   - 64 位 Windows：[TTD_x64.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x64.zip)
+   - 32 位 Windows：[TTD_x86.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x86.zip)
+
+   {: .note }
+   > 这是 TTD 内部版本（1.10.91.0），与公开下载的 TTD 不同。
+
+2. 以管理员身份打开 **Command Prompt**，然后进入 `C:\TTD\TTD_x64` 或 `C:\TTD\TTD_x86`。
 
 3. 创建目标文件夹 `c:\tttoutput` 来保存输出日志。
 

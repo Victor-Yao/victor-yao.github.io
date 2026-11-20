@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 6
 description: "为 Crashpad 和 Windows Error Reporting 崩溃场景收集 Microsoft Edge 崩溃转储。"
 tags: [edge, crash, memory-dump]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 按 Edge 崩溃类型**只选择一种**方式，不是先后执行的步骤。
@@ -50,9 +50,9 @@ last_modified_date: 2026-10-03
 ## Windows 崩溃事件
 {: #windows-crash-event }
 
-1. 下载 [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip)，然后解压。
+1. 右键 [msedge-wer.reg]({% link assets/Scripts/msedge-wer.reg %})，选择**链接另存为**并保存。
 
-2. 将 `toolkit\msedge-wer.reg` 导入注册表。
+2. 双击 `msedge-wer.reg`，将其导入注册表。
 
     ![导入 reg](/assets/images/edgewer1.png)
 

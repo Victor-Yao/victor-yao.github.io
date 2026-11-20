@@ -6,16 +6,16 @@ grand_parent: 指南
 nav_order: 8
 description: "收集 Windows TLS 协议和密码套件配置以用于故障排查。"
 tags: [windows, tls, security]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 last_verified_date: 2026-08-02
 tested_on: Windows 11 企业版（内部版本 26200）
 ---
 
 ## 从 Windows 获取 TLS 配置
 
-1. 下载 [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip)，然后解压。
+1. 新建 `C:\Temp\TLS` 文件夹。右键 [GetTlsConfig.bat]({% link assets/Scripts/GetTlsConfig.bat %})，选择**链接另存为**，保存到该文件夹。
 
-2. 以管理员身份打开 **Command Prompt**，进入解压后的 `toolkit` 文件夹。
+2. 以管理员身份打开 **Command Prompt**，进入 `C:\Temp\TLS`。
 
 3. 运行 `GetTlsConfig.bat`。
 

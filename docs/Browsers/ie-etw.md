@@ -5,15 +5,15 @@ grand_parent: Guides
 nav_order: 14
 description: "Capture an ETW trace for Internet Explorer with the provided script."
 tags: [internet-explorer, etw, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 ## Collect an ETW trace for Internet Explorer
 {: #collect-a-etw-trace-for-internet-explorer }
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+1. Create the `C:\Temp\IE-ETW` folder. Right-click [CaptureIEEtw.bat]({% link assets/Scripts/CaptureIEEtw.bat %}), select **Save link as**, and save it in that folder.
 
-2. Open **Command Prompt** as an administrator and go to the extracted `toolkit` folder.
+2. Open **Command Prompt** as an administrator and go to `C:\Temp\IE-ETW`.
 
 3. Run `CaptureIEEtw.bat` to start tracing and wait for the script to pause.
 

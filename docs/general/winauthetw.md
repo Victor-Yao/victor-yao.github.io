@@ -5,14 +5,14 @@ grand_parent: Guides
 nav_order: 5
 description: "Capture ETW traces for Windows authentication troubleshooting."
 tags: [windows, authentication, etw]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 ## Capture ETW traces for Windows authentication
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+1. Create the `C:\Temp\Auth` folder. Right-click [start-auth.ps1]({% link assets/Scripts/Auth-Script/start-auth.ps1 %}) and [stop-auth.ps1]({% link assets/Scripts/Auth-Script/stop-auth.ps1 %}), select **Save link as**, and save both files in that folder.
 
-2. Open **PowerShell** as an administrator, then go to `toolkit\Auth-Script`.
+2. Open **PowerShell** as an administrator, then go to `C:\Temp\Auth`.
 
 3. Run the following command to start capturing.
 

@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 6
 description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."
 tags: [edge, crash, memory-dump]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-20
 ---
 
 Choose **one** procedure matching the Edge crash type; these are alternatives, not sequential steps.
@@ -49,9 +49,9 @@ Choose **one** procedure matching the Edge crash type; these are alternatives, n
 ## Windows crash event
 {: #windows-crash-event }
 
-1. Download [toolkit.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/v0.0.0/toolkit.zip), then unzip it.
+1. Right-click [msedge-wer.reg]({% link assets/Scripts/msedge-wer.reg %}), select **Save link as**, and save it.
 
-2. Import `toolkit\msedge-wer.reg` into the registry.
+2. Double-click `msedge-wer.reg` to import it into the registry.
 
     ![Import reg](/assets/images/edgewer1.png)
 
