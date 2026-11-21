@@ -2,7 +2,7 @@
 title: Capture an IIS ETW Trace
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 7
+nav_order: 6
 description: "Capture an IIS ETW trace with the provided collection script."
 tags: [iis, etw, tracing]
 last_modified_date: 2026-11-20

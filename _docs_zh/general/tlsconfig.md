@@ -3,7 +3,7 @@ title: 收集 Windows TLS 配置
 permalink: /zh/docs/general/tlsconfig/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 8
+nav_order: 5
 description: "收集 Windows TLS 协议和密码套件配置以用于故障排查。"
 tags: [windows, tls, security]
 last_modified_date: 2026-11-20

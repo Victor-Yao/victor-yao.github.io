@@ -2,7 +2,7 @@
 title: Roll Back Microsoft Edge with an MSI
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 23
+nav_order: 21
 description: "Temporarily roll back Microsoft Edge with an enterprise MSI package."
 tags: [edge, rollback, msi]
 last_modified_date: 2026-10-03

@@ -3,7 +3,7 @@ title: 收集 Edge 和 Chrome 无响应转储
 permalink: /zh/docs/Browsers/edge-hang-dump/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 25
+nav_order: 13
 description: "使用 ProcDump 和收集脚本，为无响应的 Microsoft Edge 或 Google Chrome 抓取完整内存转储。"
 tags: [edge, chrome, hang, memory-dump, procdump]
 last_modified_date: 2026-11-20

@@ -3,7 +3,7 @@ title: 检查已安装的 WebView2 Runtime
 permalink: /zh/docs/Browsers/webview2/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 10
+nav_order: 15
 description: "在不更改服务注册表值的情况下识别已安装的 Evergreen WebView2 Runtime 版本。"
 tags: [webview2, runtime, registry]
 last_modified_date: 2026-08-02

@@ -3,7 +3,7 @@ title: 使用 Perfmon 抓取性能计数器日志
 permalink: /zh/docs/general/perfmon/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 12
+nav_order: 8
 description: "抓取限制大小的 Windows 性能计数器日志，用于排查 IIS、ASP.NET、.NET Framework 和 WCF 性能问题。"
 tags: [windows, perfmon, performance, iis, dotnet]
 last_modified_date: 2026-11-21

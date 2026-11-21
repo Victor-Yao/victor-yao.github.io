@@ -3,7 +3,7 @@ title: 收集 Edge for iOS 诊断数据
 permalink: /zh/docs/Browsers/edgeios-diagnostic/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 11
+nav_order: 22
 description: "从 Microsoft Edge for iOS 收集离线诊断数据。"
 tags: [edge, ios, diagnostics]
 last_modified_date: 2026-10-03

@@ -2,7 +2,7 @@
 title: Collect a WebView2 ETW Trace
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 24
+nav_order: 16
 description: "Collect a WebView2 ETW trace with the built-in Windows recorder and send it to support."
 tags: [webview2, etw, diagnostics]
 last_modified_date: 2026-11-20

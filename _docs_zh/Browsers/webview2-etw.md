@@ -3,7 +3,7 @@ title: 收集 WebView2 ETW 日志
 permalink: /zh/docs/Browsers/webview2-etw/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 24
+nav_order: 16
 description: "使用 Windows 自带的 WPR 采集 WebView2 ETW 日志，并提交给支持工程师。"
 tags: [webview2, etw, diagnostics]
 last_modified_date: 2026-11-20

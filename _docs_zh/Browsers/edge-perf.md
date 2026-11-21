@@ -3,7 +3,7 @@ title: 捕获 Edge 性能配置文件
 permalink: /zh/docs/Browsers/edge-perf/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 3
+nav_order: 6
 description: "录制并导出 Microsoft Edge DevTools 性能配置文件。"
 tags: [edge, performance, devtools]
 last_modified_date: 2026-10-03

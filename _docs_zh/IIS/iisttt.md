@@ -3,7 +3,7 @@ title: 抓取 IIS Time Travel 跟踪
 permalink: /zh/docs/IIS/iisttt/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 8
+nav_order: 9
 description: "为 IIS 工作进程抓取 Time Travel Tracing 录制。"
 tags: [iis, ttd, debugging]
 last_modified_date: 2026-11-20

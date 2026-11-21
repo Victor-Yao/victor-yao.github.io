@@ -2,7 +2,7 @@
 title: Collect Microsoft Defender SmartScreen Diagnostics
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 8
+nav_order: 11
 description: "Collect the logs and traces required to investigate Microsoft Defender SmartScreen behavior in Edge."
 tags: [edge, smartscreen, security]
 last_modified_date: 2026-10-03

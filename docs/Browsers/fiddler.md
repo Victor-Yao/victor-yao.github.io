@@ -2,7 +2,7 @@
 title: Capture Browser Traffic with Fiddler
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 13
+nav_order: 4
 description: "Configure Fiddler Classic to decrypt HTTPS traffic and capture browser requests."
 tags: [fiddler, networking, http]
 last_modified_date: 2026-10-03

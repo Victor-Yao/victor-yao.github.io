@@ -3,7 +3,7 @@ title: 修复 Microsoft Edge 和 WebView2 安装
 permalink: /zh/docs/Browsers/edge-force-remove/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 16
+nav_order: 19
 description: "使用受支持的修复、重新安装和诊断步骤处理 Microsoft Edge 与 WebView2 安装失败。"
 tags: [edge, webview2, installation]
 last_modified_date: 2026-10-03

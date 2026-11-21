@@ -3,7 +3,7 @@ title: 导出浏览器策略与注册表设置
 permalink: /zh/docs/Browsers/edge-policy/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 7
+nav_order: 17
 description: "将已生效的 Edge 与 Chrome 策略导出为 JSON 和 Windows 注册表文件。"
 tags: [edge, chrome, policy]
 last_modified_date: 2026-11-21

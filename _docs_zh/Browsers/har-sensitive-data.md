@@ -3,7 +3,7 @@ title: 在 HAR 文件中捕获身份验证数据
 permalink: /zh/docs/Browsers/har-sensitive-data/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 20
+nav_order: 2
 description: "配置 DevTools 以在 HAR 捕获中包含身份验证标头和 Cookie。"
 tags: [har, authentication, sensitive-data]
 last_modified_date: 2026-11-21

@@ -3,7 +3,7 @@ title: 收集网络跟踪
 permalink: /zh/docs/general/network-trace/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 6
+nav_order: 4
 description: "使用 netsh trace、NetMon 命令行或 Wireshark 收集网络数据包。"
 tags: [windows, networking, packet-capture, etw, netmon, wireshark]
 last_modified_date: 2026-11-21

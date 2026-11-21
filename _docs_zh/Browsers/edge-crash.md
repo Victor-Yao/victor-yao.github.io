@@ -3,7 +3,7 @@ title: 收集 Microsoft Edge 崩溃转储
 permalink: /zh/docs/Browsers/edge-crash/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 6
+nav_order: 12
 description: "为 Crashpad 和 Windows Error Reporting 崩溃场景收集 Microsoft Edge 崩溃转储。"
 tags: [edge, crash, memory-dump]
 last_modified_date: 2026-11-20

@@ -2,7 +2,7 @@
 title: Capture Network Traces
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 6
+nav_order: 4
 description: "Capture network packets with netsh trace, NetMon command-line capture, or Wireshark."
 tags: [windows, networking, packet-capture, etw, netmon, wireshark]
 last_modified_date: 2026-11-21

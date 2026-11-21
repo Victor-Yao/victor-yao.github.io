@@ -2,7 +2,7 @@
 title: Collect Edge and Chrome Hang Dumps
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 25
+nav_order: 13
 description: "Capture full memory dumps of a hung Microsoft Edge or Google Chrome with ProcDump and a collection script."
 tags: [edge, chrome, hang, memory-dump, procdump]
 last_modified_date: 2026-11-20

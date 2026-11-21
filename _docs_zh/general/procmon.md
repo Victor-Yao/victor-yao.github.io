@@ -3,7 +3,7 @@ title: 抓取 Procmon 跟踪
 permalink: /zh/docs/general/procmon/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 3
+nav_order: 7
 description: "使用普通采集、循环缓冲区或启动日志抓取并保存 Process Monitor 跟踪。"
 tags: [windows, procmon, tracing]
 last_modified_date: 2026-11-21

@@ -2,7 +2,7 @@
 title: Collect Audit Logs for Failed File Access
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 14
+nav_order: 3
 description: "Collect Security audit logs for failed file access."
 tags: [windows, auditing, files, event-logs]
 last_modified_date: 2026-10-03

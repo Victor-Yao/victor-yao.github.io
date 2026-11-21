@@ -2,7 +2,7 @@
 title: Collect Intune Diagnostics from Edge for iOS
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 12
+nav_order: 23
 description: "Collect Intune help and support data from Microsoft Edge for iOS."
 tags: [edge, ios, intune]
 last_modified_date: 2026-10-03

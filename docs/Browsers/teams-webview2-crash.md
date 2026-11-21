@@ -2,7 +2,7 @@
 title: Collect Microsoft Teams WebView2 Crash Diagnostics
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 22
+nav_order: 14
 description: "Collect supported Teams, Windows, and existing WebView2 crash data without changing Crashpad permissions."
 tags: [teams, webview2, crash]
 last_modified_date: 2026-10-03

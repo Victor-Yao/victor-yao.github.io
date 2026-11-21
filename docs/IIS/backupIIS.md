@@ -2,7 +2,7 @@
 title: Back Up and Restore IIS Configuration
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 6
+nav_order: 2
 description: "Create, verify, and safely restore IIS configuration backups with AppCmd."
 tags: [iis, configuration, backup]
 last_modified_date: 2026-10-03

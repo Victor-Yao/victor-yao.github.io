@@ -2,7 +2,7 @@
 title: Collect Windows TLS Configuration
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 8
+nav_order: 5
 description: "Collect Windows TLS protocol and cipher-suite configuration for troubleshooting."
 tags: [windows, tls, security]
 last_modified_date: 2026-11-20

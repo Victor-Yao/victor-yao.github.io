@@ -3,7 +3,7 @@ title: 捕获 Internet Explorer ETW 跟踪
 permalink: /zh/docs/Browsers/ie-etw/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 14
+nav_order: 24
 description: "使用提供的脚本为 Internet Explorer 捕获 ETW 跟踪。"
 tags: [internet-explorer, etw, tracing]
 last_modified_date: 2026-11-20

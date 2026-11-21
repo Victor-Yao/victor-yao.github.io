@@ -3,7 +3,7 @@ title: 使用 ProcDump 抓取 IIS 转储
 permalink: /zh/docs/IIS/iisprocdump/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 3
+nav_order: 8
 description: "使用 ProcDump 从 IIS 工作进程抓取崩溃、挂起或异常转储。"
 tags: [iis, memory-dump, procdump]
 last_modified_date: 2026-10-03

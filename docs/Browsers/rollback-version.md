@@ -2,7 +2,7 @@
 title: Configure Microsoft Edge Rollback Policies
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 9
+nav_order: 20
 description: "Configure Microsoft Edge Update policies to roll Edge back to an available target version."
 tags: [edge, group-policy, rollback]
 last_modified_date: 2026-10-03

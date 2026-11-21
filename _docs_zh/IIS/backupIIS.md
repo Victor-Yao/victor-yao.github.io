@@ -3,7 +3,7 @@ title: 备份和还原 IIS 配置
 permalink: /zh/docs/IIS/backupIIS/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 6
+nav_order: 2
 description: "使用 AppCmd 创建、验证并安全还原 IIS 配置备份。"
 tags: [iis, configuration, backup]
 last_modified_date: 2026-10-03

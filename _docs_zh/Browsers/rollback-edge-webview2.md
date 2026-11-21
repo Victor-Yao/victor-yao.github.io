@@ -3,7 +3,7 @@ title: 使用 MSI 回滚 Microsoft Edge
 permalink: /zh/docs/Browsers/rollback-edge-webview2/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 23
+nav_order: 21
 description: "使用企业 MSI 包临时回滚 Microsoft Edge。"
 tags: [edge, rollback, msi]
 last_modified_date: 2026-10-03

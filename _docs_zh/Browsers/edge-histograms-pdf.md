@@ -3,7 +3,7 @@ title: 为 PDF 问题收集 Edge 直方图
 permalink: /zh/docs/Browsers/edge-histograms-pdf/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 19
+nav_order: 10
 description: "为加密 PDF 和 MIP 故障排除收集 Microsoft Edge 直方图数据。"
 tags: [edge, pdf, diagnostics]
 last_modified_date: 2026-11-21

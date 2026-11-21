@@ -2,7 +2,7 @@
 title: Export Edge DevTools Console Logs
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 2
+nav_order: 5
 description: "Save Microsoft Edge DevTools console output for troubleshooting."
 tags: [edge, devtools, logging]
 last_modified_date: 2026-10-03

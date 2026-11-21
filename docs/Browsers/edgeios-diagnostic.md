@@ -2,7 +2,7 @@
 title: Collect Edge for iOS Diagnostic Data
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 11
+nav_order: 22
 description: "Collect offline diagnostic data from Microsoft Edge for iOS."
 tags: [edge, ios, diagnostics]
 last_modified_date: 2026-10-03

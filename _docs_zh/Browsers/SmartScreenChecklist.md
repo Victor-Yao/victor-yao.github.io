@@ -3,7 +3,7 @@ title: 收集 Microsoft Defender SmartScreen 诊断数据
 permalink: /zh/docs/Browsers/SmartScreenChecklist/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 8
+nav_order: 11
 description: "收集调查 Edge 中 Microsoft Defender SmartScreen 行为所需的日志和跟踪。"
 tags: [edge, smartscreen, security]
 last_modified_date: 2026-10-03

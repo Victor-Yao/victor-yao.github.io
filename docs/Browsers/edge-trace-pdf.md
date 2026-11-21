@@ -2,7 +2,7 @@
 title: Capture an Edge Trace for PDF Issues
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 18
+nav_order: 9
 description: "Capture a focused Chromium trace for PDF rendering and font-mapping issues in Edge."
 tags: [edge, pdf, tracing]
 last_modified_date: 2026-11-21

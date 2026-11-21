@@ -3,7 +3,7 @@ title: 使用 PerfView 抓取 IIS 性能跟踪
 permalink: /zh/docs/IIS/perfview/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 9
+nav_order: 10
 description: "使用 PerfView 收集 CPU、内存和 ETW 性能跟踪。"
 tags: [iis, performance, perfview]
 last_modified_date: 2026-10-03

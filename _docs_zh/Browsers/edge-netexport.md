@@ -3,7 +3,7 @@ title: 捕获 Microsoft Edge NetExport 日志
 permalink: /zh/docs/Browsers/edge-netexport/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 4
+nav_order: 3
 description: "使用 Microsoft Edge net-export 捕获 Chromium 网络事件。"
 tags: [edge, networking, net-export]
 last_modified_date: 2026-10-03

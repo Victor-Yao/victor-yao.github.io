@@ -3,7 +3,7 @@ title: 抓取 Windows 内核转储
 permalink: /zh/docs/general/kernel-dump/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 9
+nav_order: 10
 description: "配置 Windows 以便在操作系统故障时抓取内核转储或完整内存转储。"
 tags: [windows, memory-dump, kernel]
 last_modified_date: 2026-10-03

@@ -2,7 +2,7 @@
 title: Capture a Microsoft Edge Trace
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 17
+nav_order: 8
 description: "Capture low-level Microsoft Edge traces with the built-in Chromium tracing tool."
 tags: [edge, tracing, chromium]
 last_modified_date: 2026-11-21

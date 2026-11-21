@@ -3,7 +3,7 @@ title: 导出 Edge DevTools 控制台日志
 permalink: /zh/docs/Browsers/edgeconsole/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 2
+nav_order: 5
 description: "保存 Microsoft Edge DevTools 控制台输出以进行故障排除。"
 tags: [edge, devtools, logging]
 last_modified_date: 2026-10-03

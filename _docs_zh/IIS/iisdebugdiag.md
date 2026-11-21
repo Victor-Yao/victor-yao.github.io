@@ -3,7 +3,7 @@ title: 使用 DebugDiag 抓取 IIS 转储
 permalink: /zh/docs/IIS/iisdebugdiag/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 2
+nav_order: 7
 description: "配置 DebugDiag 规则以抓取 IIS 崩溃或异常内存转储。"
 tags: [iis, memory-dump, debugdiag]
 last_modified_date: 2026-10-03

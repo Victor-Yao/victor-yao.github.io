@@ -3,7 +3,7 @@ title: 收集 Microsoft Teams WebView2 崩溃诊断数据
 permalink: /zh/docs/Browsers/teams-webview2-crash/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 22
+nav_order: 14
 description: "在不更改 Crashpad 权限的情况下收集受支持的 Teams、Windows 和现有 WebView2 崩溃数据。"
 tags: [teams, webview2, crash]
 last_modified_date: 2026-10-03

@@ -2,7 +2,7 @@
 title: Capture an Internet Explorer ETW Trace
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 14
+nav_order: 24
 description: "Capture an ETW trace for Internet Explorer with the provided script."
 tags: [internet-explorer, etw, tracing]
 last_modified_date: 2026-11-20

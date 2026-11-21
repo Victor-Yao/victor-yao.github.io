@@ -2,7 +2,7 @@
 title: Capture Performance Counter Logs with Perfmon
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 12
+nav_order: 8
 description: "Capture size-limited Windows performance counter logs for IIS, ASP.NET, .NET Framework, and WCF troubleshooting."
 tags: [windows, perfmon, performance, iis, dotnet]
 last_modified_date: 2026-11-21

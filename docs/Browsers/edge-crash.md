@@ -2,7 +2,7 @@
 title: Collect Microsoft Edge Crash Dumps
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 6
+nav_order: 12
 description: "Collect Microsoft Edge crash dumps for Crashpad and Windows Error Reporting crash scenarios."
 tags: [edge, crash, memory-dump]
 last_modified_date: 2026-11-20

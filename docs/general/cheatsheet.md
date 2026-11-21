@@ -2,7 +2,7 @@
 title: Cheatsheet
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 13
+nav_order: 12
 description: "Quick commands and methods for checking software versions, system details, and configuration."
 tags: [cheatsheet, windows, powershell, dotnet]
 last_modified_date: 2026-10-03

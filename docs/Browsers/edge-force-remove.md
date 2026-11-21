@@ -2,7 +2,7 @@
 title: Repair Microsoft Edge and WebView2 Installation
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 16
+nav_order: 19
 description: "Use supported repair, reinstall, and diagnostic steps for Microsoft Edge and WebView2 installation failures."
 tags: [edge, webview2, installation]
 last_modified_date: 2026-07-24

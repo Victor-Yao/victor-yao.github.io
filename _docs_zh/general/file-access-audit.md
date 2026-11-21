@@ -3,7 +3,7 @@ title: 收集文件访问失败的审核日志
 permalink: /zh/docs/general/file-access-audit/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 14
+nav_order: 3
 description: "启用文件访问失败审核，并收集 Security 事件日志。"
 tags: [windows, auditing, files, event-logs]
 last_modified_date: 2026-10-03

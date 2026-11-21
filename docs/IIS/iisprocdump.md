@@ -2,7 +2,7 @@
 title: Collect IIS Dumps with ProcDump
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 3
+nav_order: 8
 description: "Use ProcDump to collect crash, hang, or exception dumps from an IIS worker process."
 tags: [iis, memory-dump, procdump]
 last_modified_date: 2026-10-03

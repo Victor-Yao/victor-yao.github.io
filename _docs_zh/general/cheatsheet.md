@@ -3,7 +3,7 @@ title: Cheatsheet 速查笔记
 permalink: /zh/docs/general/cheatsheet/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 13
+nav_order: 12
 description: "按主题整理软件版本、系统信息及配置检查的常用命令和方法。"
 tags: [cheatsheet, windows, powershell, dotnet]
 last_modified_date: 2026-10-02

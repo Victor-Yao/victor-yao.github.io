@@ -2,7 +2,7 @@
 title: Capture an IIS Time Travel Trace
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 8
+nav_order: 9
 description: "Capture a Time Travel Tracing recording for an IIS worker process."
 tags: [iis, ttd, debugging]
 last_modified_date: 2026-11-20

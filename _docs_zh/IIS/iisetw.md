@@ -3,7 +3,7 @@ title: 抓取 IIS ETW 跟踪
 permalink: /zh/docs/IIS/iisetw/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 7
+nav_order: 6
 description: "使用提供的收集脚本抓取 IIS ETW 跟踪。"
 tags: [iis, etw, tracing]
 last_modified_date: 2026-11-20

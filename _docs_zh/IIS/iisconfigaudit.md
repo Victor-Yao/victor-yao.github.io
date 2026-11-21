@@ -3,7 +3,7 @@ title: 审核 IIS 配置更改
 permalink: /zh/docs/IIS/iisconfigaudit/
 parent: IIS 与 Web 托管
 grand_parent: 指南
-nav_order: 10
+nav_order: 3
 description: "启用 IIS 配置审核，以识别谁更改了设置以及修改了哪些内容。"
 tags: [iis, configuration, auditing]
 last_modified_date: 2026-10-03

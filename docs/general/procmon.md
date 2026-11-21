@@ -2,7 +2,7 @@
 title: Capture a Procmon Trace
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 3
+nav_order: 7
 description: "Capture and save a Process Monitor trace using normal capture, a circular buffer, or boot logging."
 tags: [windows, procmon, tracing]
 last_modified_date: 2026-11-21

@@ -2,7 +2,7 @@
 title: Capture Authentication Data in a HAR File
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 20
+nav_order: 2
 description: "Configure DevTools to include authentication headers and cookies in a HAR capture."
 tags: [har, authentication, sensitive-data]
 last_modified_date: 2026-11-21

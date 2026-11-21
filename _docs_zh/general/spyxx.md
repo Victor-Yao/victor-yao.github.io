@@ -3,7 +3,7 @@ title: 使用 Spy++ 监视 Windows 消息
 permalink: /zh/docs/general/spyxx/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 10
+nav_order: 9
 description: "使用 Spy++ 监视发送到应用程序窗口的 Windows 消息。"
 tags: [windows, debugging, ui]
 last_modified_date: 2026-10-03

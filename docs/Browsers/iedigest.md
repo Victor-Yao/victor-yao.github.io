@@ -2,7 +2,7 @@
 title: Collect Internet Explorer Configuration
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 15
+nav_order: 25
 description: "Collect Internet Explorer configuration data for comparison and troubleshooting."
 tags: [internet-explorer, configuration, diagnostics]
 last_modified_date: 2026-01-01

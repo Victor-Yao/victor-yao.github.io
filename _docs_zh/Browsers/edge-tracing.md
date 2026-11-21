@@ -3,7 +3,7 @@ title: 捕获 Microsoft Edge 跟踪
 permalink: /zh/docs/Browsers/edge-tracing/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 17
+nav_order: 8
 description: "使用内置 Chromium tracing 工具捕获底层 Microsoft Edge 跟踪。"
 tags: [edge, tracing, chromium]
 last_modified_date: 2026-11-21

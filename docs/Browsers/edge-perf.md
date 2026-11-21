@@ -2,7 +2,7 @@
 title: Capture an Edge Performance Profile
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 3
+nav_order: 6
 description: "Record and export a Microsoft Edge DevTools performance profile."
 tags: [edge, performance, devtools]
 last_modified_date: 2026-10-03

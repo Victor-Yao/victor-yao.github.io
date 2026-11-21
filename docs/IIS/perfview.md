@@ -2,7 +2,7 @@
 title: Capture IIS Performance Traces with PerfView
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 9
+nav_order: 10
 description: "Collect CPU, memory, and ETW performance traces with PerfView."
 tags: [iis, performance, perfview]
 last_modified_date: 2026-10-03

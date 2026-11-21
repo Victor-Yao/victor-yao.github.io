@@ -2,7 +2,7 @@
 title: Collect CAPI2 Logs
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 4
+nav_order: 2
 description: "Enable, collect, and restore the CAPI2 Operational log for certificate chain building and validation issues."
 tags: [windows, event-logs, capi2, certificates]
 last_modified_date: 2026-11-21

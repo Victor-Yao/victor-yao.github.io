@@ -2,7 +2,7 @@
 title: Audit IIS Configuration Changes
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 10
+nav_order: 3
 description: "Enable IIS configuration auditing to identify who changed settings and what was modified."
 tags: [iis, configuration, auditing]
 last_modified_date: 2026-10-03

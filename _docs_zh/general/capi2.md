@@ -3,7 +3,7 @@ title: 收集 CAPI2 日志
 permalink: /zh/docs/general/capi2/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 4
+nav_order: 2
 description: "启用、收集并还原 CAPI2 Operational 日志，用于排查证书链构建和校验问题。"
 tags: [windows, event-logs, capi2, certificates]
 last_modified_date: 2026-11-21

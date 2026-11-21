@@ -2,7 +2,7 @@
 title: Capture Windows Authentication ETW Traces
 parent: Windows & Networking
 grand_parent: Guides
-nav_order: 5
+nav_order: 6
 description: "Capture ETW traces for Windows authentication troubleshooting."
 tags: [windows, authentication, etw]
 last_modified_date: 2026-11-20

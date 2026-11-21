@@ -3,7 +3,7 @@ title: 导出组策略报告
 permalink: /zh/docs/general/gpresult/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 2
+nav_order: 11
 description: "使用 gpresult 导出计算机和用户组策略设置的 HTML 报告。"
 tags: [windows, group-policy]
 last_modified_date: 2026-10-03

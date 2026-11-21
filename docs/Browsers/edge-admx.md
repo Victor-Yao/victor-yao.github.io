@@ -2,7 +2,7 @@
 title: Deploy Microsoft Edge Administrative Templates
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 21
+nav_order: 18
 description: "Deploy Microsoft Edge and Edge Update ADMX/ADML templates to domain or local policy stores."
 tags: [edge, group-policy, admx]
 last_modified_date: 2026-10-03

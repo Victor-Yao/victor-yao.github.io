@@ -3,7 +3,7 @@ title: 从 Edge for iOS 收集 Intune 诊断数据
 permalink: /zh/docs/Browsers/edgeios-IntuneHelp/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 12
+nav_order: 23
 description: "从 Microsoft Edge for iOS 收集 Intune 帮助和支持数据。"
 tags: [edge, ios, intune]
 last_modified_date: 2026-10-03

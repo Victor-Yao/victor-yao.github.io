@@ -2,7 +2,7 @@
 title: Collect Edge Histograms for PDF Issues
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 19
+nav_order: 10
 description: "Collect Microsoft Edge histogram data for encrypted PDF and MIP troubleshooting."
 tags: [edge, pdf, diagnostics]
 last_modified_date: 2026-11-21

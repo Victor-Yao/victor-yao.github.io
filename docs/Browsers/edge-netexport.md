@@ -2,7 +2,7 @@
 title: Capture a Microsoft Edge NetExport Log
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 4
+nav_order: 3
 description: "Capture Chromium network events with Microsoft Edge net-export."
 tags: [edge, networking, net-export]
 last_modified_date: 2026-10-03

@@ -3,7 +3,7 @@ title: 为 PDF 问题捕获 Edge 跟踪
 permalink: /zh/docs/Browsers/edge-trace-pdf/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 18
+nav_order: 9
 description: "为 Edge 中的 PDF 呈现和字体映射问题捕获聚焦的 Chromium 跟踪。"
 tags: [edge, pdf, tracing]
 last_modified_date: 2026-11-21

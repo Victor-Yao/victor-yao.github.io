@@ -2,7 +2,7 @@
 title: Inspect the Installed WebView2 Runtime
 parent: Browsers & WebView2
 grand_parent: Guides
-nav_order: 10
+nav_order: 15
 description: "Identify installed Evergreen WebView2 Runtime versions without changing servicing registry values."
 tags: [webview2, runtime, registry]
 last_modified_date: 2026-08-02

@@ -3,7 +3,7 @@ title: 抓取 Windows 身份验证 ETW 跟踪
 permalink: /zh/docs/general/winauthetw/
 parent: Windows 与网络
 grand_parent: 指南
-nav_order: 5
+nav_order: 6
 description: "抓取用于 Windows 身份验证故障排查的 ETW 跟踪。"
 tags: [windows, authentication, etw]
 last_modified_date: 2026-11-20

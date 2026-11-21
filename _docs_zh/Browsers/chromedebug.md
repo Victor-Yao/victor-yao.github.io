@@ -3,7 +3,7 @@ title: 收集 Microsoft Edge 调试日志
 permalink: /zh/docs/Browsers/chromedebug/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 5
+nav_order: 7
 description: "启用 Microsoft Edge 命令行日志记录并收集 chrome_debug.log。"
 tags: [edge, logging, chromium]
 last_modified_date: 2026-10-03

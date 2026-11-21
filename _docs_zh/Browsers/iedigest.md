@@ -3,7 +3,7 @@ title: 收集 Internet Explorer 配置
 permalink: /zh/docs/Browsers/iedigest/
 parent: 浏览器与 WebView2
 grand_parent: 指南
-nav_order: 15
+nav_order: 25
 description: "收集 Internet Explorer 配置数据用于对比和故障排查。"
 tags: [internet-explorer, configuration, diagnostics]
 last_modified_date: 2026-08-02

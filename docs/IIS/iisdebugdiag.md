@@ -2,7 +2,7 @@
 title: Collect IIS Dumps with DebugDiag
 parent: IIS & Web Hosting
 grand_parent: Guides
-nav_order: 2
+nav_order: 7
 description: "Configure DebugDiag rules to collect IIS crash or exception memory dumps."
 tags: [iis, memory-dump, debugdiag]
 last_modified_date: 2026-10-03
