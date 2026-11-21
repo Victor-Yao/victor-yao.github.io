@@ -5,10 +5,12 @@ grand_parent: Guides
 nav_order: 1
 description: "Capture and export an HTTP Archive network trace from Microsoft Edge DevTools."
 tags: [edge, har, networking]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Collect a network trace log from Edge Developer Tools
+
+Use this guide for most network issues. By default, the exported HAR file does not include cookies or authentication headers. Use [Capture Authentication Data in a HAR File]({% link docs/Browsers/har-sensitive-data.md %}) only when support explicitly asks for them.
 
 1. Open Microsoft Edge, then open **Developer Tools** by pressing **F12**.
 

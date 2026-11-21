@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 18
 description: "Capture a focused Chromium trace for PDF rendering and font-mapping issues in Edge."
 tags: [edge, pdf, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capturing an Edge trace for PDF troubleshooting
 
-Capture Chromium traces for Edge PDF rendering and font-mapping issues.
+Use this guide for PDF rendering and font-mapping issues. Unlike the general [Microsoft Edge trace]({% link docs/Browsers/edge-tracing.md %}), it starts Edge with PDF feature flags and records only the PDF and font categories. For encrypted (MIP) PDFs, use [Collect Edge Histograms for PDF Issues]({% link docs/Browsers/edge-histograms-pdf.md %}) instead.
 
 ### Instructions
 

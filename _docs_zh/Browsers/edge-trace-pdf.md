@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 18
 description: "为 Edge 中的 PDF 呈现和字体映射问题捕获聚焦的 Chromium 跟踪。"
 tags: [edge, pdf, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 为 PDF 故障排除捕获 Edge 跟踪
 
-采集 Chromium 跟踪，排查 Edge PDF 呈现和字体映射问题。
+本指南用于 PDF 呈现和字体映射问题。与通用的 [Microsoft Edge 跟踪]({% link _docs_zh/Browsers/edge-tracing.md %})不同，它会用 PDF 相关的功能标志启动 Edge，并且只记录 PDF 和字体类别。如果是加密（MIP）PDF，请改用[为 PDF 问题收集 Edge 直方图]({% link _docs_zh/Browsers/edge-histograms-pdf.md %})。
 
 ### 操作步骤
 

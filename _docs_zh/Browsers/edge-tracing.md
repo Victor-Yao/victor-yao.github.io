@@ -6,12 +6,18 @@ grand_parent: 指南
 nav_order: 17
 description: "使用内置 Chromium tracing 工具捕获底层 Microsoft Edge 跟踪。"
 tags: [edge, tracing, chromium]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 捕获 Microsoft Edge 跟踪日志
 
-使用 Chromium 跟踪排查 Edge PDF 呈现失败、插件错误等底层问题。
+这是记录**全部**类别的通用 Chromium 跟踪。用于没有更具体指南可用的底层浏览器问题，例如插件错误。
+
+以下问题请改用对应的专用指南：
+
+- PDF 呈现或字体问题：[为 PDF 问题捕获 Edge 跟踪]({% link _docs_zh/Browsers/edge-trace-pdf.md %})
+- 加密（MIP）PDF：[为 PDF 问题收集 Edge 直方图]({% link _docs_zh/Browsers/edge-histograms-pdf.md %})
+- SmartScreen 拦截：[收集 Microsoft Defender SmartScreen 诊断数据]({% link _docs_zh/Browsers/SmartScreenChecklist.md %})
 
 ### 环境
 

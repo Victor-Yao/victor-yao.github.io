@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 19
 description: "为加密 PDF 和 MIP 故障排除收集 Microsoft Edge 直方图数据。"
 tags: [edge, pdf, diagnostics]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 为 PDF 故障排除捕获 Edge 直方图
 
-排查 Microsoft Information Protection（MIP）加密 PDF 问题时，收集 Edge 直方图。
+本指南用于 Microsoft Information Protection（MIP）加密的 PDF。如果是未加密 PDF 的呈现或字体问题，请改用[为 PDF 问题捕获 Edge 跟踪]({% link _docs_zh/Browsers/edge-trace-pdf.md %})。
 
 ### 环境
 

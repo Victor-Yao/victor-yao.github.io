@@ -6,12 +6,12 @@ grand_parent: 指南
 nav_order: 20
 description: "配置 DevTools 以在 HAR 捕获中包含身份验证标头和 Cookie。"
 tags: [har, authentication, sensitive-data]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 在 HAR 日志中捕获敏感数据
 
-配置 Developer Tools，使导出的 HAR 文件包含身份验证标头和 Cookie 数据。
+配置 Developer Tools，使导出的 HAR 文件包含身份验证标头和 Cookie 数据。只有支持人员明确要求提供身份验证数据时才使用本指南；否则请使用[在 Microsoft Edge 中捕获 HAR 文件]({% link _docs_zh/Browsers/edge-har.md %})。
 
 ### 环境
 

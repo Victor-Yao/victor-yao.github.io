@@ -6,16 +6,24 @@ grand_parent: 指南
 nav_order: 3
 description: "使用普通采集、循环缓冲区或启动日志抓取并保存 Process Monitor 跟踪。"
 tags: [windows, procmon, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 准备
 
 下载并解压 [Process Monitor（Procmon）](https://learn.microsoft.com/zh-cn/sysinternals/downloads/procmon)。
 
-下面两种采集方式**只选一种**。Windows 启动问题请改用[启动日志](#boot-logging)。
-
 ## 选择采集方式
+
+只选择以下**一种**方式，它们不是先后执行的步骤。
+
+| 方式 | 适用场景 | 章节 |
+| --- | --- | --- |
+| 普通采集 | 问题能够较快复现 | [普通采集](#normal-capture) |
+| 循环采集 | 偶发问题，需要等待出现 | [循环采集](#limited-capture) |
+| 启动日志 | 问题发生在 Windows 启动过程中 | [启动日志](#boot-logging) |
+
+普通采集和循环采集都以[复现、停止并保存](#stop-and-save)结束；启动日志有独立的步骤。
 
 ### 普通采集
 {: #normal-capture }
@@ -54,7 +62,7 @@ last_modified_date: 2026-10-03
 
    ![保存 Procmon 日志文件](/assets/images/procmon3.png)
 
-## 启动日志（可选）
+## 启动日志
 {: #boot-logging }
 
 需要记录 Windows 启动过程时，使用以下独立流程。

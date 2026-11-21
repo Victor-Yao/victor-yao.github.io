@@ -6,11 +6,20 @@ grand_parent: 指南
 nav_order: 6
 description: "使用 netsh trace、NetMon 命令行或 Wireshark 收集网络数据包。"
 tags: [windows, networking, packet-capture, etw, netmon, wireshark]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
-按需选择以下一种方式，采集前创建 `c:\logs`。
-需要对比客户端与服务器时，在两端同时采集，并按计算机名区分保存的文件。
+## 选择抓取方式
+
+只选择以下**一种**方式，它们不是先后执行的步骤。
+
+| 方式 | 适用场景 | 章节 |
+| --- | --- | --- |
+| netsh trace | 默认选择。Windows 自带，无需安装 | [netsh trace](#netsh-trace) |
+| Network Monitor | 要求提供 `.cap` 文件，或已安装 NetMon | [Network Monitor](#netmon) |
+| Wireshark | 需要实时查看数据包，并且允许安装软件 | [Wireshark](#wireshark) |
+
+采集前创建 `c:\logs`。需要对比客户端与服务器时，在两端同时采集，并按计算机名区分保存的文件。
 
 ## netsh trace（ETW）
 {: #netsh-trace }

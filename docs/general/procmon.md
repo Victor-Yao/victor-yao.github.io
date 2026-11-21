@@ -5,16 +5,24 @@ grand_parent: Guides
 nav_order: 3
 description: "Capture and save a Process Monitor trace using normal capture, a circular buffer, or boot logging."
 tags: [windows, procmon, tracing]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Preparation
 
 Download and extract [Process Monitor (Procmon)](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon).
 
-Choose **one** capture method below. For Windows startup issues, use [Boot Logging](#boot-logging) instead.
-
 ## Choose a capture method
+
+Choose **one** method below; they are alternatives, not sequential steps.
+
+| Method | Use when | Section |
+| --- | --- | --- |
+| Normal capture | The issue can be reproduced quickly | [Normal capture](#normal-capture) |
+| Circular capture | The issue is intermittent and you need to wait for it | [Circular capture](#limited-capture) |
+| Boot logging | The issue happens during Windows startup | [Boot logging](#boot-logging) |
+
+Normal and circular capture both finish with [Reproduce, stop, and save](#stop-and-save). Boot logging has its own steps.
 
 ### Normal capture
 {: #normal-capture }
@@ -53,7 +61,7 @@ Use these steps after starting either capture method.
 
    ![Save Procmon log file](/assets/images/procmon3.png)
 
-## Boot Logging (optional)
+## Boot logging
 {: #boot-logging }
 
 Use this separate procedure when you need to capture activity during Windows startup.

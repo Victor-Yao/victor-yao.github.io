@@ -5,12 +5,18 @@ grand_parent: Guides
 nav_order: 17
 description: "Capture low-level Microsoft Edge traces with the built-in Chromium tracing tool."
 tags: [edge, tracing, chromium]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capturing Microsoft Edge trace logs
 
-Use Chromium tracing to diagnose Edge PDF rendering failures, plug-in errors, and other low-level browser issues.
+This is a general Chromium trace that records **all** categories. Use it for low-level browser issues, such as plug-in errors, when no more specific guide applies.
+
+For these issues, use the specific guide instead:
+
+- PDF rendering or font issues: [Capture an Edge Trace for PDF Issues]({% link docs/Browsers/edge-trace-pdf.md %})
+- Encrypted (MIP) PDFs: [Collect Edge Histograms for PDF Issues]({% link docs/Browsers/edge-histograms-pdf.md %})
+- SmartScreen blocks: [Collect Microsoft Defender SmartScreen Diagnostics]({% link docs/Browsers/SmartScreenChecklist.md %})
 
 ### Environment
 

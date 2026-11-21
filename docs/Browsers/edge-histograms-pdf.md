@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 19
 description: "Collect Microsoft Edge histogram data for encrypted PDF and MIP troubleshooting."
 tags: [edge, pdf, diagnostics]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capturing Edge histograms for PDF troubleshooting
 
-Collect Edge histograms when troubleshooting Microsoft Information Protection (MIP) encrypted PDFs.
+Use this guide for PDFs encrypted with Microsoft Information Protection (MIP). For rendering or font issues in unencrypted PDFs, use [Capture an Edge Trace for PDF Issues]({% link docs/Browsers/edge-trace-pdf.md %}) instead.
 
 ### Environment
 

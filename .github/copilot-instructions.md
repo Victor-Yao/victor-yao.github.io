@@ -65,6 +65,12 @@ For UI-affecting changes, start the local preview and use Playwright MCP against
 - Use concise imperative wording in both languages. Chinese procedures use one consistent term for reproduction and distinguish touch taps from desktop clicks. Preserve language-appropriate punctuation, actual command syntax, necessary warnings, and existing links or anchors.
 - Use Jekyll links for repository pages, for example `{% link docs/Browsers/index.md %}`.
 - Reference images from the site root, for example `![Descriptive alt text](/assets/images/example.png)`, and add the corresponding file under `assets/images/`.
+- Limit each guide to one collection task: one artifact, or a set of artifacts collected together for the same problem. Put unrelated logs on separate pages.
+- When a task can be done in more than one way, use exactly one of these structures, in both languages:
+  - **Alternatives** (different scenarios): start with a `## Choose ...` section that says to choose one method and is not a sequence, followed by a `Method | Use when | Section` table that links to each section's anchor. Keep each section self-contained.
+  - **Preferred method plus fallback**: state "Use A. Use B only if ..." before the sections, and title the fallback section "... instead" (Chinese: "改用 ...").
+  - **Checklist** (all steps required): use one numbered sequence, and say that every step is required.
+- When several guides cover the same tool or problem (for example `edge://tracing`, PDF, HAR, or memory dumps), open each guide with one or two sentences that state its scope and link to the related guides for other cases.
 - Share tools and scripts in one of three ways only:
   - Scripts and configuration files you maintain (`.ps1`, `.bat`, `.reg`, `.wprp`, `.xml`) live in `assets/Scripts/` and are linked individually with `{% link assets/Scripts/<file> %}`. Tell readers to create a working folder, then right-click the link and select **Save link as**. English and Chinese pages link the same file. Do not bundle scripts into ZIP files.
   - Binary tools that have no official download, such as the internal TTD build, are published as GitHub Release assets under a versioned tag (for example `ttd-1.10.91.0`), one ZIP per architecture, and linked with the full release download URL.

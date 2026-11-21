@@ -6,10 +6,12 @@ grand_parent: 指南
 nav_order: 1
 description: "从 Microsoft Edge DevTools 捕获并导出 HTTP Archive 网络跟踪。"
 tags: [edge, har, networking]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 从 Edge Developer Tools 收集网络跟踪日志
+
+大多数网络问题使用本指南即可。默认导出的 HAR 文件不包含 Cookie 和身份验证标头。只有支持人员明确要求时，才使用[在 HAR 文件中捕获身份验证数据]({% link _docs_zh/Browsers/har-sensitive-data.md %})。
 
 1. 打开 Microsoft Edge，然后按 **F12** 打开 **Developer Tools**。
 

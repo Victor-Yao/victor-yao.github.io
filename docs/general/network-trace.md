@@ -5,12 +5,20 @@ grand_parent: Guides
 nav_order: 6
 description: "Capture network packets with netsh trace, NetMon command-line capture, or Wireshark."
 tags: [windows, networking, packet-capture, etw, netmon, wireshark]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
-Choose one method below. Create `c:\logs` before capture.
-For client/server comparison, capture on both computers at the same time and
-name the saved files by computer.
+## Choose a capture method
+
+Choose **one** method below; they are alternatives, not sequential steps.
+
+| Method | Use when | Section |
+| --- | --- | --- |
+| netsh trace | Default choice. Built into Windows, no installation needed | [netsh trace](#netsh-trace) |
+| Network Monitor | You are asked for a `.cap` file, or NetMon is already installed | [Network Monitor](#netmon) |
+| Wireshark | You need to watch packets live, and installing software is allowed | [Wireshark](#wireshark) |
+
+Create `c:\logs` before capture. For client/server comparison, capture on both computers at the same time and name the saved files by computer.
 
 ## netsh trace (ETW)
 {: #netsh-trace }

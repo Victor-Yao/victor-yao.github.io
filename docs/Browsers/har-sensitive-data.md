@@ -5,12 +5,12 @@ grand_parent: Guides
 nav_order: 20
 description: "Configure DevTools to include authentication headers and cookies in a HAR capture."
 tags: [har, authentication, sensitive-data]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capturing sensitive data in HAR logs
 
-Configure Developer Tools to include authentication headers and cookies in exported HAR files.
+Configure Developer Tools to include authentication headers and cookies in exported HAR files. Use this guide only when support explicitly asks for authentication data; otherwise, use [Capture a HAR File in Microsoft Edge]({% link docs/Browsers/edge-har.md %}).
 
 ### Environment
 
