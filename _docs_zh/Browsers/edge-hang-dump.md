@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 13
 description: "使用 ProcDump 和收集脚本，为无响应的 Microsoft Edge 或 Google Chrome 抓取完整内存转储。"
 tags: [edge, chrome, hang, memory-dump, procdump]
-last_modified_date: 2026-11-20
+last_modified_date: 2026-11-21
 ---
 
 ## 收集转储
@@ -51,9 +51,6 @@ last_modified_date: 2026-11-20
 
 4. 关闭浏览器。如有需要，使用**任务管理器 > 结束任务**。
 5. 将整个 `C:\Dumps\EdgeHang_<timestamp>` 文件夹压缩为 ZIP 文件并上传，同时说明问题发生的时间和当时的操作，例如访问的网站和执行的操作。
-
-{: .note }
-> 转储文件包含浏览器内存，可能含有网页内容。请按照组织的数据政策处理。
 
 ## 可选参数
 

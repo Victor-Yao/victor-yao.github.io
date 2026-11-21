@@ -46,6 +46,3 @@ Configure Developer Tools to include authentication headers and cookies in expor
 7. **Revert settings**
 
    Once the trace is finalized, repeat steps 2 through 4 and **clear** the sensitive data option.
-
-   {: .warning }
-   > **Critical security cleanup**: Disable this option immediately after the diagnostic session. Leaving it enabled on a customer's device is a significant security risk, because all subsequent HAR exports will contain plain-text session cookies and authentication tokens.

@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 14
 description: "在不更改 Crashpad 权限的情况下收集受支持的 Teams、Windows 和现有 WebView2 崩溃数据。"
 tags: [teams, webview2, crash]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 收集 Microsoft Teams WebView2 崩溃诊断数据
@@ -15,9 +15,6 @@ last_modified_date: 2026-10-03
 
 {: .warning }
 > 不要拒绝 Teams Crashpad 目录的删除权限，不要添加系统范围的堆转储环境变量，不要启用内部 Teams 工程菜单，也不要故意触发 `edge://crash`。这些不受支持的更改可能干扰 Teams 更新、正常崩溃处理和其他 WebView2 应用程序。
-
-{: .important }
-> Teams 日志和内存转储可能包含租户名称、用户标识符、会议和聊天元数据、URL、令牌以及内存中内容。仅收集所需文件，并使用批准的安全传输渠道。
 
 ### 1. 记录事件
 
@@ -39,8 +36,6 @@ last_modified_date: 2026-10-03
 3. 等待 **Downloading web logs** 横幅消失。
 4. 打开用户的 **Downloads** 文件夹。
 5. 保留生成的 Web 日志存档，并在传输前压缩 Microsoft Teams 支持日志文件。
-
-当登录了多个帐户时，输出可能包含每个已登录帐户的诊断数据。
 
 ### 3. 导出相关 Windows 事件
 
@@ -80,8 +75,7 @@ last_modified_date: 2026-10-03
 ### 7. 打包并清理
 
 1. 包含事件时间、Teams 版本、WebView2 版本、Teams 支持文件、筛选后的 Application 事件日志以及任何现有匹配转储。
-2. 通过批准的支持渠道传输包。
-3. 所需保留期结束后，删除临时本地副本。
+2. 将打包文件发送给支持团队。
 
 此过程不会更改 Teams 配置、Crashpad 权限或系统范围转储设置，因此不需要系统回滚。
 

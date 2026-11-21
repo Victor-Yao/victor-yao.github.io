@@ -87,8 +87,3 @@ Edge 根项的导出是递归的，因此在 `WebView2` 子项存在时已经包
 | `chrome-update-hklm.reg` | `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update` | Chrome 与 Google Update 策略 |
 
 Chrome 根项的导出包含其下所有浏览器策略子项。显示 `Not configured` 表示该项在本机不存在，脚本不会为它生成文件。
-
-## 导出数据的处理
-
-{: .warning }
-> 策略导出文件中可能包含内部 URL、标识符和企业注册信息等敏感内容。在发送之前请先检查 JSON 与 `.reg` 文件的内容，并遵循[使用与数据隐私说明]({% link disclaimer.md %})。

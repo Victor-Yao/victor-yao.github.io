@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 2
 description: "Safely capture and retrieve a .NET process memory dump from an AKS pod."
 tags: [dotnet, aks, memory-dump]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capture a .NET memory dump in AKS
@@ -17,10 +17,6 @@ Replace `<namespace>`, `<pod>`, `<container>`, and `<pid>` with the target value
 {: .warning }
 > Collection can pause the process, use substantial disk space, or exceed the
 > memory limit and terminate the container. Test first and use a controlled capture window.
-
-{: .important }
-> Dumps may contain credentials, tokens, personal data, and encryption material.
-> Follow the approved diagnostic-data handling and retention policy.
 
 ### Prerequisites
 
@@ -110,9 +106,6 @@ After verifying the local copy, remove temporary files:
 ```bash
 kubectl exec <pod> -n <namespace> -c <container> -- rm -f /tmp/app-heap.dmp /tmp/dotnet-dump
 ```
-
-Transfer through an approved encrypted channel, limit access to the investigation
-team, and delete copies after the retention period.
 
 ## References
 

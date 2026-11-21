@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 14
 description: "Collect supported Teams, Windows, and existing WebView2 crash data without changing Crashpad permissions."
 tags: [teams, webview2, crash]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Collect Microsoft Teams WebView2 crash diagnostics
@@ -19,11 +19,6 @@ because of a suspected WebView2 failure.
 > menus, or deliberately trigger `edge://crash`. These unsupported changes can
 > interfere with Teams updates, normal crash handling, and other WebView2
 > applications.
-
-{: .important }
-> Teams logs and memory dumps can contain tenant names, user identifiers,
-> meeting and chat metadata, URLs, tokens, and in-memory content. Collect only
-> the required files and use an approved secure transfer channel.
 
 ### 1. Record the incident
 
@@ -46,9 +41,6 @@ Collect the files as soon as possible after the crash:
 4. Open the user's **Downloads** folder.
 5. Keep the generated web-log archive and compress the Microsoft Teams support
    log files before transfer.
-
-When multiple accounts are signed in, the output can contain diagnostic data
-for every signed-in account.
 
 ### 3. Export the relevant Windows events
 
@@ -101,8 +93,7 @@ collection.
 
 1. Include the incident time, Teams version, WebView2 version, Teams support
    files, filtered Application event log, and any existing matching dump.
-2. Transfer the package through the approved support channel.
-3. Delete temporary local copies when the required retention period ends.
+2. Send the package to the support team.
 
 This procedure does not change Teams configuration, Crashpad permissions, or
 system-wide dump settings, so no system rollback is required.

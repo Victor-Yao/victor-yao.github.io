@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 13
 description: "Capture full memory dumps of a hung Microsoft Edge or Google Chrome with ProcDump and a collection script."
 tags: [edge, chrome, hang, memory-dump, procdump]
-last_modified_date: 2026-11-20
+last_modified_date: 2026-11-21
 ---
 
 ## Collect the dumps
@@ -50,9 +50,6 @@ Use this guide when the browser shows **Not Responding** and does not recover. T
 
 4. Close the browser. If needed, use **Task Manager > End task**.
 5. Compress the whole `C:\Dumps\EdgeHang_<timestamp>` folder into a ZIP file, then upload it with the time of the issue and what you were doing, such as the website and action.
-
-{: .note }
-> Dump files contain browser memory, which can include web page content. Handle them according to your organization's data policy.
 
 ## Optional parameters
 

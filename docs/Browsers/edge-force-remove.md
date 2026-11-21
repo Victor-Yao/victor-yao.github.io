@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 19
 description: "Use supported repair, reinstall, and diagnostic steps for Microsoft Edge and WebView2 installation failures."
 tags: [edge, webview2, installation]
-last_modified_date: 2026-07-24
+last_modified_date: 2026-11-21
 ---
 
 ## Repair Microsoft Edge and WebView2 installation
@@ -113,11 +113,6 @@ Also:
   [Process Monitor trace]({% link docs/general/procmon.md %}) while reproducing
   the installation failure.
 - Record the installer filename, command line, error code, and failure time.
-
-{: .important }
-> Installer logs, policy exports, and Process Monitor traces can contain user
-> names, paths, URLs, policy values, and application data. Review and transfer
-> them through an approved support channel.
 
 ### 5. Escalate unresolved servicing failures
 

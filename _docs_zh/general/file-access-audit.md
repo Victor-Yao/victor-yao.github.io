@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 3
 description: "启用文件访问失败审核，并收集 Security 事件日志。"
 tags: [windows, auditing, files, event-logs]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 开始前
@@ -75,12 +75,10 @@ last_modified_date: 2026-10-03
 2. 若未找到匹配记录，重新检查审核策略和文件审核条目。
 3. 将 `Security.evtx` 压缩为 ZIP。
 4. 附上复现时间、时区和目标路径。
-5. 通过支持团队的**安全渠道**提交。
+5. 将 ZIP 文件发送给支持团队。
 
 {: .note }
 > **4663 没有 Failure 事件。** 并非所有文件错误都是权限拒绝。
-
-日志可能包含账户名和路径，分享前请阅读[数据隐私须知]({% link disclaimer.md %})。
 
 ## 恢复设置
 

@@ -74,7 +74,7 @@ Run all steps in the same administrator **PowerShell** window.
 ## After collection
 {: #after-collection }
 
-1. Open `C:\Logs\CAPI2.evtx` and verify the collected events. Save the required copy to the approved diagnostic-data location.
+1. Open `C:\Logs\CAPI2.evtx` and verify the collected events.
 2. Disable logging if it was originally disabled, as recorded in `capi2-settings-before.txt` or in Event Viewer. If it was already enabled before collection, leave it enabled.
 
    ```powershell
@@ -95,8 +95,6 @@ Run all steps in the same administrator **PowerShell** window.
    ```
 
    In Event Viewer, right-click **Operational** and select **Clear Log**.
-
-4. Remove unneeded exported copies and the saved settings file only after verifying the required copy and meeting the retention policy.
 
 ## References
 

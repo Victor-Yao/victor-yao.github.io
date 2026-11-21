@@ -89,8 +89,3 @@ The script checks each key before exporting and prints one status line per key. 
 | `chrome-update-hklm.reg` | `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Update` | Chrome and Google Update policies |
 
 The Chrome root exports include all nested browser policy keys. A key that reports `Not configured` is not present on the machine, and no file is created for it.
-
-## Handling exported policy data
-
-{: .warning }
-> Policy exports can contain sensitive internal URLs, identifiers, and enrollment values. Review the JSON and `.reg` files before sharing them, and follow the [usage and data privacy guidance]({% link disclaimer.md %}).

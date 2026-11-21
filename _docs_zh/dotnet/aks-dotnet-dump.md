@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 2
 description: "从 AKS pod 安全抓取并取回 .NET 进程内存转储。"
 tags: [dotnet, aks, memory-dump]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## 在 AKS 中抓取 .NET 内存转储
@@ -17,9 +17,6 @@ last_modified_date: 2026-10-03
 
 {: .warning }
 > 采集可能暂停进程、占用大量磁盘；超出内存限制可导致容器终止。先测试，再安排受控采集窗口。
-
-{: .important }
-> 转储可能包含凭据、令牌、个人数据和加密材料，按批准的诊断数据流程和保留策略处理。
 
 ### 前提条件
 
@@ -102,8 +99,6 @@ kubectl cp <namespace>/<pod>:/tmp/app-heap.dmp ./app-heap.dmp -c <container>
 ```bash
 kubectl exec <pod> -n <namespace> -c <container> -- rm -f /tmp/app-heap.dmp /tmp/dotnet-dump
 ```
-
-通过批准的加密通道传输，仅供调查团队访问；保留期结束后删除各处副本。
 
 ## 参考
 

@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 3
 description: "Collect Security audit logs for failed file access."
 tags: [windows, auditing, files, event-logs]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Before you start
@@ -74,12 +74,10 @@ last_modified_date: 2026-10-03
 2. If none match, recheck the audit policy and file audit entry.
 3. Compress `Security.evtx` into a ZIP file.
 4. Include the reproduction time, time zone, and affected path.
-5. Submit through your support team's **secure channel**.
+5. Send the ZIP file to your support team.
 
 {: .note }
 > **4663 has no Failure events.** Not every file error is a permission denial.
-
-Logs can contain account names and paths. Review the [data privacy guidance]({% link disclaimer.md %}) before sharing.
 
 ## Restore settings
 
