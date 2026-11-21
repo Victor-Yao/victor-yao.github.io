@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 9
 description: "为 IIS 工作进程抓取 Time Travel Tracing 录制。"
 tags: [iis, ttd, debugging]
-last_modified_date: 2026-11-20
+last_modified_date: 2026-11-21
 ---
 
 ## 为 IIS 工作进程抓取 TTT 跟踪
@@ -15,9 +15,6 @@ last_modified_date: 2026-11-20
 
    - 64 位 Windows：[TTD_x64.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x64.zip)
    - 32 位 Windows：[TTD_x86.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x86.zip)
-
-   {: .note }
-   > 这是 TTD 内部版本（1.10.91.0），与公开下载的 TTD 不同。
 
 2. 以管理员身份打开 **Command Prompt**，然后进入 `C:\TTD\TTD_x64` 或 `C:\TTD\TTD_x86`。
 

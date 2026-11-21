@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 9
 description: "Capture a Time Travel Tracing recording for an IIS worker process."
 tags: [iis, ttd, debugging]
-last_modified_date: 2026-11-20
+last_modified_date: 2026-11-21
 ---
 
 ## Capture a TTT trace for IIS worker process
@@ -14,9 +14,6 @@ last_modified_date: 2026-11-20
 
    - 64-bit Windows: [TTD_x64.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x64.zip)
    - 32-bit Windows: [TTD_x86.zip](https://github.com/Victor-Yao/victor-yao.github.io/releases/download/ttd-1.10.91.0/TTD_x86.zip)
-
-   {: .note }
-   > This is an internal TTD build (1.10.91.0) that differs from the public TTD download.
 
 2. Open **Command Prompt** as an administrator, then go to `C:\TTD\TTD_x64` or `C:\TTD\TTD_x86`.
 
