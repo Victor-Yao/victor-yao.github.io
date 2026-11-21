@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 7
 description: "Export applied Edge and Chrome policies to JSON and Windows registry files."
 tags: [edge, chrome, policy]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 last_verified_date: 2026-08-02
 tested_on: Windows 11 Enterprise (build 26200), Microsoft Edge Stable 151.0.4129.59, PowerShell 7.6.4
 ---
@@ -41,41 +41,15 @@ are alternatives, not sequential steps.
 ## Microsoft Edge: export registry-backed policies
 {: #edge-policy-registry }
 
-Run the following commands in PowerShell:
+1. Right-click [Export-BrowserPolicyRegistry.ps1]({% link assets/Scripts/Export-BrowserPolicyRegistry.ps1 %}), select **Save link as**, and save it in `C:\Temp`.
+2. Open **PowerShell**, then run:
 
-```powershell
-$destination = Join-Path ([Environment]::GetFolderPath('Desktop')) 'browser-policy-registry'
-New-Item -ItemType Directory -Path $destination -Force | Out-Null
+   ```powershell
+   cd C:\Temp
+   powershell.exe -ExecutionPolicy Bypass -File .\Export-BrowserPolicyRegistry.ps1 -Browser Edge
+   ```
 
-$policyKeys = [ordered]@{
-    # Microsoft Edge browser policies
-    'HKLM\SOFTWARE\Policies\Microsoft\Edge'          = 'edge-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Microsoft\Edge'          = 'edge-hkcu.reg'
-    # Microsoft Edge WebView2 policies
-    'HKLM\SOFTWARE\Policies\Microsoft\Edge\WebView2' = 'edge-webview2-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Microsoft\Edge\WebView2' = 'edge-webview2-hkcu.reg'
-    # Microsoft Edge and WebView2 Runtime update policies
-    'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate'    = 'edge-update-hklm.reg'
-}
-
-foreach ($key in $policyKeys.Keys) {
-    if (-not (Test-Path -LiteralPath "Registry::$key")) {
-        Write-Host "Not configured : $key"
-        continue
-    }
-
-    $file = Join-Path $destination $policyKeys[$key]
-    $output = reg.exe export $key $file /y 2>&1
-
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Exported       : $key"
-    } else {
-        Write-Host "Export failed  : $key -- $output"
-    }
-}
-
-Write-Host "Output folder  : $destination"
-```
+3. Collect the `.reg` files from the `browser-policy-registry` folder on the desktop.
 
 | File | Registry key | Scope |
 | --- | --- | --- |
@@ -98,38 +72,15 @@ The script checks each key before exporting and prints one status line per key. 
 ## Google Chrome: export registry-backed policies
 {: #chrome-policy-registry }
 
-Run the following commands in PowerShell:
+1. Right-click [Export-BrowserPolicyRegistry.ps1]({% link assets/Scripts/Export-BrowserPolicyRegistry.ps1 %}), select **Save link as**, and save it in `C:\Temp`.
+2. Open **PowerShell**, then run:
 
-```powershell
-$destination = Join-Path ([Environment]::GetFolderPath('Desktop')) 'browser-policy-registry'
-New-Item -ItemType Directory -Path $destination -Force | Out-Null
+   ```powershell
+   cd C:\Temp
+   powershell.exe -ExecutionPolicy Bypass -File .\Export-BrowserPolicyRegistry.ps1 -Browser Chrome
+   ```
 
-$policyKeys = [ordered]@{
-    # Google Chrome browser policies
-    'HKLM\SOFTWARE\Policies\Google\Chrome' = 'chrome-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Google\Chrome' = 'chrome-hkcu.reg'
-    # Google Update policies
-    'HKLM\SOFTWARE\Policies\Google\Update' = 'chrome-update-hklm.reg'
-}
-
-foreach ($key in $policyKeys.Keys) {
-    if (-not (Test-Path -LiteralPath "Registry::$key")) {
-        Write-Host "Not configured : $key"
-        continue
-    }
-
-    $file = Join-Path $destination $policyKeys[$key]
-    $output = reg.exe export $key $file /y 2>&1
-
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Exported       : $key"
-    } else {
-        Write-Host "Export failed  : $key -- $output"
-    }
-}
-
-Write-Host "Output folder  : $destination"
-```
+3. Collect the `.reg` files from the `browser-policy-registry` folder on the desktop.
 
 | File | Registry key | Scope |
 | --- | --- | --- |

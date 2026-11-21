@@ -1,0 +1,17 @@
+\Memory\*
+\Process(*)\*
+\Thread(*)\*
+\Processor(*)\*
+\ASP.NET v4.0.30319\*
+\ASP.NET Apps v4.0.30319(*)\*
+\ASP.NET v2.0.50727\*
+\ASP.NET Apps v2.0.50727(*)\*
+\ASP.NET Applications(*)\*
+\ASP.NET\*
+\.NET CLR Memory(*)\*
+\.NET CLR Networking\*
+\APP_POOL_WAS(*)\*
+\HTTP Service\*
+\HTTP Service Request Queues(*)\*
+\W3SVC_W3WP(*)\*
+\WAS_W3WP(*)\*

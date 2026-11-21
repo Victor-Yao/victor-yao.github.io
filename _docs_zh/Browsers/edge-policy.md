@@ -6,7 +6,7 @@ grand_parent: 指南
 nav_order: 7
 description: "将已生效的 Edge 与 Chrome 策略导出为 JSON 和 Windows 注册表文件。"
 tags: [edge, chrome, policy]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 last_verified_date: 2026-08-02
 tested_on: Windows 11 企业版（内部版本 26200）、Microsoft Edge Stable 151.0.4129.59、PowerShell 7.6.4
 ---
@@ -39,41 +39,15 @@ tested_on: Windows 11 企业版（内部版本 26200）、Microsoft Edge Stable 
 ## Microsoft Edge：导出注册表中的策略
 {: #edge-policy-registry }
 
-在 PowerShell 中运行以下命令：
+1. 右键 [Export-BrowserPolicyRegistry.ps1]({% link assets/Scripts/Export-BrowserPolicyRegistry.ps1 %})，选择**链接另存为**，保存到 `C:\Temp`。
+2. 打开 **PowerShell**，然后运行：
 
-```powershell
-$destination = Join-Path ([Environment]::GetFolderPath('Desktop')) 'browser-policy-registry'
-New-Item -ItemType Directory -Path $destination -Force | Out-Null
+   ```powershell
+   cd C:\Temp
+   powershell.exe -ExecutionPolicy Bypass -File .\Export-BrowserPolicyRegistry.ps1 -Browser Edge
+   ```
 
-$policyKeys = [ordered]@{
-    # Microsoft Edge 浏览器策略
-    'HKLM\SOFTWARE\Policies\Microsoft\Edge'          = 'edge-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Microsoft\Edge'          = 'edge-hkcu.reg'
-    # Microsoft Edge WebView2 策略
-    'HKLM\SOFTWARE\Policies\Microsoft\Edge\WebView2' = 'edge-webview2-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Microsoft\Edge\WebView2' = 'edge-webview2-hkcu.reg'
-    # Microsoft Edge 与 WebView2 运行时的更新策略
-    'HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate'    = 'edge-update-hklm.reg'
-}
-
-foreach ($key in $policyKeys.Keys) {
-    if (-not (Test-Path -LiteralPath "Registry::$key")) {
-        Write-Host "Not configured : $key"
-        continue
-    }
-
-    $file = Join-Path $destination $policyKeys[$key]
-    $output = reg.exe export $key $file /y 2>&1
-
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Exported       : $key"
-    } else {
-        Write-Host "Export failed  : $key -- $output"
-    }
-}
-
-Write-Host "Output folder  : $destination"
-```
+3. 从桌面上的 `browser-policy-registry` 文件夹收集 `.reg` 文件。
 
 | 文件 | 注册表项 | 作用范围 |
 | --- | --- | --- |
@@ -96,38 +70,15 @@ Edge 根项的导出是递归的，因此在 `WebView2` 子项存在时已经包
 ## Google Chrome：导出注册表中的策略
 {: #chrome-policy-registry }
 
-在 PowerShell 中运行以下命令：
+1. 右键 [Export-BrowserPolicyRegistry.ps1]({% link assets/Scripts/Export-BrowserPolicyRegistry.ps1 %})，选择**链接另存为**，保存到 `C:\Temp`。
+2. 打开 **PowerShell**，然后运行：
 
-```powershell
-$destination = Join-Path ([Environment]::GetFolderPath('Desktop')) 'browser-policy-registry'
-New-Item -ItemType Directory -Path $destination -Force | Out-Null
+   ```powershell
+   cd C:\Temp
+   powershell.exe -ExecutionPolicy Bypass -File .\Export-BrowserPolicyRegistry.ps1 -Browser Chrome
+   ```
 
-$policyKeys = [ordered]@{
-    # Google Chrome 浏览器策略
-    'HKLM\SOFTWARE\Policies\Google\Chrome' = 'chrome-hklm.reg'
-    'HKCU\SOFTWARE\Policies\Google\Chrome' = 'chrome-hkcu.reg'
-    # Google Update 策略
-    'HKLM\SOFTWARE\Policies\Google\Update' = 'chrome-update-hklm.reg'
-}
-
-foreach ($key in $policyKeys.Keys) {
-    if (-not (Test-Path -LiteralPath "Registry::$key")) {
-        Write-Host "Not configured : $key"
-        continue
-    }
-
-    $file = Join-Path $destination $policyKeys[$key]
-    $output = reg.exe export $key $file /y 2>&1
-
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Exported       : $key"
-    } else {
-        Write-Host "Export failed  : $key -- $output"
-    }
-}
-
-Write-Host "Output folder  : $destination"
-```
+3. 从桌面上的 `browser-policy-registry` 文件夹收集 `.reg` 文件。
 
 | 文件 | 注册表项 | 作用范围 |
 | --- | --- | --- |

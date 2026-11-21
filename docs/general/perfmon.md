@@ -5,7 +5,7 @@ grand_parent: Guides
 nav_order: 12
 description: "Capture size-limited Windows performance counter logs for IIS, ASP.NET, .NET Framework, and WCF troubleshooting."
 tags: [windows, perfmon, performance, iis, dotnet]
-last_modified_date: 2026-10-03
+last_modified_date: 2026-11-21
 ---
 
 ## Capture performance counter logs with Perfmon
@@ -34,11 +34,11 @@ Use `logman` to collect Windows performance counters in a binary `.blg` file. Th
    typeperf -qx
    ```
 
-   Counter categories depend on the installed Windows roles and .NET Framework components. If `logman` reports that a counter is invalid, remove that unavailable category from the command and run it again.
+   Counter categories depend on the installed Windows roles and .NET Framework components. If `logman` reports that a counter is invalid, remove that unavailable category from the counter file and run the command again.
 
 ### Start and stop the capture
 
-1. Create the data collector by running the command for the selected counter set.
+1. Create the data collector by following the steps for the selected counter set.
 
 2. Start data collection.
 
@@ -69,30 +69,12 @@ Use `logman` to collect Windows performance counters in a binary `.blg` file. Th
 
 This set captures system resources, worker processes, IIS request queues, ASP.NET, and .NET Framework memory and networking counters.
 
-```bat
-logman create counter PerfCapture ^
-  -f bincirc ^
-  -max 800 ^
-  -si 00:00:01 ^
-  -o C:\PerfMonLogs\PerfCapture.blg ^
-  -c "\Memory\*" ^
-     "\Process(*)\*" ^
-     "\Thread(*)\*" ^
-     "\Processor(*)\*" ^
-     "\ASP.NET v4.0.30319\*" ^
-     "\ASP.NET Apps v4.0.30319(*)\*" ^
-     "\ASP.NET v2.0.50727\*" ^
-     "\ASP.NET Apps v2.0.50727(*)\*" ^
-     "\ASP.NET Applications(*)\*" ^
-     "\ASP.NET\*" ^
-     "\.NET CLR Memory(*)\*" ^
-     "\.NET CLR Networking\*" ^
-     "\APP_POOL_WAS(*)\*" ^
-     "\HTTP Service\*" ^
-     "\HTTP Service Request Queues(*)\*" ^
-     "\W3SVC_W3WP(*)\*" ^
-     "\WAS_W3WP(*)\*"
-```
+1. Right-click [perfmon-iis-counters.txt]({% link assets/Scripts/perfmon-iis-counters.txt %}), select **Save link as**, and save it in `C:\PerfMonLogs`.
+2. Create the data collector:
+
+   ```bat
+   logman create counter PerfCapture -f bincirc -max 800 -si 00:00:01 -o C:\PerfMonLogs\PerfCapture.blg -cf C:\PerfMonLogs\perfmon-iis-counters.txt
+   ```
 
 {: .note }
 > ASP.NET Core does not expose the classic ASP.NET and .NET CLR counter categories shown above. For an ASP.NET Core process, retain the system, process, processor, memory, HTTP Service, and IIS counters that are available.
@@ -101,29 +83,12 @@ logman create counter PerfCapture ^
 
 This set adds WCF endpoint, operation, and service counters to the system and .NET Framework counters.
 
-```bat
-logman create counter PerfCapture ^
-  -f bincirc ^
-  -max 800 ^
-  -si 00:00:01 ^
-  -o C:\PerfMonLogs\PerfCapture.blg ^
-  -c "\Memory\*" ^
-     "\Process(*)\*" ^
-     "\Thread(*)\*" ^
-     "\Processor(*)\*" ^
-     "\.NET CLR Networking\*" ^
-     "\.NET CLR Networking 4.0.0.0\*" ^
-     "\.NET CLR Memory(*)\*" ^
-     "\HTTP Service\*" ^
-     "\HTTP Service Request Queues(*)\*" ^
-     "\ServiceModelEndpoint 3.0.0.0(*)\*" ^
-     "\ServiceModelEndpoint 4.0.0.0(*)\*" ^
-     "\ServiceModelOperation 3.0.0.0(*)\*" ^
-     "\ServiceModelOperation 4.0.0.0(*)\*" ^
-     "\ServiceModelService 3.0.0.0(*)\*" ^
-     "\ServiceModelService 4.0.0.0(*)\*" ^
-     "\Web Service(*)\*"
-```
+1. Right-click [perfmon-wcf-counters.txt]({% link assets/Scripts/perfmon-wcf-counters.txt %}), select **Save link as**, and save it in `C:\PerfMonLogs`.
+2. Create the data collector:
+
+   ```bat
+   logman create counter PerfCapture -f bincirc -max 800 -si 00:00:01 -o C:\PerfMonLogs\PerfCapture.blg -cf C:\PerfMonLogs\perfmon-wcf-counters.txt
+   ```
 
 WCF performance counters may be disabled by application configuration. If the ServiceModel categories are missing, confirm that WCF performance counters are enabled for the service before collecting another log.
 

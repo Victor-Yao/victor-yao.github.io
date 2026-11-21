@@ -1,0 +1,16 @@
+\Memory\*
+\Process(*)\*
+\Thread(*)\*
+\Processor(*)\*
+\.NET CLR Networking\*
+\.NET CLR Networking 4.0.0.0\*
+\.NET CLR Memory(*)\*
+\HTTP Service\*
+\HTTP Service Request Queues(*)\*
+\ServiceModelEndpoint 3.0.0.0(*)\*
+\ServiceModelEndpoint 4.0.0.0(*)\*
+\ServiceModelOperation 3.0.0.0(*)\*
+\ServiceModelOperation 4.0.0.0(*)\*
+\ServiceModelService 3.0.0.0(*)\*
+\ServiceModelService 4.0.0.0(*)\*
+\Web Service(*)\*
